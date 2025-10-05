@@ -1,17 +1,17 @@
 import type { ReactNode } from 'react'
+import type { NotificationType, NotificationPosition } from '@components'
 
-export interface Notification {
+export interface NotificationItem {
   id: string
   message: string
   type: NotificationType
-  duration?: number
+  duration: number
+  position: NotificationPosition
 }
 
-export type NotificationType = 'success' | 'error' | 'warning' | 'info'
-
 export interface NotificationContextType {
-  notifications: Notification[]
-  showNotification: (message: string, type: NotificationType, duration?: number) => void
+  notifications: NotificationItem[]
+  showNotification: (message: string, type?: NotificationType, duration?: number, position?: NotificationPosition) => void
   hideNotification: (id: string) => void
 }
 

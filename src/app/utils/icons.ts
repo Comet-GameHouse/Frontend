@@ -1,0 +1,47 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faRocket,
+  faSpinner,
+  faGamepad,
+  faCoins,
+  faCrown,
+  faBolt,
+  faDice,
+  faPlay,
+  faUser,
+  faEnvelope,
+  faLock,
+  faSearch,
+  faDollarSign,
+  faGem,
+  faTimes,
+  faCheckCircle,
+  faTimesCircle,
+  faExclamationCircle,
+  faInfoCircle,
+  faInbox,
+} from '@fortawesome/free-solid-svg-icons';
+
+// Add icons to library
+library.add(
+  faRocket,
+  faSpinner,
+  faGamepad,
+  faCoins,
+  faCrown,
+  faBolt,
+  faDice,
+  faPlay,
+  faUser,
+  faEnvelope,
+  faLock,
+  faSearch,
+  faDollarSign,
+  faGem,
+  faTimes,
+  faCheckCircle,
+  faTimesCircle,
+  faExclamationCircle,
+  faInfoCircle,
+  faInbox
+);

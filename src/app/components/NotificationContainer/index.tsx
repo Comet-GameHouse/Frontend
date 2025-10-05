@@ -1,35 +1,55 @@
-import { useNotification } from '@contexts/NotificationContext'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { NOTIFICATION_ICONS, NOTIFICATION_ICON_COLORS } from './data'
-import { NOTIFICATION_STYLES } from '@contexts/NotificationContext/data'
+import { useNotification } from '@contexts/NotificationContext';
+import { Notification } from './Notification';
+import { NOTIFICATION_POSITION_STYLES } from './data';
 
 export const NotificationContainer = () => {
-  const { notifications, hideNotification } = useNotification()
+  const { notifications, hideNotification } = useNotification();
+
+  const positions = [
+    'top-right',
+    'top-left',
+    'top-center',
+    'bottom-right',
+    'bottom-left',
+    'bottom-center',
+  ] as const;
 
   return (
-    <div className="fixed top-4 right-4 z-50 space-y-2">
-      {notifications.map(notification => (
-        <div
-          key={notification.id}
-          className={`p-4 rounded-lg shadow-lg border-l-4 min-w-80 max-w-md flex items-start gap-3 ${
-            NOTIFICATION_STYLES[notification.type]
-          }`}
-        >
-          <FontAwesomeIcon 
-            icon={NOTIFICATION_ICONS[notification.type]} 
-            className={`mt-0.5 ${NOTIFICATION_ICON_COLORS[notification.type]}`}
-          />
-          <div className="flex-1">
-            <p className="font-medium text-sm">{notification.message}</p>
-          </div>
-          <button
-            onClick={() => hideNotification(notification.id)}
-            className="text-gray-500 hover:text-gray-700 ml-2"
+    <>
+      {positions.map((position) => {
+        const positionNotifications = notifications.filter(
+          (n) => n.position === position
+        );
+
+        if (positionNotifications.length === 0) return null;
+
+        return (
+          <div
+            key={position}
+            className={`
+              fixed z-50 pointer-events-none
+              ${NOTIFICATION_POSITION_STYLES[position]}
+              flex flex-col space-y-3
+              ${position.includes('bottom') ? 'flex-col-reverse space-y-reverse' : ''}
+            `}
           >
-            <FontAwesomeIcon icon={NOTIFICATION_ICONS.close} />
-          </button>
-        </div>
-      ))}
-    </div>
-  )
-}
+            {positionNotifications.map((notification) => (
+              <div key={notification.id} className="pointer-events-auto">
+                <Notification
+                  id={notification.id}
+                  message={notification.message}
+                  type={notification.type}
+                  duration={notification.duration}
+                  position={notification.position}
+                  onClose={hideNotification}
+                />
+              </div>
+            ))}
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+export type { NotificationType, NotificationPosition } from './types';

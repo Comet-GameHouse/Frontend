@@ -1,44 +1,49 @@
 import { createContext, useContext, useState } from 'react'
-import type { Notification, NotificationContextType, NotificationProviderProps, NotificationType } from './types'
-import { NOTIFICATION_DURATION } from './data'
+import type { NotificationContextType, NotificationProviderProps, NotificationItem } from './types'
+import type { NotificationType, NotificationPosition } from '@components'
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined)
 
-// Create a ref to hold the showNotification function
-let notificationRef: { showNotification: NotificationContextType['showNotification'] } = {
+export const notificationRef: { showNotification: NotificationContextType['showNotification'] } = {
   showNotification: () => {}
 }
 
 export const NotificationProvider = ({ children }: NotificationProviderProps) => {
-  const [notifications, setNotifications] = useState<Notification[]>([])
+  const [notifications, setNotifications] = useState<NotificationItem[]>([])
 
-  const showNotification = (message: string, type: NotificationType, duration?: number) => {
+  const showNotification = (
+    message: string, 
+    type: NotificationType = 'info', 
+    duration = 5000,
+    position: NotificationPosition = 'top-right'
+  ) => {
     const id = Math.random().toString(36).substring(2, 9)
-    const notification = { 
+    const notification: NotificationItem = { 
       id, 
       message, 
       type, 
-      duration: duration || NOTIFICATION_DURATION[type.toUpperCase() as keyof typeof NOTIFICATION_DURATION]
+      duration,
+      position
     }
     
     setNotifications(prev => [...prev, notification])
-    
-    if (notification.duration > 0) {
-      setTimeout(() => {
-        hideNotification(id)
-      }, notification.duration)
-    }
   }
 
   const hideNotification = (id: string) => {
     setNotifications(prev => prev.filter(notification => notification.id !== id))
   }
 
-  // Update the ref when component mounts/updates
+  // Update the ref
   notificationRef.showNotification = showNotification
 
+  const value: NotificationContextType = {
+    notifications,
+    showNotification,
+    hideNotification
+  }
+
   return (
-    <NotificationContext.Provider value={{ notifications, showNotification, hideNotification }}>
+    <NotificationContext.Provider value={value}>
       {children}
     </NotificationContext.Provider>
   )
@@ -51,6 +56,3 @@ export const useNotification = () => {
   }
   return context
 }
-
-// Export the ref for use outside React components
-export { notificationRef }
