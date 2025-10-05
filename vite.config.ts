@@ -16,6 +16,8 @@ export default defineConfig({
       '@hooks': resolve(__dirname, './src/app/hooks'),
       '@layouts': resolve(__dirname, './src/app/layouts'),
       '@pages': resolve(__dirname, './src/app/pages'),
+      '@routes': resolve(__dirname, './src/app/routes'),
+      '@services': resolve(__dirname, './src/app/services'),
       '@styles': resolve(__dirname, './src/app/styles'),
       '@utils': resolve(__dirname, './src/app/utils'),
     },
@@ -25,6 +27,11 @@ export default defineConfig({
     port: 5173,
   },
   build: {
-    outDir: 'dist/web'
-  }
+    outDir: 'dist/web',
+    rollupOptions: {
+      input: {
+        main: 'index.html', // Explicitly set index.html as the only entry point
+      },
+    },
+  },
 });
