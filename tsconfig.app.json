@@ -34,6 +34,8 @@
       "@hooks/*": ["src/app/hooks/*"],
       "@layouts/*": ["src/app/layouts/*"],
       "@pages/*": ["src/app/pages/*"],
+      "@routes/*": ["src/app/routes/*"],
+      "@services/*": ["src/app/services/*"],
       "@styles/*": ["src/app/styles/*"],
       "@utils/*": ["src/app/utils/*"],
 
@@ -45,6 +47,8 @@
       "@hooks": ["src/app/hooks"],
       "@layouts": ["src/app/layouts"],
       "@pages": ["src/app/pages"],
+      "@routes": ["src/app/routes"],
+      "@services": ["src/app/services"],
       "@styles": ["src/app/styles"],
       "@utils": ["src/app/utils"],
     }
