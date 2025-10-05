@@ -15,10 +15,10 @@
     "build:desktop": "vite build --config vite.desktop.config.ts && electron-builder",
     "build:android": "vite build --config vite.android.config.ts && npx cap add android && cd dist/android && ./gradlew assembleDebug",
     "build:extension": "vite build --config vite.extension.config.ts",
-    "preversion": "node scripts/update-manifest-version.cjs",
-    "version:patch": "npm version patch",
-    "version:minor": "npm version minor",
-    "version:major": "npm version major"
+    "postversion": "node scripts/update-manifest-version.cjs",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
