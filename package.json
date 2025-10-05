@@ -1,0 +1,84 @@
+{
+  "name": "comet-gamehouse-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Comet GameHouse - A modern gaming platform with desktop, mobile, and browser extension support",
+  "author": {
+    "name": "Akira Nakamura",
+    "email": "cometstar864@gmail.com",
+    "url": "https://akiranakamura-cometstar.web.app"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:desktop": "vite build --config vite.desktop.config.ts && electron-builder",
+    "build:android": "vite build --config vite.android.config.ts && npx cap add android && cd dist/android && ./gradlew assembleDebug",
+    "build:extension": "vite build --config vite.extension.config.ts",
+    "postversion": "node scripts/update-manifest-version.js",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version"
+  },
+  "dependencies": {
+    "@stripe/react-stripe-js": "^5.0.0",
+    "@stripe/stripe-js": "^8.0.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "aos": "^2.3.4",
+    "axios": "^1.12.2",
+    "pixi.js": "^8.13.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.3",
+    "rollup-plugin-copy": "^3.5.0",
+    "tailwindcss": "^4.1.14",
+    "websocket": "^1.0.35"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/cli": "^7.4.3",
+    "@capacitor/core": "^7.4.3",
+    "@eslint/js": "^9.36.0",
+    "@types/node": "^24.6.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "capacitor": "^0.5.6",
+    "electron": "^38.2.1",
+    "electron-builder": "^26.0.12",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.45.0",
+    "vite": "^7.1.7"
+  },
+  "build": {
+    "appId": "com.comet.gamehouse",
+    "productName": "Comet GameHouse",
+    "directories": {
+      "output": "dist/desktop"
+    },
+    "files": [
+      "dist/web/**/*",
+      "platforms/desktop/**/*"
+    ],
+    "extraMetadata": {
+      "main": "platforms/desktop/main.js"
+    },
+    "asar": true,
+    "win": {
+      "target": "nsis",
+      "icon": "public/favicon.png"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "public/favicon.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "public/favicon.png"
+    }
+  }
+}

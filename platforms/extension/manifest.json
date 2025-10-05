@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Comet GameHouse",
+  "version": "1.0.0",
+  "description": "Comet GameHouse Sidebar Extension",
+  "permissions": ["sidePanel", "activeTab", "storage"],
+  "icons": {
+    "16": "favicon.png",
+    "48": "favicon.png",
+    "128": "favicon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open Comet GameHouse Sidebar"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
+}
