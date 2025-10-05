@@ -1,7 +1,7 @@
 {
   "name": "comet-gamehouse-frontend",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.4",
   "type": "module",
   "description": "Comet GameHouse - A modern gaming platform with desktop, mobile, and browser extension support",
   "author": {
@@ -15,7 +15,7 @@
     "build:desktop": "vite build --config vite.desktop.config.ts && electron-builder",
     "build:android": "vite build --config vite.android.config.ts && npx cap add android && cd dist/android && ./gradlew assembleDebug",
     "build:extension": "vite build --config vite.extension.config.ts",
-    "postversion": "node scripts/update-manifest-version.js",
+    "postversion": "node scripts/update-manifest-version.cjs",
     "version:patch": "npm version patch --no-git-tag-version",
     "version:minor": "npm version minor --no-git-tag-version",
     "version:major": "npm version major --no-git-tag-version"

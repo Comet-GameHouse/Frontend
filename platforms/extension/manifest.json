@@ -1,9 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Comet GameHouse",
-  "version": "1.0.0",
+  "version": "0.1.4",
   "description": "Comet GameHouse Sidebar Extension",
-  "permissions": ["sidePanel", "activeTab", "storage"],
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "storage"
+  ],
   "icons": {
     "16": "favicon.png",
     "48": "favicon.png",
@@ -20,9 +24,15 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
     }
   ],
-  "host_permissions": ["<all_urls>"]
+  "host_permissions": [
+    "<all_urls>"
+  ]
 }
