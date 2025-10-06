@@ -23,9 +23,19 @@ import {
   faEnvelopeOpen,
   faShieldAlt,
   faUsers,
+  faBars,
+  faHome,
+  faShoppingBag,
+  faTrophy,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { faGoogle, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import {
+  faGoogle,
+  faDiscord,
+  faTwitter,
+  faYoutube,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 
 console.log(faGoogle, faDiscord, faInbox);
 
@@ -54,7 +64,14 @@ library.add(
   faEnvelopeOpen,
   faShieldAlt,
   faUsers,
+  faBars,
+  faHome,
+  faShoppingBag,
+  faTrophy,
 
   faGoogle,
-  faDiscord
+  faDiscord,
+  faTwitter,
+  faYoutube,
+  faInstagram
 );

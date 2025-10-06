@@ -5,7 +5,7 @@ export const initAOS = () => {
   AOS.init({
     duration: 800,
     easing: 'ease-out-cubic',
-    once: true,
+    once: false,
     offset: -999999
   })
 }
