@@ -1,4 +1,8 @@
-import type { StatItemProps } from './types'
+interface StatItemProps {
+  value: string;
+  label: string;
+  color: string;
+}
 
 export const StatItem = ({ value, label, color }: StatItemProps) => {
   return (

@@ -1,7 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GameCard } from './GameCard';
 
-import type { GamesGridProps } from './types';
+import type { Game } from './types';
+
+interface GamesGridProps {
+  games: Game[];
+}
 
 export const GamesGrid = ({ games }: GamesGridProps) => {
   if (games.length === 0) {

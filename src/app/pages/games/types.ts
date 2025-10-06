@@ -29,6 +29,7 @@ export interface GameFilter {
   search: string;
 }
 
-export interface GamesGridProps {
-  games: Game[];
+export interface SortOption {
+  label: string;
+  value: string;
 }

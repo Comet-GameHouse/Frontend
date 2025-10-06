@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
-import { ROUTES } from '@constants'
+import { Link } from 'react-router-dom';
+import { ROUTES } from '@constants';
 
 export const SignUpFooter = () => {
   return (
-    <div 
+    <div
       className="text-center mt-6 sm:mt-8 px-4 sm:px-0"
       data-aos="fade-up"
       data-aos-duration="400"
@@ -11,7 +11,7 @@ export const SignUpFooter = () => {
     >
       <p className="text-sm sm:text-base text-gray-400">
         Already have an account?{' '}
-        <Link 
+        <Link
           to={ROUTES.SIGN_IN}
           className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
         >
@@ -19,5 +19,5 @@ export const SignUpFooter = () => {
         </Link>
       </p>
     </div>
-  )
-}
+  );
+};

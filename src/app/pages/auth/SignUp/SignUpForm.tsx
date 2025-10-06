@@ -1,7 +1,19 @@
-import { Input, Button } from '@components'
-import type { SignUpFormProps } from './types'
+import { Input, Button } from '@components';
+import type { SignUpFormData } from './types';
 
-export const SignUpForm = ({ formData, loading, onChange, onSubmit }: SignUpFormProps) => {
+interface SignUpFormProps {
+  formData: SignUpFormData;
+  loading: boolean;
+  onChange: (field: keyof SignUpFormData, value: string) => void;
+  onSubmit: (e: React.FormEvent) => void;
+}
+
+export const SignUpForm = ({
+  formData,
+  loading,
+  onChange,
+  onSubmit,
+}: SignUpFormProps) => {
   return (
     <form onSubmit={onSubmit} className="space-y-4 sm:space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
@@ -73,22 +85,26 @@ export const SignUpForm = ({ formData, loading, onChange, onSubmit }: SignUpForm
         />
       </div>
 
-      <div 
+      <div
         className="flex items-start space-x-3"
         data-aos="fade-up"
         data-aos-duration="400"
         data-aos-delay="450"
       >
-        <input 
-          type="checkbox" 
-          className="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 mt-1 flex-shrink-0" 
-          required 
+        <input
+          type="checkbox"
+          className="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500 mt-1 flex-shrink-0"
+          required
         />
         <span className="text-xs sm:text-sm text-gray-300 leading-relaxed">
           I agree to the{' '}
-          <a href="#" className="text-blue-400 hover:text-blue-300">Terms of Service</a>
-          {' '}and{' '}
-          <a href="#" className="text-blue-400 hover:text-blue-300">Privacy Policy</a>
+          <a href="#" className="text-blue-400 hover:text-blue-300">
+            Terms of Service
+          </a>{' '}
+          and{' '}
+          <a href="#" className="text-blue-400 hover:text-blue-300">
+            Privacy Policy
+          </a>
         </span>
       </div>
 
@@ -105,5 +121,5 @@ export const SignUpForm = ({ formData, loading, onChange, onSubmit }: SignUpForm
         </Button>
       </div>
     </form>
-  )
-}
+  );
+};
