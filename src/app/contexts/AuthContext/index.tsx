@@ -1,6 +1,16 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  type ReactNode,
+} from 'react';
 import { apiService } from '@services/apiService';
-import type { User, AuthContextType, AuthProviderProps } from './types';
+import type { User, AuthContextType } from './types';
+
+interface AuthProviderProps {
+  children: ReactNode;
+}
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 

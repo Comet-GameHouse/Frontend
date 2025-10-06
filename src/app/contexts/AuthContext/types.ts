@@ -1,4 +1,3 @@
-import type { ReactNode } from 'react';
 import type { ApiResponse } from '@services';
 
 export interface User {
@@ -26,8 +25,4 @@ export interface AuthContextType {
   ) => Promise<ApiResponse<{ user: User; token: string }>>;
   signOut: () => void;
   updateUser: (updates: Partial<User>) => void;
-}
-
-export interface AuthProviderProps {
-  children: ReactNode;
 }
