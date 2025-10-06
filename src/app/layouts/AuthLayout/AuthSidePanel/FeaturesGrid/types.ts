@@ -3,8 +3,3 @@ export interface Feature {
   text: string;
   description: string;
 }
-
-export interface FeatureCardProps {
-  feature: Feature;
-  index: number;
-}

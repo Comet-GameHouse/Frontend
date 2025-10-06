@@ -4,7 +4,10 @@ import { Button } from '@components';
 import { useAuth } from '@contexts';
 import { NAVIGATION_ITEMS } from './data';
 
-import type { MobileMenuProps } from './types';
+interface MobileMenuProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
 
 export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   const location = useLocation();
