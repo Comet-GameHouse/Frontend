@@ -19,7 +19,8 @@ export interface AuthContextType {
     password: string
   ) => Promise<ApiResponse<{ user: User; token: string }>>;
   signUp: (
-    username: string,
+    firstName: string,
+    lastName: string,
     email: string,
     password: string
   ) => Promise<ApiResponse<{ user: User; token: string }>>;
