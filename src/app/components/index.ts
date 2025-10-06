@@ -3,6 +3,7 @@ export {
   type ButtonVariant,
   Input,
   Dialog,
+  ProgressBar,
   NotificationContainer,
   type NotificationType,
   type NotificationPosition,
@@ -12,4 +13,5 @@ export {
 
 export { SocialSignIn } from './auth';
 
-export { SectionHeader } from './home';
+export { SectionHeader as HomeSectionHeader } from './home';
+export { SectionHeader as DashboardSectionHeader } from './dashboard';

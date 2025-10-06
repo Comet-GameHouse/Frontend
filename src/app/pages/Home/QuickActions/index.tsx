@@ -1,4 +1,4 @@
-import { SectionHeader } from '@components';
+import { HomeSectionHeader } from '@components';
 
 import { QUICK_ACTIONS } from './data';
 import { QuickActionCard } from './QuickActionCard';
@@ -6,7 +6,7 @@ import { QuickActionCard } from './QuickActionCard';
 export const QuickActions = () => {
   return (
     <section className="py-8 sm:py-12 lg:py-16">
-      <SectionHeader
+      <HomeSectionHeader
         title="Quick Actions"
         subtitle="Get started instantly with these options"
       />

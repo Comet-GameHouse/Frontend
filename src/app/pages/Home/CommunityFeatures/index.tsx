@@ -1,4 +1,4 @@
-import { SectionHeader } from '@components';
+import { HomeSectionHeader } from '@components';
 
 import { COMMUNITY_FEATURES } from './data';
 import { CommunityFeatureCard } from './CommunityFeatureCard';
@@ -6,7 +6,7 @@ import { CommunityFeatureCard } from './CommunityFeatureCard';
 export const CommunityFeatures = () => {
   return (
     <section className="py-8 sm:py-12 lg:py-16">
-      <SectionHeader
+      <HomeSectionHeader
         title="Community Features"
         subtitle="Connect, compete, and grow with our amazing gaming community"
       />

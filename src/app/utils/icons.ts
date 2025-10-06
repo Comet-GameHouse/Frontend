@@ -48,6 +48,10 @@ import {
   faHeart,
   faMap,
   faCar,
+  faTachometerAlt,
+  faFire,
+  faCalendar,
+  faMinus,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -57,8 +61,6 @@ import {
   faYoutube,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
-
-console.log(faGoogle, faDiscord, faInbox);
 
 // Add icons to library
 library.add(
@@ -110,6 +112,10 @@ library.add(
   faHeart,
   faMap,
   faCar,
+  faTachometerAlt,
+  faFire,
+  faCalendar,
+  faMinus,
 
   faGoogle,
   faDiscord,

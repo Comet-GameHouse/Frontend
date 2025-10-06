@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Button, SectionHeader } from '@components';
+import { Button, HomeSectionHeader } from '@components';
 import { ROUTES } from '@constants';
 import { FEATURED_GAMES } from './data';
 import { GameCard } from './GameCard';
@@ -7,7 +7,7 @@ import { GameCard } from './GameCard';
 export const FeaturedGames = () => {
   return (
     <section className="py-8 sm:py-12 lg:py-16">
-      <SectionHeader
+      <HomeSectionHeader
         title="Featured Games"
         subtitle="Jump into our most popular multiplayer experiences. Updated daily with new challenges!"
       />
