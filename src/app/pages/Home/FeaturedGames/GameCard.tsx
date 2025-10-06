@@ -1,5 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from '@components';
+import { ROUTES } from '@constants';
+
 import type { Game } from './types';
 import { Link } from 'react-router-dom';
 
@@ -51,7 +53,7 @@ export const GameCard = ({ game, index }: GameCardProps) => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
             <Link
-              to={`/game/${game.id}`}
+              to={`${ROUTES.GAMES}/${game.id}`}
               className="flex-1 justify-center sm:justify-start"
             >
               <Button
@@ -64,7 +66,7 @@ export const GameCard = ({ game, index }: GameCardProps) => {
               </Button>
             </Link>
             <Link
-              to={`/game/${game.id}/info`}
+              to={`${ROUTES.GAMES}/${game.id}/info`}
               className="flex-1 justify-center sm:justify-start"
             >
               <Button

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@components';
+import { ROUTES } from '@constants';
 import { useAuth } from '@contexts';
 
 export const HeroButtons = () => {
@@ -14,7 +15,7 @@ export const HeroButtons = () => {
     >
       {user ? (
         <>
-          <Link to="/game" className="w-full sm:w-auto flex-1">
+          <Link to={ROUTES.GAMES} className="w-full sm:w-auto flex-1">
             <Button
               variant="primary"
               size="lg"
@@ -24,7 +25,7 @@ export const HeroButtons = () => {
               Play Games
             </Button>
           </Link>
-          <Link to="/dashboard" className="w-full sm:w-auto flex-1">
+          <Link to={ROUTES.DASHBOARD} className="w-full sm:w-auto flex-1">
             <Button
               variant="secondary"
               size="lg"
@@ -37,7 +38,7 @@ export const HeroButtons = () => {
         </>
       ) : (
         <>
-          <Link to="/auth/sign-up" className="w-full sm:w-auto flex-1">
+          <Link to={ROUTES.SIGN_UP} className="w-full sm:w-auto flex-1">
             <Button
               variant="primary"
               size="lg"
@@ -47,7 +48,7 @@ export const HeroButtons = () => {
               Join Free
             </Button>
           </Link>
-          <Link to="/auth/sign-in" className="w-full sm:w-auto flex-1">
+          <Link to={ROUTES.SIGN_IN} className="w-full sm:w-auto flex-1">
             <Button
               variant="secondary"
               size="lg"

@@ -40,6 +40,9 @@ import {
   faRandom,
   faHeadset,
   faArrowRight,
+  faDashboard,
+  faCog,
+  faSignOutAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -94,6 +97,9 @@ library.add(
   faRandom,
   faHeadset,
   faArrowRight,
+  faDashboard,
+  faCog,
+  faSignOutAlt,
 
   faGoogle,
   faDiscord,

@@ -12,7 +12,7 @@ export const Logo = () => {
         <span className="text-white font-bold text-sm sm:text-base lg:text-lg">🚀</span>
       </div>
       <div className="hidden sm:block">
-        <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-orbitron leading-tight">
+        <h1 className="text-lg sm:text-xl lg:text-sm xl:text-2xl font-bold text-white font-orbitron leading-tight">
           Comet-GameHouse
         </h1>
         <p className="text-blue-300 text-xs hidden sm:block">Play & Earn</p>

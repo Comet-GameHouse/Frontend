@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button, SectionHeader } from '@components';
+import { ROUTES } from '@constants';
 import { FEATURED_GAMES } from './data';
 import { GameCard } from './GameCard';
 
@@ -24,7 +25,7 @@ export const FeaturedGames = () => {
         data-aos-duration="400"
         data-aos-delay="200"
       >
-        <Link to="/games" className="w-full">
+        <Link to={ROUTES.GAMES} className="w-full">
           <Button
             variant="primary"
             design="neon"

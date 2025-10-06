@@ -5,7 +5,15 @@ import type { User, AuthContextType, AuthProviderProps } from './types';
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>({
+    id: 'aa',
+    username: 'Supercometstar',
+    email: 'cometstar864@gmail.com',
+    avatar: '',
+    coins: 8342,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  });
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
