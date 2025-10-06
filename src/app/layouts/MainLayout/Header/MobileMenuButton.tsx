@@ -1,6 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import type { MobileMenuButtonProps } from './types';
+export interface MobileMenuButtonProps {
+  isOpen: boolean;
+  onClick: () => void;
+}
 
 export const MobileMenuButton = ({
   isOpen,

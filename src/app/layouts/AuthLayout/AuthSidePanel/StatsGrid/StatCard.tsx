@@ -1,4 +1,8 @@
-import type { StatCardProps } from './types';
+import type { Stat } from './types';
+
+interface StatCardProps {
+  stat: Stat;
+}
 
 export const StatCard = ({ stat }: StatCardProps) => {
   return (

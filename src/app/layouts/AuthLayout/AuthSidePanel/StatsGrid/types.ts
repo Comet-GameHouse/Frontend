@@ -3,7 +3,3 @@ export interface Stat {
   label: string;
   color: string;
 }
-
-export interface StatCardProps {
-  stat: Stat;
-}

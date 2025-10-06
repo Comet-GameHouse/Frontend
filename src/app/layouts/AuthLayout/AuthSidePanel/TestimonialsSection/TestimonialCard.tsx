@@ -1,4 +1,9 @@
-import type { TestimonialCardProps } from './types';
+import type { Testimonial } from './types';
+
+interface TestimonialCardProps {
+  testimonial: Testimonial;
+  index: number;
+}
 
 export const TestimonialCard = ({
   testimonial,

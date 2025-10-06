@@ -1,8 +1,11 @@
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '@contexts';
 import { ROUTES } from '@constants';
+import type { ReactNode } from 'react';
 
-import type { PrivateRouteProps } from './types';
+interface PrivateRouteProps {
+  children: ReactNode;
+}
 
 export const PrivateRoute = ({ children }: PrivateRouteProps) => {
   const { user } = useAuth();

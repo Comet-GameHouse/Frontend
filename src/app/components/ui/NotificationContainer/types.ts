@@ -12,15 +12,6 @@ export type NotificationPosition =
   | 'bottom-left'
   | 'bottom-center';
 
-export interface NotificationProps {
-  id: string;
-  message: string;
-  type: NotificationType;
-  duration: number;
-  position: NotificationPosition;
-  onClose: (id: string) => void;
-}
-
 export interface NotificationItem {
   id: string;
   message: string;

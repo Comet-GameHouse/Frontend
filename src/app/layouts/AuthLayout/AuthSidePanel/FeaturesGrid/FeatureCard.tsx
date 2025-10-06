@@ -1,5 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import type { FeatureCardProps } from './types';
+import type { Feature } from './types';
+
+interface FeatureCardProps {
+  feature: Feature;
+  index: number;
+}
 
 export const FeatureCard = ({ feature, index }: FeatureCardProps) => {
   return (

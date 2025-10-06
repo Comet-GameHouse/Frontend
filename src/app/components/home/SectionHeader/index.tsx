@@ -1,4 +1,8 @@
-import type { SectionHeaderProps } from './types';
+interface SectionHeaderProps {
+  title: string;
+  subtitle: string;
+  className?: string;
+}
 
 export const SectionHeader = ({
   title,

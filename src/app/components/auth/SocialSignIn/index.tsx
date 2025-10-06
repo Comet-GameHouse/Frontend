@@ -1,6 +1,9 @@
 import { Button } from '@components';
 import { SOCIAL_PROVIDERS } from './data';
-import type { SocialSignInProps } from './types';
+
+interface SocialSignInProps {
+  dataAosDelay?: number;
+}
 
 export const SocialSignIn = ({ dataAosDelay = 400 }: SocialSignInProps) => {
   return (

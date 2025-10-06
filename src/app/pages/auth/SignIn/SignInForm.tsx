@@ -1,16 +1,19 @@
-import { Input, Button } from '@components'
+import { Input, Button } from '@components';
+import type { SignInFormData } from './types';
 
 interface SignInFormProps {
-  formData: {
-    email: string
-    password: string
-  }
-  loading: boolean
-  onChange: (field: string, value: string) => void
-  onSubmit: (e: React.FormEvent) => void
+  formData: SignInFormData;
+  loading: boolean;
+  onChange: (field: keyof SignInFormData, value: string) => void;
+  onSubmit: (e: React.FormEvent) => void;
 }
 
-export const SignInForm = ({ formData, loading, onChange, onSubmit }: SignInFormProps) => {
+export const SignInForm = ({
+  formData,
+  loading,
+  onChange,
+  onSubmit,
+}: SignInFormProps) => {
   return (
     <form onSubmit={onSubmit} className="space-y-4 sm:space-y-6">
       <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="200">
@@ -41,17 +44,23 @@ export const SignInForm = ({ formData, loading, onChange, onSubmit }: SignInForm
         />
       </div>
 
-      <div 
+      <div
         className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0"
         data-aos="fade-up"
         data-aos-duration="400"
         data-aos-delay="300"
       >
         <label className="flex items-center order-2 sm:order-1">
-          <input type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500" />
+          <input
+            type="checkbox"
+            className="w-4 h-4 text-blue-600 bg-gray-700 border-gray-600 rounded focus:ring-blue-500"
+          />
           <span className="ml-2 text-sm text-gray-300">Remember me</span>
         </label>
-        <a href="#" className="text-sm text-blue-400 hover:text-blue-300 transition-colors order-1 sm:order-2 text-center sm:text-right">
+        <a
+          href="#"
+          className="text-sm text-blue-400 hover:text-blue-300 transition-colors order-1 sm:order-2 text-center sm:text-right"
+        >
           Forgot password?
         </a>
       </div>
@@ -69,5 +78,5 @@ export const SignInForm = ({ formData, loading, onChange, onSubmit }: SignInForm
         </Button>
       </div>
     </form>
-  )
-}
+  );
+};

@@ -1,4 +1,4 @@
-import type { Game, GameCategory } from './types';
+import type { Game, GameCategory, SortOption } from './types';
 
 export const GAME_CATEGORIES: GameCategory[] = [
   { id: 'all', name: 'All Games', icon: 'gamepad', count: 24 },
@@ -140,7 +140,7 @@ export const GAMES: Game[] = [
   },
 ];
 
-export const SORT_OPTIONS = [
+export const SORT_OPTIONS: SortOption[] = [
   { value: 'popular', label: 'Most Popular' },
   { value: 'newest', label: 'Newest First' },
   { value: 'rating', label: 'Highest Rated' },

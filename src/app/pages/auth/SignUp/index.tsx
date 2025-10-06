@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import { useAuth } from '@contexts'
-import { SocialSignIn } from '@components'
-import { SignUpHeader } from './SignUpHeader'
-import { SignUpForm } from './SignUpForm'
-import { SignUpFooter } from './SignUpFooter'
-import type { SignUpFormData } from './types'
+import { useState } from 'react';
+import { useAuth } from '@contexts';
+import { SocialSignIn } from '@components';
+import { SignUpHeader } from './SignUpHeader';
+import { SignUpForm } from './SignUpForm';
+import { SignUpFooter } from './SignUpFooter';
+import type { SignUpFormData } from './types';
 
 export const SignUp = () => {
   const [formData, setFormData] = useState<SignUpFormData>({
@@ -12,32 +12,37 @@ export const SignUp = () => {
     lastName: '',
     email: '',
     password: '',
-    passwordConfirm: ''
-  })
-  const [loading, setLoading] = useState(false)
-  const { signUp } = useAuth()
+    passwordConfirm: '',
+  });
+  const [loading, setLoading] = useState(false);
+  const { signUp } = useAuth();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    
+    e.preventDefault();
+    setLoading(true);
+
     try {
-      await signUp(formData.firstName, formData.lastName, formData.email, formData.password)
+      await signUp(
+        formData.firstName,
+        formData.lastName,
+        formData.email,
+        formData.password
+      );
     } catch (error) {
       // Error handled by apiService
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const handleChange = (field: keyof SignUpFormData, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
-  }
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
   return (
     <div className="w-full">
       <SignUpHeader />
-      <SignUpForm 
+      <SignUpForm
         formData={formData}
         loading={loading}
         onChange={handleChange}
@@ -46,5 +51,5 @@ export const SignUp = () => {
       <SocialSignIn containerDelay={550} buttonsDelay={600} />
       <SignUpFooter />
     </div>
-  )
-}
+  );
+};

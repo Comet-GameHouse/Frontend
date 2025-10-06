@@ -1,6 +1,21 @@
+import type { ButtonHTMLAttributes } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import type { ButtonProps } from './types';
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 import { BUTTON_VARIANTS, BUTTON_SIZES, BUTTON_DESIGNS } from './data';
+import type { ButtonDesign, ButtonSize, ButtonVariant } from './types';
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  design?: ButtonDesign;
+  loading?: boolean;
+  icon?: IconProp;
+  iconPosition?: 'left' | 'right';
+  pulse?: boolean;
+  glow?: boolean;
+  disabled?: boolean;
+}
 
 export const Button = ({
   variant = 'primary',
@@ -35,7 +50,7 @@ export const Button = ({
         </>
       );
     }
-    
+
     return (
       <>
         {icon && iconPosition === 'left' && <FontAwesomeIcon icon={icon} />}

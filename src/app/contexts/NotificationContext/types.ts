@@ -1,20 +1,20 @@
-import type { ReactNode } from 'react'
-import type { NotificationType, NotificationPosition } from '@components'
+import type { NotificationType, NotificationPosition } from '@components';
 
 export interface NotificationItem {
-  id: string
-  message: string
-  type: NotificationType
-  duration: number
-  position: NotificationPosition
+  id: string;
+  message: string;
+  type: NotificationType;
+  duration: number;
+  position: NotificationPosition;
 }
 
 export interface NotificationContextType {
-  notifications: NotificationItem[]
-  showNotification: (message: string, type?: NotificationType, duration?: number, position?: NotificationPosition) => void
-  hideNotification: (id: string) => void
-}
-
-export interface NotificationProviderProps {
-  children: ReactNode
+  notifications: NotificationItem[];
+  showNotification: (
+    message: string,
+    type?: NotificationType,
+    duration?: number,
+    position?: NotificationPosition
+  ) => void;
+  hideNotification: (id: string) => void;
 }
