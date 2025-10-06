@@ -40,6 +40,14 @@ import {
   faRandom,
   faHeadset,
   faArrowRight,
+  faDashboard,
+  faCog,
+  faSignOutAlt,
+  faFighterJet,
+  faPuzzlePiece,
+  faHeart,
+  faMap,
+  faCar,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -94,6 +102,14 @@ library.add(
   faRandom,
   faHeadset,
   faArrowRight,
+  faDashboard,
+  faCog,
+  faSignOutAlt,
+  faFighterJet,
+  faPuzzlePiece,
+  faHeart,
+  faMap,
+  faCar,
 
   faGoogle,
   faDiscord,

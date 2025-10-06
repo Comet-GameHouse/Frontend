@@ -10,6 +10,8 @@ import {
   Leaderboard,
   Profile,
   NotFound,
+  Community,
+  Games,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -59,6 +61,10 @@ export const routesConfig = [
         element: <Dashboard />,
       },
       {
+        path: ROUTES.GAMES.replace(`${ROUTES.APP}/`, ''),
+        element: <Games />,
+      },
+      {
         path: ROUTES.SHOP.replace(`${ROUTES.APP}/`, ''),
         element: <Shop />,
       },
@@ -67,13 +73,17 @@ export const routesConfig = [
         element: <Leaderboard />,
       },
       {
+        path: ROUTES.COMMUNITY.replace(`${ROUTES.APP}/`, ''),
+        element: <Community />,
+      },
+      {
         path: ROUTES.PROFILE.replace(`${ROUTES.APP}/`, ''),
         element: <Profile />,
       },
     ],
   },
   {
-    path: ROUTES.GAMES,
+    path: ROUTES.GAME_PREFIX,
     element: (
       <PrivateRoute>
         <GameLayout />
@@ -81,7 +91,7 @@ export const routesConfig = [
     ),
     children: [
       {
-        path: ROUTES.GAME_LOBBY.replace(`${ROUTES.GAMES}/`, ''),
+        path: ROUTES.GAME_LOBBY.replace(`${ROUTES.GAME_PREFIX}/`, ''),
         element: <GameLobby />,
       },
     ],

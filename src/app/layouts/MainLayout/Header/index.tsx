@@ -21,7 +21,7 @@ export const Header = () => {
   }, [location.pathname])
 
   return (
-    <header className="bg-gray-800/80 backdrop-blur-lg border-b border-gray-700/50 sticky top-0 z-50">
+    <header className="fixed w-full bg-gray-800/80 backdrop-blur-lg border-b border-gray-700/50 top-0 z-50">
       <div className="relative container mx-auto">
         <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20 px-3 sm:px-4 lg:px-6 xl:px-8">
           <Logo />
