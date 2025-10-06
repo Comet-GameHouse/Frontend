@@ -9,3 +9,4 @@ export {
 } from './NotificationContainer';
 
 export { LoadingSpinner } from './LoadingSpinner';
+export { CometBackground } from './CometBackground';

@@ -1,14 +1,12 @@
-import { STAR_COUNT } from './data';
-
 export const CometBackground = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden">
+    <div className="fixed w-screen h-screen inset-0 overflow-hidden">
       {/* Main Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-gray-950 to-black"></div>
 
       {/* Animated Stars */}
       <div className="absolute inset-0">
-        {[...Array(STAR_COUNT)].map((_, i) => (
+        {[...Array(50)].map((_, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-white rounded-full animate-ping"
