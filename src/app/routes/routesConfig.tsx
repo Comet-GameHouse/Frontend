@@ -23,7 +23,7 @@ export const routesConfig = [
     ),
     children: [
       {
-        index: true,
+        path: '',
         element: <Home />,
       },
     ],

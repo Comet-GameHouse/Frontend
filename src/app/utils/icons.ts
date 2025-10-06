@@ -23,9 +23,32 @@ import {
   faEnvelopeOpen,
   faShieldAlt,
   faUsers,
+  faBars,
+  faHome,
+  faShoppingBag,
+  faTrophy,
+  faComments,
+  faUserFriends,
+  faChartBar,
+  faGift,
+  faAward,
+  faMobileAlt,
+  faChess,
+  faDragon,
+  faLinesLeaning,
+  faPlus,
+  faRandom,
+  faHeadset,
+  faArrowRight,
 } from '@fortawesome/free-solid-svg-icons';
 
-import { faGoogle, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import {
+  faGoogle,
+  faDiscord,
+  faTwitter,
+  faYoutube,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 
 console.log(faGoogle, faDiscord, faInbox);
 
@@ -54,7 +77,27 @@ library.add(
   faEnvelopeOpen,
   faShieldAlt,
   faUsers,
+  faBars,
+  faHome,
+  faShoppingBag,
+  faTrophy,
+  faComments,
+  faUserFriends,
+  faChartBar,
+  faGift,
+  faAward,
+  faMobileAlt,
+  faChess,
+  faDragon,
+  faLinesLeaning,
+  faPlus,
+  faRandom,
+  faHeadset,
+  faArrowRight,
 
   faGoogle,
-  faDiscord
+  faDiscord,
+  faTwitter,
+  faYoutube,
+  faInstagram
 );

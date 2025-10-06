@@ -3,9 +3,9 @@ import 'aos/dist/aos.css'
 
 export const initAOS = () => {
   AOS.init({
-    duration: 800,
+    duration: 400,
     easing: 'ease-out-cubic',
-    once: true,
+    once: false,
     offset: -999999
   })
 }
