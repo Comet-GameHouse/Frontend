@@ -20,7 +20,14 @@ import {
   faExclamationCircle,
   faInfoCircle,
   faInbox,
+  faEnvelopeOpen,
+  faShieldAlt,
+  faUsers,
 } from '@fortawesome/free-solid-svg-icons';
+
+import { faGoogle, faDiscord } from '@fortawesome/free-brands-svg-icons';
+
+console.log(faGoogle, faDiscord, faInbox);
 
 // Add icons to library
 library.add(
@@ -43,5 +50,11 @@ library.add(
   faTimesCircle,
   faExclamationCircle,
   faInfoCircle,
-  faInbox
+  faInbox,
+  faEnvelopeOpen,
+  faShieldAlt,
+  faUsers,
+
+  faGoogle,
+  faDiscord
 );

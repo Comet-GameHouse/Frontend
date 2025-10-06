@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const checkAuthStatus = async () => {
     const token = localStorage.getItem('token');
     if (token) {
-        console.log(token)
+      console.log(token);
       const response = await apiService.get<{ user: User }>('/auth/me');
       if (response.success && response.data) {
         setUser(response.data.user);
@@ -44,12 +44,18 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     return response;
   };
 
-  const signUp = async (username: string, email: string, password: string) => {
+  const signUp = async (
+    firstName: string,
+    lastName: string,
+    email: string,
+    password: string
+  ) => {
     setIsLoading(true);
     const response = await apiService.post<{ user: User; token: string }>(
       '/auth/signup',
       {
-        username,
+        firstName,
+        lastName,
         email,
         password,
       }

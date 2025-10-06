@@ -1,14 +1,3 @@
-import { 
-  faRocket, 
-  faSpinner, 
-  faGamepad,
-  faCoins,
-  faCrown,
-  faBolt,
-  faDice,
-  faPlay
-} from '@fortawesome/free-solid-svg-icons'
-
 export const BUTTON_VARIANTS = {
   primary: 'bg-gradient-to-r from-blue-500 to-cyan-500 border-blue-600 text-white', // Space blue
   secondary: 'bg-gray-700 border-gray-600 text-white',
@@ -28,15 +17,4 @@ export const BUTTON_DESIGNS = {
   neon: 'border-0 shadow-[0_0_5px_theme(colors.blue.400),0_0_10px_theme(colors.blue.400),0_0_15px_theme(colors.blue.400)] hover:shadow-[0_0_10px_theme(colors.blue.400),0_0_20px_theme(colors.blue.400),0_0_30px_theme(colors.blue.400)] transition-shadow',
   pixel: 'border-0 pixelated font-pixel',
   gradient: 'border-0 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all'
-} as const
-
-export const BUTTON_ICONS = {
-  rocket: faRocket,
-  spinner: faSpinner,
-  gamepad: faGamepad,
-  coins: faCoins,
-  crown: faCrown,
-  bolt: faBolt,
-  dice: faDice,
-  play: faPlay
 } as const

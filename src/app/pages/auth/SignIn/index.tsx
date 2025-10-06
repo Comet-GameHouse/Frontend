@@ -1,39 +1,46 @@
-import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useAuth } from '@contexts'
-import { ROUTES } from '@constants'
-import { LoadingSpinner } from '@components'
+import { useState } from 'react';
+import { useAuth } from '@contexts';
+import { SocialSignIn } from '@components';
+import { SignInHeader } from './SignInHeader';
+import { SignInForm } from './SignInForm';
+import { SignInFooter } from './SignInFooter';
 
 export const SignIn = () => {
-  const { user, isLoading } = useAuth()
-  const navigate = useNavigate()
-  console.log(user, isLoading)
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+  const [loading, setLoading] = useState(false);
+  const { signIn } = useAuth();
 
-  useEffect(() => {
-    // If user is already signed in (via token auto-signin), redirect to dashboard
-    if (user) {
-      navigate(ROUTES.DASHBOARD, { replace: true })
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      await signIn(formData.email, formData.password);
+    } catch (error) {
+      // Error handled by apiService
+    } finally {
+      setLoading(false);
     }
-  }, [user, navigate])
+  };
 
-  // Show loading while checking auth status
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <LoadingSpinner />
-        <p className="ml-4">Checking authentication...</p>
-      </div>
-    )
-  }
-
-  if (user) {
-    return <LoadingSpinner />
-  }
+  const handleChange = (field: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
   return (
     <div>
-      SignIn Page
-      {/* Your sign in form will go here */}
+      <SignInHeader />
+      <SignInForm
+        formData={formData}
+        loading={loading}
+        onChange={handleChange}
+        onSubmit={handleSubmit}
+      />
+      <SocialSignIn dataAosDelay={400} />
+      <SignInFooter />
     </div>
-  )
-}
+  );
+};
