@@ -1,6 +1,8 @@
 export const ROUTES = {
   // Public routes
   HOME: '/',
+  SUPPORT: '/support',
+  PROFILE: '/profile/:id',
 
   // Auth routes
   AUTH: '/auth',
@@ -15,9 +17,9 @@ export const ROUTES = {
   SHOP: '/app/shop',
   LEADERBOARD: '/app/leaderboard',
   COMMUNITY: '/app/community',
-  PROFILE: '/app/profile/:id',
   MY_PROFILE: '/app/profile',
   SETTINGS: '/app/settings',
+  PLAYERS: '/app/players',
 
   // Game routes
   GAME_PREFIX: '/games',

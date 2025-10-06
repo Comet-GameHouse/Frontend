@@ -11,3 +11,4 @@ export {
 
 export { LoadingSpinner } from './LoadingSpinner';
 export { CometBackground } from './CometBackground';
+export { Loading } from './Loading';

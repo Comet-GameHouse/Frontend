@@ -9,6 +9,7 @@ export {
   type NotificationPosition,
   LoadingSpinner,
   CometBackground,
+  Loading,
 } from './ui';
 
 export { SocialSignIn } from './auth';
