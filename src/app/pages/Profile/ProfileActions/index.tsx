@@ -17,20 +17,20 @@ export const ProfileActions = ({ profile, onAction }: ProfileActionsProps) => {
             label: 'Customize Profile',
             icon: 'edit',
             variant: 'primary',
-            action: 'EDIT_PROFILE'
+            action: 'EDIT_PROFILE',
           },
           {
             label: 'Change Theme',
             icon: 'palette',
             variant: 'secondary',
-            action: 'CUSTOMIZE'
+            action: 'CUSTOMIZE',
           },
           {
             label: 'Share Profile',
             icon: 'share-alt',
             variant: 'secondary',
-            action: 'SHARE'
-          }
+            action: 'SHARE',
+          },
         ]}
         onAction={onAction}
       />
@@ -46,28 +46,30 @@ export const ProfileActions = ({ profile, onAction }: ProfileActionsProps) => {
           label: profile.isFriend ? 'Remove Friend' : 'Add Friend',
           icon: profile.isFriend ? 'user-minus' : 'user-plus',
           variant: profile.isFriend ? 'secondary' : 'primary',
-          action: profile.isFriend ? 'REMOVE_FRIEND' : 'ADD_FRIEND'
+          action: profile.isFriend ? 'REMOVE_FRIEND' : 'ADD_FRIEND',
         },
         {
           label: 'Send Message',
           icon: 'comment',
           variant: 'secondary',
-          action: 'SEND_MESSAGE'
+          action: 'SEND_MESSAGE',
         },
         {
           label: 'Challenge to Game',
           icon: 'gamepad',
           variant: 'secondary',
-          action: 'CHALLENGE'
+          action: 'CHALLENGE',
         },
         {
           label: 'Block User',
           icon: 'ban',
           variant: 'danger',
-          action: 'BLOCK'
-        }
+          action: 'BLOCK',
+        },
       ]}
       onAction={onAction}
     />
   );
 };
+
+export type { UserProfile } from './types';

@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
+import { Loading } from '@components';
+import { NotFound } from '@pages';
+
 import { ProfileHero } from './ProfileHero';
 import { ProfileStatsCards } from './ProfileStatsCards';
 import { GameMastery } from './GameMastery';
@@ -37,18 +41,17 @@ export const Profile = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900/10 to-purple-900/10 flex items-center justify-center">
-        <div className="text-white text-xl">Loading profile...</div>
-      </div>
+      <Loading
+        type="page"
+        message="Loading Profile"
+        subMessage="Preparing your gaming journey..."
+        showProgress={true}
+      />
     );
   }
 
   if (!profile) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900/10 to-purple-900/10 flex items-center justify-center">
-        <div className="text-white text-xl">Profile not found</div>
-      </div>
-    );
+    return <NotFound />;
   }
 
   const profileId = profile.id;

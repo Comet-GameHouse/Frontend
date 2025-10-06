@@ -28,6 +28,10 @@ export const routesConfig = [
         path: '',
         element: <Home />,
       },
+      {
+        path: ROUTES.PROFILE.replace(`${ROUTES.APP}/`, ''),
+        element: <Profile />,
+      },
     ],
   },
   {
@@ -77,7 +81,7 @@ export const routesConfig = [
         element: <Community />,
       },
       {
-        path: ROUTES.PROFILE.replace(`${ROUTES.APP}/`, ''),
+        path: ROUTES.MY_PROFILE.replace(`${ROUTES.APP}/`, ''),
         element: <Profile />,
       },
     ],
@@ -98,6 +102,12 @@ export const routesConfig = [
   },
   {
     path: ROUTES.NOT_FOUND,
-    element: <NotFound />,
+    element: <MainLayout />,
+    children: [
+      {
+        path: '*',
+        element: <NotFound />,
+      },
+    ],
   },
 ];
