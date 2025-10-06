@@ -2,7 +2,6 @@ import { GAMES } from './data';
 
 export const GamesStats = () => {
   const totalPlayers = GAMES.reduce((sum, game) => sum + parseInt(game.online.replace('K', '000')), 0);
-  const featuredGames = GAMES.filter(game => game.isFeatured).length;
   const newGames = GAMES.filter(game => game.isNew).length;
 
   return (

@@ -1,7 +1,7 @@
 import { ROUTES } from '@constants';
 
 export const NAVIGATION_ITEMS = [
-  { path: ROUTES.HOME, label: 'Home', icon: 'home' },
+  // { path: ROUTES.HOME, label: 'Home', icon: 'home' },
   { path: ROUTES.GAMES, label: 'Games', icon: 'gamepad' },
   { path: ROUTES.SHOP, label: 'Shop', icon: 'shopping-bag' },
   { path: ROUTES.LEADERBOARD, label: 'Leaderboard', icon: 'trophy' },

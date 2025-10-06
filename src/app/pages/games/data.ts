@@ -17,7 +17,7 @@ export const GAMES: Game[] = [
       'Strategic card battle with cute sheep characters in a 5-line formation. Outsmart your opponents!',
     players: '2-4 Players',
     online: '1.2K',
-    icon: 'sheep',
+    icon: 'lines-leaning',
     color: 'from-green-500 to-emerald-500',
     gradient: 'bg-gradient-to-r from-green-500 to-emerald-500',
     category: 'strategy',

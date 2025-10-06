@@ -9,7 +9,7 @@ export const MainLayout = () => {
     <div className="min-h-screen bg-gray-900 flex flex-col">
       <CometBackground />
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 mt-24">
         <Outlet />
       </main>
       <Footer />

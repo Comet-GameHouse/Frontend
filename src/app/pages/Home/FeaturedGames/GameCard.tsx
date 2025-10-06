@@ -53,7 +53,7 @@ export const GameCard = ({ game, index }: GameCardProps) => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
             <Link
-              to={`${ROUTES.GAMES}/${game.id}`}
+              to={`${ROUTES.GAME_PREFIX}/${game.id}`}
               className="flex-1 justify-center sm:justify-start"
             >
               <Button
@@ -66,7 +66,7 @@ export const GameCard = ({ game, index }: GameCardProps) => {
               </Button>
             </Link>
             <Link
-              to={`${ROUTES.GAMES}/${game.id}/info`}
+              to={`${ROUTES.GAME_PREFIX}/${game.id}/info`}
               className="flex-1 justify-center sm:justify-start"
             >
               <Button
