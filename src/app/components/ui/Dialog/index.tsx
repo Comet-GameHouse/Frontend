@@ -1,10 +1,22 @@
-import { useEffect, useState } from 'react'
-import { createPortal } from 'react-dom'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import type { DialogProps } from './types'
-import { DIALOG_SIZES } from './data'
+import { useEffect, useState, type ReactNode } from 'react';
+import { createPortal } from 'react-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import AOS from 'aos';
+
+import { DIALOG_SIZES } from './data';
+import type { DialogSize } from './types';
+
+interface DialogProps {
+  isOpen: boolean;
+  onClose: () => void;
+  title?: string;
+  children: ReactNode;
+  size?: DialogSize;
+  showCloseButton?: boolean;
+  overlayBlur?: boolean;
+  overlayDark?: boolean;
+  preventClose?: boolean;
+}
 
 export const Dialog = ({
   isOpen,
@@ -15,55 +27,55 @@ export const Dialog = ({
   showCloseButton = true,
   overlayBlur = true,
   overlayDark = true,
-  preventClose = false
+  preventClose = false,
 }: DialogProps) => {
-  const [isMounted, setIsMounted] = useState(false)
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
-      setIsMounted(true)
-      AOS.refresh() // Refresh AOS to detect new elements
+      setIsMounted(true);
+      AOS.refresh(); // Refresh AOS to detect new elements
     } else {
-      const timer = setTimeout(() => setIsMounted(false), 300)
-      return () => clearTimeout(timer)
+      const timer = setTimeout(() => setIsMounted(false), 300);
+      return () => clearTimeout(timer);
     }
-  }, [isOpen])
+  }, [isOpen]);
 
   useEffect(() => {
     // Initialize AOS
     AOS.init({
       duration: 200,
       easing: 'ease-out-cubic',
-      once: true
-    })
-  }, [])
+      once: true,
+    });
+  }, []);
 
   // Close handlers (same as before)
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && !preventClose) {
-        onClose()
+        onClose();
       }
-    }
+    };
 
     if (isMounted) {
-      document.addEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'hidden'
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'unset'
-    }
-  }, [isMounted, onClose, preventClose])
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMounted, onClose, preventClose]);
 
   const handleOverlayClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget && !preventClose) {
-      onClose()
+      onClose();
     }
-  }
+  };
 
-  if (!isMounted) return null
+  if (!isMounted) return null;
 
   return createPortal(
     <div
@@ -100,9 +112,9 @@ export const Dialog = ({
                 className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-700 hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 group"
                 aria-label="Close dialog"
               >
-                <FontAwesomeIcon 
-                  icon="times" 
-                  className="text-gray-400 group-hover:text-white transition-colors" 
+                <FontAwesomeIcon
+                  icon="times"
+                  className="text-gray-400 group-hover:text-white transition-colors"
                 />
               </button>
             )}
@@ -110,11 +122,9 @@ export const Dialog = ({
         )}
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto p-6">
-          {children}
-        </div>
+        <div className="flex-1 overflow-y-auto p-6">{children}</div>
       </div>
     </div>,
     document.body
-  )
-}
+  );
+};

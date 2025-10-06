@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import type { NotificationProps } from './types';
 import {
   NOTIFICATION_ICONS,
   NOTIFICATION_BACKGROUNDS,
@@ -10,6 +9,16 @@ import {
   NOTIFICATION_ICON_BORDERS,
   NOTIFICATION_PROGRESS_COLORS,
 } from './data';
+import type { NotificationPosition, NotificationType } from './types';
+
+interface NotificationProps {
+  id: string;
+  message: string;
+  type: NotificationType;
+  duration: number;
+  position: NotificationPosition;
+  onClose: (id: string) => void;
+}
 
 export const Notification = ({
   id,

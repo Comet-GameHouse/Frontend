@@ -1,4 +1,7 @@
-export const NOTIFICATION_ICONS = {
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
+import type { NotificationPosition, NotificationType } from './types';
+
+export const NOTIFICATION_ICONS: Record<NotificationType, IconProp> = {
   success: 'check-circle',
   error: 'times-circle',
   warning: 'exclamation-triangle',
@@ -6,7 +9,10 @@ export const NOTIFICATION_ICONS = {
   premium: 'crown',
 } as const;
 
-export const NOTIFICATION_POSITION_STYLES = {
+export const NOTIFICATION_POSITION_STYLES: Record<
+  NotificationPosition,
+  string
+> = {
   'top-right': 'top-4 right-4',
   'top-left': 'top-4 left-4',
   'top-center': 'top-4 left-1/2 transform -translate-x-1/2',
@@ -15,7 +21,7 @@ export const NOTIFICATION_POSITION_STYLES = {
   'bottom-center': 'bottom-4 left-1/2 transform -translate-x-1/2',
 } as const;
 
-export const NOTIFICATION_BACKGROUNDS = {
+export const NOTIFICATION_BACKGROUNDS: Record<NotificationType, string> = {
   success:
     'bg-gradient-to-r from-green-500/20 to-emerald-600/20 backdrop-blur-md',
   error: 'bg-gradient-to-r from-red-500/20 to-pink-600/20 backdrop-blur-md',
@@ -26,7 +32,7 @@ export const NOTIFICATION_BACKGROUNDS = {
     'bg-gradient-to-r from-purple-500/20 to-pink-600/20 backdrop-blur-md',
 } as const;
 
-export const NOTIFICATION_BORDERS = {
+export const NOTIFICATION_BORDERS: Record<NotificationType, string> = {
   success: 'border-l-green-500',
   error: 'border-l-red-500',
   warning: 'border-l-yellow-500',
@@ -34,7 +40,7 @@ export const NOTIFICATION_BORDERS = {
   premium: 'border-l-purple-500',
 } as const;
 
-export const NOTIFICATION_TEXT_COLORS = {
+export const NOTIFICATION_TEXT_COLORS: Record<NotificationType, string> = {
   success: 'text-green-100',
   error: 'text-red-100',
   warning: 'text-yellow-100',
@@ -42,7 +48,7 @@ export const NOTIFICATION_TEXT_COLORS = {
   premium: 'text-purple-100',
 } as const;
 
-export const NOTIFICATION_ICON_BACKGROUNDS = {
+export const NOTIFICATION_ICON_BACKGROUNDS: Record<NotificationType, string> = {
   success: 'bg-green-500',
   error: 'bg-red-500',
   warning: 'bg-yellow-500',
@@ -50,7 +56,7 @@ export const NOTIFICATION_ICON_BACKGROUNDS = {
   premium: 'bg-gradient-to-r from-purple-500 to-pink-500',
 } as const;
 
-export const NOTIFICATION_ICON_BORDERS = {
+export const NOTIFICATION_ICON_BORDERS: Record<NotificationType, string> = {
   success: 'border-2 border-green-300',
   error: 'border-2 border-red-300',
   warning: 'border-2 border-yellow-300',
@@ -58,7 +64,7 @@ export const NOTIFICATION_ICON_BORDERS = {
   premium: 'border-2 border-purple-300',
 } as const;
 
-export const NOTIFICATION_PROGRESS_COLORS = {
+export const NOTIFICATION_PROGRESS_COLORS: Record<NotificationType, string> = {
   success: 'bg-green-400',
   error: 'bg-red-400',
   warning: 'bg-yellow-400',
