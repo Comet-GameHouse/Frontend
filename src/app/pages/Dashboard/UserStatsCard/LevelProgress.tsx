@@ -12,7 +12,7 @@ export const LevelProgress = ({
   nextLevelExp,
 }: LevelProgressProps) => {
   return (
-    <div className="mb-6">
+    <div className="mb-6" data-aos="zoom-in" data-aos-delay="50">
       <div className="flex justify-between items-center mb-2">
         <span className="text-gray-300 font-medium">Level {level}</span>
         <span className="text-blue-400 text-sm">

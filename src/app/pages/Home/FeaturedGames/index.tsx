@@ -23,7 +23,7 @@ export const FeaturedGames = () => {
         className="text-center mt-8 sm:mt-12"
         data-aos="fade-up"
         data-aos-duration="400"
-        data-aos-delay="200"
+        data-aos-delay="350"
       >
         <Link to={ROUTES.GAMES} className="w-full">
           <Button

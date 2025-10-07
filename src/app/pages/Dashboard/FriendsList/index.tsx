@@ -11,7 +11,6 @@ export const FriendsList = ({ friends }: FriendsListProps) => {
     <div
       className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30"
       data-aos="fade-up"
-      data-aos-duration="400"
       data-aos-delay="400"
     >
       <DashboardSectionHeader title="Friends" actionText="View All" />

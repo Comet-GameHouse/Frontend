@@ -6,7 +6,6 @@ export const SignInFooter = () => {
     <div
       className="text-center mt-6 sm:mt-8 px-4 sm:px-0"
       data-aos="fade-up"
-      data-aos-duration="400"
       data-aos-delay="450"
     >
       <p className="text-sm sm:text-base text-gray-400">

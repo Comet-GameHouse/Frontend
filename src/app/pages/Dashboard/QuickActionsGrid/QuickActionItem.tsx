@@ -13,13 +13,12 @@ export const QuickActionItem = ({ action, index }: QuickActionItemProps) => {
   return (
     <button
       onClick={() => navigate(action.path)}
-      className="bg-gray-700/20 rounded-xl p-4 border border-gray-600/30 hover:border-blue-500/30 transition-all duration-300 group text-left w-full"
+      className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-4 border border-gray-700/30 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300 group text-left w-full hover:scale-[1.02] cursor-pointer shadow-lg hover:shadow-blue-500/20"
       data-aos="zoom-in"
-      data-aos-duration="300"
-      data-aos-delay={index * 100}
+      data-aos-delay={100 + (index + 1) * 50}
     >
       <div
-        className={`w-12 h-12 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center shadow-lg mb-3 group-hover:scale-110 transition-transform duration-300`}
+        className={`w-12 h-12 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center shadow-lg mb-3 group-hover:scale-105 transition-transform duration-300`}
       >
         <FontAwesomeIcon icon={action.icon} className="text-white text-base" />
       </div>

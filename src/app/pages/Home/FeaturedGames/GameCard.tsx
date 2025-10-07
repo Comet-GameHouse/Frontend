@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from '@components';
 import { ROUTES } from '@constants';
-
 import type { Game } from './types';
 import { Link } from 'react-router-dom';
 
@@ -13,15 +12,15 @@ interface GameCardProps {
 export const GameCard = ({ game, index }: GameCardProps) => {
   return (
     <div
-      className="bg-gray-800/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-700/30 hover:border-blue-500/50 transition-all duration-300 group hover:scale-[1.02]"
+      className="bg-gray-800/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-700/30 hover:border-gray-500/30 transition-all duration-300 group cursor-default hover:scale-[1.01]"
       data-aos="fade-up"
       data-aos-duration="500"
-      data-aos-delay={index * 100}
+      data-aos-delay={100 + (index + 1) * 50}
     >
       <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
         {/* Game Icon */}
         <div
-          className={`w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 ${game.gradient} rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0 mx-auto sm:mx-0`}
+          className={`w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 ${game.gradient} rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 flex-shrink-0 mx-auto sm:mx-0`}
         >
           <FontAwesomeIcon
             icon={game.icon}

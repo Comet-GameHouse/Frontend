@@ -12,7 +12,6 @@ export const UserInfo = () => {
       <div 
         className="hidden sm:flex items-center space-x-2 lg:space-x-3 bg-gray-700/50 rounded-lg px-3 lg:px-4 py-1.5 lg:py-2 min-w-0"
         data-aos="fade-left"
-        data-aos-duration="400"
         data-aos-delay="200"
       >
         <div className="text-right min-w-0 flex-1">

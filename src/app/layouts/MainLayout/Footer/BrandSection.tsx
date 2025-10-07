@@ -7,7 +7,6 @@ export const BrandSection = () => {
     <div
       className="md:col-span-3 lg:col-span-2 text-center md:text-left"
       data-aos="fade-up"
-      data-aos-duration="400"
     >
       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-3 mb-4 md:mb-6">
         <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">

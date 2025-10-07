@@ -16,7 +16,7 @@ export const SignInForm = ({
 }: SignInFormProps) => {
   return (
     <form onSubmit={onSubmit} className="space-y-4 sm:space-y-6">
-      <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="200">
+      <div data-aos="fade-up" data-aos-delay="200">
         <Input
           label="Email Address"
           icon="envelope-open"
@@ -30,7 +30,7 @@ export const SignInForm = ({
         />
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="250">
+      <div data-aos="fade-up" data-aos-delay="250">
         <Input
           label="Password"
           icon="lock"
@@ -65,7 +65,7 @@ export const SignInForm = ({
         </a>
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="350">
+      <div data-aos="fade-up" data-aos-delay="350">
         <Button
           type="submit"
           variant="primary"

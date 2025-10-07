@@ -5,8 +5,7 @@ export const BottomBar = () => {
     <div
       className="border-t border-gray-700/50 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
       data-aos="fade-up"
-      data-aos-duration="400"
-      data-aos-delay="500"
+      data-aos-delay="600"
     >
       <p className="text-gray-400 text-base md:text-sm text-center md:text-left order-2 md:order-1">
         © 2024 Comet-GameHouse. All rights reserved.

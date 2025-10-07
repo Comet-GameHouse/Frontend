@@ -14,7 +14,6 @@ export const FooterLinksSection = ({
     <div
       className="text-center md:text-left"
       data-aos="fade-up"
-      data-aos-duration="400"
       data-aos-delay={(index + 1) * 100}
     >
       <h4 className="text-xl md:text-lg lg:text-xl font-bold text-white mb-4 md:mb-6 font-orbitron">
@@ -27,8 +26,7 @@ export const FooterLinksSection = ({
               to={link.path}
               className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:translate-x-1 text-base md:text-sm lg:text-base flex items-center justify-center md:justify-start group"
               data-aos="fade-right"
-              data-aos-duration="300"
-              data-aos-delay={(index + 1) * 100 + linkIndex * 50}
+              data-aos-delay={(index + 1) * 100 + (linkIndex + 1) * 50}
             >
               <span className="w-1 h-1 bg-blue-500 rounded-full mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:inline-block"></span>
               {link.label}

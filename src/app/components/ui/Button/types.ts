@@ -3,6 +3,7 @@ export type ButtonVariant =
   | 'secondary'
   | 'danger'
   | 'success'
+  | 'warning'
   | 'premium';
 export type ButtonSize = 'sm' | 'md' | 'lg';
 export type ButtonDesign = 'neon' | 'pixel' | 'gradient';

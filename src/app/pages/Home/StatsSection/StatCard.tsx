@@ -11,8 +11,7 @@ export const StatCard = ({ stat, index }: StatCardProps) => {
     <div
       className="text-center group p-4 sm:p-6 hover:scale-105 transition-transform duration-300"
       data-aos="fade-up"
-      data-aos-duration="400"
-      data-aos-delay={index * 100}
+      data-aos-delay={300 + (index + 1) * 50}
     >
       <div className="text-2xl sm:text-3xl lg:text-4xl mb-2 sm:mb-3">
         <FontAwesomeIcon icon={stat.icon} className={stat.color} />

@@ -1,8 +1,9 @@
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from '@components';
 import { useAuth } from '@contexts';
 import { NAVIGATION_ITEMS } from './data';
+import { ROUTES } from '@constants';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -11,7 +12,6 @@ interface MobileMenuProps {
 
 export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   const location = useLocation();
-  const navigate = useNavigate();
   const { user } = useAuth();
 
   return (
@@ -20,7 +20,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
     >
       {/* Mobile Navigation Items */}
       <nav className="space-y-2 mb-4">
-        {NAVIGATION_ITEMS.map((item, index) => (
+        {NAVIGATION_ITEMS.map((item) => (
           <Link
             key={item.path}
             to={item.path}
@@ -30,9 +30,6 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
             }`}
             onClick={onClose}
-            data-aos="fade-right"
-            data-aos-duration="300"
-            data-aos-delay={index * 50}
           >
             <FontAwesomeIcon icon={item.icon} className="w-4 h-4" />
             <span className="font-semibold text-sm">{item.label}</span>
@@ -44,32 +41,25 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       {!user && (
         <div
           className="border-t border-gray-700/50 pt-4 space-y-2"
-          data-aos="fade-up"
-          data-aos-duration="300"
-          data-aos-delay="200"
         >
-          <Button
-            variant="primary"
-            size="sm"
-            onClick={() => {
-              navigate('/signin');
-              onClose();
-            }}
-            className="w-full justify-center transform hover:scale-[1.02] transition-transform duration-300"
-          >
-            Sign In
-          </Button>
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={() => {
-              navigate('/signup');
-              onClose();
-            }}
-            className="w-full justify-center transform hover:scale-[1.02] transition-transform duration-300"
-          >
-            Create Account
-          </Button>
+          <Link to={ROUTES.SIGN_IN} className="block">
+            <Button
+              variant="primary"
+              size="sm"
+              className="w-full justify-center transform hover:scale-[1.02] transition-transform duration-300"
+            >
+              Sign In
+            </Button>
+          </Link>
+          <Link to={ROUTES.SIGN_UP} className="block">
+            <Button
+              variant="secondary"
+              size="sm"
+              className="w-full justify-center transform hover:scale-[1.02] transition-transform duration-300"
+            >
+              Create Account
+            </Button>
+          </Link>
         </div>
       )}
     </div>

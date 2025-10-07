@@ -14,10 +14,9 @@ export const AchievementItem = ({
 }: AchievementItemProps) => {
   return (
     <div
-      className="flex items-center space-x-4 p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-colors duration-300"
+      className="flex items-center space-x-4 p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-colors duration-300 cursor-default"
       data-aos="fade-right"
-      data-aos-duration="300"
-      data-aos-delay={index * 50}
+      data-aos-delay={300 + (index + 1) * 50}
     >
       <AchievementIcon
         icon={achievement.icon}

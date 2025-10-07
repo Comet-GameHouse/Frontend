@@ -35,6 +35,8 @@ export const UserMenu = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="user-menu-button w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition-colors duration-200 flex-shrink-0 cursor-pointer"
+        data-aos="fade-left"
+        data-aos-delay="100"
       >
         <FontAwesomeIcon icon="user" className="text-gray-300 text-sm" />
       </button>

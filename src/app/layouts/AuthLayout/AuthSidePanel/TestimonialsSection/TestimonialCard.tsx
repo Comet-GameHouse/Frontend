@@ -13,8 +13,7 @@ export const TestimonialCard = ({
     <div
       className="bg-blue-500/10 rounded-xl p-3 lg:p-4 border border-blue-500/20"
       data-aos="fade-right"
-      data-aos-duration="400"
-      data-aos-delay={550 + index * 100}
+      data-aos-delay={500 + (index + 1) * 50}
     >
       <p className="text-gray-200 text-sm italic">"{testimonial.text}"</p>
       <div className="mt-2">

@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { GameFilter } from './types';
+import { Input } from '@components';
 
 interface GameSearchProps {
   filters: GameFilter;
@@ -11,7 +12,7 @@ export const GameSearch = ({ filters, onFiltersChange }: GameSearchProps) => {
     <div
       className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-700/30 mb-6 sm:mb-8"
       data-aos="fade-up"
-      data-aos-duration="400"
+      data-aos-delay="200"
     >
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
         {/* Search Input */}
@@ -21,14 +22,17 @@ export const GameSearch = ({ filters, onFiltersChange }: GameSearchProps) => {
               icon="search"
               className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4"
             />
-            <input
+            <Input
+              icon="envelope-open"
               type="text"
               placeholder="Search games..."
               value={filters.search}
               onChange={(e) =>
                 onFiltersChange({ ...filters, search: e.target.value })
               }
-              className="w-full bg-gray-700/50 border border-gray-600/50 rounded-xl pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors duration-300"
+              required
+              variant="primary"
+              inputSize="md"
             />
           </div>
         </div>

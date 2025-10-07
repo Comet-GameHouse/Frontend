@@ -13,7 +13,7 @@ export const GamesGrid = ({ games }: GamesGridProps) => {
       <div
         className="text-center py-12"
         data-aos="fade-up"
-        data-aos-duration="400"
+        data-aos-delay="400"
       >
         <FontAwesomeIcon
           icon="search"
