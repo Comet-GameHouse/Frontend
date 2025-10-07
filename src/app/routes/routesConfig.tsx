@@ -12,6 +12,7 @@ import {
   NotFound,
   Community,
   Games,
+  Settings,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -83,6 +84,10 @@ export const routesConfig = [
       {
         path: ROUTES.MY_PROFILE.replace(`${ROUTES.APP}/`, ''),
         element: <Profile />,
+      },
+      {
+        path: ROUTES.SETTINGS.replace(`${ROUTES.APP}/`, ''),
+        element: <Settings />,
       },
     ],
   },

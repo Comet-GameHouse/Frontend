@@ -8,3 +8,4 @@ export { Leaderboard } from './Leaderboard';
 export { Profile } from './Profile';
 export { NotFound } from './NotFound';
 export { Community } from './Community';
+export { Settings } from './Settings';
