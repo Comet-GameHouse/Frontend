@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { ProfileTimelineEvent } from './types';
+import { Card } from '@components';
 
 interface TimelineEventProps {
   event: ProfileTimelineEvent;
@@ -42,8 +43,9 @@ export const TimelineEvent = ({ event, index }: TimelineEventProps) => {
   };
 
   return (
-    <div
-      className="flex items-start space-x-3 p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group cursor-default"
+    <Card
+      variant="static-paper"
+      className="flex items-start space-x-3 !p-3"
       data-aos="fade-left"
       data-aos-delay={400 + (index + 1) * 50}
     >
@@ -75,6 +77,6 @@ export const TimelineEvent = ({ event, index }: TimelineEventProps) => {
           })}
         </div>
       </div>
-    </div>
+    </Card>
   );
 };

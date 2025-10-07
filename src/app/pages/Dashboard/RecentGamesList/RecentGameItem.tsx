@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { RecentGame } from './types';
 import { GameResultIcon } from './GameResultIcon';
+import { Card } from '@components';
 
 interface RecentGameItemProps {
   game: RecentGame;
@@ -22,8 +23,9 @@ export const RecentGameItem = ({ game, index }: RecentGameItemProps) => {
   };
 
   return (
-    <div
-      className="flex items-center justify-between p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-colors duration-300 cursor-default"
+    <Card
+      variant="static-paper"
+      className="flex items-center justify-between"
       data-aos="fade-right"
       data-aos-delay={200 + (index + 1) * 50}
     >
@@ -46,6 +48,6 @@ export const RecentGameItem = ({ game, index }: RecentGameItemProps) => {
           <span>+{game.coinsEarned}</span>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };

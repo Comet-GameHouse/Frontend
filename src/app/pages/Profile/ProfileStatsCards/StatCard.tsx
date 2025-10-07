@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { StatCard as StatCardType } from './types';
 import type { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { Card } from '@components';
 
 interface StatCardProps {
   card: StatCardType;
@@ -9,8 +10,8 @@ interface StatCardProps {
 
 export const StatCard = ({ card, index }: StatCardProps) => {
   return (
-    <div
-      className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-4 border border-gray-700/30 hover:border-gray-500/30 transition-all duration-300 group hover:scale-[1.01] cursor-default"
+    <Card
+      variant="static-feature"
       data-aos="zoom-in"
       data-aos-delay={100 + (index + 1) * 50}
     >
@@ -29,6 +30,6 @@ export const StatCard = ({ card, index }: StatCardProps) => {
         {card.value}
       </div>
       <div className="text-gray-400 text-sm font-medium">{card.label}</div>
-    </div>
+    </Card>
   );
 };

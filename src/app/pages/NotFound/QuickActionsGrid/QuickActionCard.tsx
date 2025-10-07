@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'react-router-dom';
 import type { QuickNavigation } from './types';
+import { Card } from '@components';
 
 interface QuickActionCardProps {
   action: QuickNavigation;
@@ -9,9 +9,10 @@ interface QuickActionCardProps {
 
 export const QuickActionCard = ({ action, index }: QuickActionCardProps) => {
   return (
-    <Link
+    <Card
       to={action.path}
-      className="bg-gray-800/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-6 border border-gray-700/30 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300 group hover:scale-[1.02] cursor-pointer shadow-lg hover:shadow-blue-500/20 active:scale-95 block h-full"
+      type="link"
+      variant="clickable"
       data-aos="fade-up"
       data-aos-delay={200 + (index + 1) * 50}
     >
@@ -42,6 +43,6 @@ export const QuickActionCard = ({ action, index }: QuickActionCardProps) => {
           />
         </div>
       </div>
-    </Link>
+    </Card>
   );
 };

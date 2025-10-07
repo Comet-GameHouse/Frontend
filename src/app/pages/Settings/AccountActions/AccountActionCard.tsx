@@ -1,12 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { AccountAction } from './types';
+import { Card } from '@components';
 
 interface AccountActionCardProps {
   action: AccountAction;
   index: number;
 }
 
-export const AccountActionCard = ({ action, index }: AccountActionCardProps) => {
+export const AccountActionCard = ({
+  action,
+  index,
+}: AccountActionCardProps) => {
   const getTypeStyles = (type: AccountAction['type']) => {
     switch (type) {
       case 'danger':
@@ -21,17 +25,22 @@ export const AccountActionCard = ({ action, index }: AccountActionCardProps) => 
   };
 
   return (
-    <div
-      key={action.id}
-      className="bg-gray-800/30 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-700/30 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300 group hover:scale-[1.02] cursor-pointer shadow-lg hover:shadow-blue-500/20 h-full flex flex-col"
+    <Card
+      variant="clickable"
+      className="sm:p-6"
       data-aos="fade-up"
       data-aos-delay={index * 100}
       onClick={action.action}
     >
       <div className="flex flex-col h-full">
         <div className="flex items-start justify-between mb-4">
-          <div className={`w-12 h-12 bg-gradient-to-r ${getTypeStyles(action.type)} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 flex-shrink-0`}>
-            <FontAwesomeIcon icon={action.icon} className="text-white text-base" />
+          <div
+            className={`w-12 h-12 bg-gradient-to-r ${getTypeStyles(action.type)} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300 flex-shrink-0`}
+          >
+            <FontAwesomeIcon
+              icon={action.icon}
+              className="text-white text-base"
+            />
           </div>
         </div>
 
@@ -46,9 +55,12 @@ export const AccountActionCard = ({ action, index }: AccountActionCardProps) => 
 
         <div className="flex items-center text-blue-400 text-sm sm:text-base font-medium mt-auto">
           Take Action
-          <FontAwesomeIcon icon="arrow-right" className="ml-2 text-xs group-hover:translate-x-1 transition-transform" />
+          <FontAwesomeIcon
+            icon="arrow-right"
+            className="ml-2 text-xs group-hover:translate-x-1 transition-transform"
+          />
         </div>
       </div>
-    </div>
+    </Card>
   );
 };

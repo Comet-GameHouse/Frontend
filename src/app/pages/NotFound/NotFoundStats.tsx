@@ -1,3 +1,5 @@
+import { Card } from '@components';
+
 export const NotFoundStats = () => {
   return (
     <div
@@ -5,8 +7,9 @@ export const NotFoundStats = () => {
       data-aos="fade-up"
       data-aos-delay="100"
     >
-      <div
-        className="bg-gray-800/30 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-gray-700/30 hover:border-gray-500/30 transition-all duration-300 hover:scale-[1.01] cursor-default"
+      <Card
+        variant="static-feature"
+        className="text-center"
         data-aos="fade-right"
         data-aos-delay="150"
       >
@@ -14,9 +17,10 @@ export const NotFoundStats = () => {
           404
         </div>
         <div className="text-red-400 text-xs sm:text-sm mt-1">Error Code</div>
-      </div>
-      <div
-        className="bg-gray-800/30 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-gray-700/30 hover:border-gray-500/30 transition-all duration-300 hover:scale-[1.01] cursor-default"
+      </Card>
+      <Card
+        variant="static-feature"
+        className="text-center"
         data-aos="fade-up"
         data-aos-delay="200"
       >
@@ -26,9 +30,10 @@ export const NotFoundStats = () => {
         <div className="text-yellow-400 text-xs sm:text-sm mt-1">
           Pages Found
         </div>
-      </div>
-      <div
-        className="bg-gray-800/30 backdrop-blur-sm rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-gray-700/30 hover:border-gray-500/30 transition-all duration-300 hover:scale-[1.01] cursor-default"
+      </Card>
+      <Card
+        variant="static-feature"
+        className="text-center"
         data-aos="fade-left"
         data-aos-delay="250"
       >
@@ -38,7 +43,7 @@ export const NotFoundStats = () => {
         <div className="text-blue-400 text-xs sm:text-sm mt-1">
           Possibilities
         </div>
-      </div>
+      </Card>
     </div>
   );
 };

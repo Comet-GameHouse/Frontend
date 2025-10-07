@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { ProfileGame, MasteryLevel } from './types';
+import { Card } from '@components';
 
 interface GameMasteryCardProps {
   game: ProfileGame;
@@ -13,8 +14,9 @@ export const GameMasteryCard = ({
   mastery,
 }: GameMasteryCardProps) => {
   return (
-    <div
-      className="flex items-center justify-between p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group cursor-default"
+    <Card
+      variant="static-paper"
+      className="flex items-center justify-between p-4 "
       data-aos="fade-right"
       data-aos-delay={200 + (index + 1) * 50}
     >
@@ -45,6 +47,6 @@ export const GameMasteryCard = ({
           Best: {game.bestScore.toLocaleString()}
         </div>
       </div>
-    </div>
+    </Card>
   );
 };

@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { NotificationOption } from './types';
 import type { NotificationSettings as NotificationSettingsType } from './types';
+import { Card } from '@components';
 
 interface NotificationToggleCardProps {
   option: NotificationOption;
@@ -28,8 +29,9 @@ export const NotificationToggleCard = ({
   };
 
   return (
-    <div
-      className="backdrop-blur-sm border border-gray-700/30 rounded-xl p-4 sm:p-6 bg-gray-700/30 hover:bg-gray-700/50 transition-all duration-300 cursor-default"
+    <Card
+      variant="static-paper"
+      className="sm:p-6"
       data-aos="fade-up"
       data-aos-delay={index * 50}
     >
@@ -59,6 +61,6 @@ export const NotificationToggleCard = ({
           <div className="w-11 h-6 bg-gray-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-500"></div>
         </label>
       </div>
-    </div>
+    </Card>
   );
 };
