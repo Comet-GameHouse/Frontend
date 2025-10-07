@@ -14,7 +14,6 @@ export const GameCard = ({ game, index }: GameCardProps) => {
     <div
       className="bg-gray-800/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-700/30 hover:border-gray-500/30 transition-all duration-300 group cursor-default hover:scale-[1.01]"
       data-aos="fade-up"
-      data-aos-duration="500"
       data-aos-delay={100 + (index + 1) * 50}
     >
       <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">

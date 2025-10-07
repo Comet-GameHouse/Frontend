@@ -31,7 +31,6 @@ export const SocialSignIn = ({ dataAosDelay = 400 }: SocialSignInProps) => {
             icon={provider.icon}
             className="w-full"
             data-aos="zoom-in"
-            data-aos-duration="300"
             data-aos-delay={dataAosDelay + (index + 1) * 50}
           >
             {provider.name}
