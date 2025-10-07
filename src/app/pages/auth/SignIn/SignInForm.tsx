@@ -47,7 +47,6 @@ export const SignInForm = ({
       <div
         className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0"
         data-aos="fade-up"
-        data-aos-duration="400"
         data-aos-delay="300"
       >
         <label className="flex items-center order-2 sm:order-1">

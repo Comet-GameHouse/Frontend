@@ -78,7 +78,7 @@ export const Loading = ({
   // Default page loading
   return (
     <div className={`min-h-screen bg-gradient-to-br from-gray-900 via-blue-900/10 to-purple-900/10 flex items-center justify-center ${className}`}>
-      <div className="text-center" data-aos="zoom-in" data-aos-duration="600">
+      <div className="text-center" data-aos="zoom-in">
         {/* Animated Logo/Icon */}
         <div className="mb-6">
           <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg animate-pulse">

@@ -95,7 +95,6 @@ export const Dialog = ({
           w-full max-h-[90vh] overflow-hidden flex flex-col
         `}
         data-aos="zoom-in"
-        data-aos-duration="100"
       >
         {/* Header */}
         {(title || showCloseButton) && (

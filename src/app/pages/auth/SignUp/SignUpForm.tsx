@@ -88,7 +88,6 @@ export const SignUpForm = ({
       <div
         className="flex items-start space-x-3"
         data-aos="fade-up"
-        data-aos-duration="400"
         data-aos-delay="450"
       >
         <input

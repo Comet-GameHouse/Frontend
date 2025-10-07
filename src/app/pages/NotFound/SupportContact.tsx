@@ -3,12 +3,7 @@ import { ROUTES } from '@app/constants';
 
 export const SupportContact = () => {
   return (
-    <div
-      data-aos="fade-up"
-      data-aos-duration="500"
-      data-aos-delay="500"
-      className="px-4"
-    >
+    <div data-aos="fade-up" data-aos-delay="400" className="px-4">
       <p className="text-gray-500 text-xs sm:text-sm text-center leading-relaxed">
         Need help?{' '}
         <Link

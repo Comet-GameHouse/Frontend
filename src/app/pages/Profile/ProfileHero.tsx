@@ -17,7 +17,6 @@ export const ProfileHero = ({ profile }: ProfileHeroProps) => {
     <div
       className="relative bg-gray-800/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30 overflow-hidden"
       data-aos="fade-up"
-      data-aos-duration="600"
     >
       <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-6 lg:space-y-0 lg:space-x-6">
         {/* Avatar Section */}
