@@ -6,7 +6,6 @@ export const StatsGrid = () => {
     <div 
       className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 pt-4 lg:pt-6 border-t border-gray-700/30"
       data-aos="fade-up"
-      data-aos-duration="400"
       data-aos-delay="700"
     >
       {STATS.map((stat, index) => (

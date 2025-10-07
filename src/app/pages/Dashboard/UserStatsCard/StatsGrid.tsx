@@ -16,13 +16,7 @@ export const StatsGrid = ({ stats }: StatsGridProps) => {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
       {statItems.map((stat, index) => (
-        <StatItem
-          key={stat.label}
-          stat={stat}
-          data-aos="fade-up"
-          data-aos-duration="300"
-          data-aos-delay={index * 100}
-        />
+        <StatItem key={stat.label} stat={stat} index={index} />
       ))}
     </div>
   );

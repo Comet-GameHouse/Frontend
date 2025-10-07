@@ -10,8 +10,7 @@ export const HeroButtons = () => {
     <div
       className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-md sm:max-w-lg mx-auto"
       data-aos="fade-up"
-      data-aos-duration="600"
-      data-aos-delay="300"
+      data-aos-delay="150"
     >
       {user ? (
         <>

@@ -11,15 +11,14 @@ export const QuickActionCard = ({ action, index }: QuickActionCardProps) => {
   return (
     <Link
       to={action.path}
-      className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-700/30 hover:border-cyan-500/50 hover:bg-cyan-500/10 transition-all duration-300 group text-center hover:scale-105"
+      className="bg-gray-800/30 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-gray-700/30 hover:border-blue-500/50 hover:bg-blue-500/10 transition-all duration-300 group text-center hover:scale-[1.02] cursor-pointer shadow-lg hover:shadow-blue-500/20"
       data-aos="zoom-in"
-      data-aos-duration="400"
-      data-aos-delay={index * 50}
+      data-aos-delay={200 + (index + 1) * 50}
     >
-      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-cyan-500/30 group-hover:scale-110 transition-all duration-300">
+      <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-500/30 transition-all duration-300">
         <FontAwesomeIcon
           icon={action.icon}
-          className="text-cyan-400 text-sm sm:text-base"
+          className="text-blue-400 text-sm sm:text-base"
         />
       </div>
 

@@ -24,13 +24,14 @@ export const BadgeCard = ({ badge, index }: BadgeCardProps) => {
 
   return (
     <div
-      className="bg-gray-700/20 rounded-xl p-3 border border-gray-600/30 hover:border-blue-500/30 transition-all duration-300 group"
+      className="bg-gray-700/30 rounded-xl p-3 hover:bg-gray-700/50 transition-all duration-300 cursor-default"
       data-aos="zoom-in"
-      data-aos-duration="400"
-      data-aos-delay={index * 100}
+      data-aos-delay={400 + (index + 1) * 50}
     >
       <div className="flex items-center space-x-3">
-        <div className={`w-10 h-10 bg-gradient-to-r ${getBadgeTypeColor(badge.type)} rounded-lg flex items-center justify-center shadow-lg`}>
+        <div
+          className={`w-10 h-10 bg-gradient-to-r ${getBadgeTypeColor(badge.type)} rounded-lg flex items-center justify-center shadow-lg`}
+        >
           <FontAwesomeIcon icon={badge.icon} className="text-white text-sm" />
         </div>
         <div className="flex-1">

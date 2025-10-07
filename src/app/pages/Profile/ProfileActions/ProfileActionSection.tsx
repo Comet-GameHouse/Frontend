@@ -24,8 +24,7 @@ export const ProfileActionSection = ({
     <div
       className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30"
       data-aos="fade-up"
-      data-aos-duration="500"
-      data-aos-delay="600"
+      data-aos-delay="500"
     >
       <h2 className="text-xl font-bold text-white font-orbitron mb-4 flex items-center">
         <FontAwesomeIcon icon={icon} className="text-blue-400 mr-2" />

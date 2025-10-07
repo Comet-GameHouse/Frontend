@@ -7,6 +7,8 @@ export const BUTTON_VARIANTS: Record<ButtonVariant, string> = {
   danger: 'bg-gradient-to-r from-red-500 to-pink-500 border-red-600 text-white',
   success:
     'bg-gradient-to-r from-green-500 to-emerald-500 border-green-600 text-white',
+  warning:
+    'bg-gradient-to-r from-yellow-500 to-amber-500 border-yellow-600 text-white',
   premium:
     'bg-gradient-to-r from-purple-500 to-pink-500 border-purple-600 text-white',
 };

@@ -48,7 +48,7 @@ export const SignUp = () => {
         onChange={handleChange}
         onSubmit={handleSubmit}
       />
-      <SocialSignIn containerDelay={550} buttonsDelay={600} />
+      <SocialSignIn dataAosDelay={550} />
       <SignUpFooter />
     </div>
   );

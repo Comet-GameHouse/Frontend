@@ -7,7 +7,7 @@ export const FeaturesGrid = () => {
       <h3
         className="text-lg lg:text-xl font-bold text-white font-orbitron"
         data-aos="fade-right"
-        data-aos-delay="150"
+        data-aos-delay="200"
       >
         Why Choose Us?
       </h3>

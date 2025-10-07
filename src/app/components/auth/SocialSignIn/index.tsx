@@ -7,12 +7,7 @@ interface SocialSignInProps {
 
 export const SocialSignIn = ({ dataAosDelay = 400 }: SocialSignInProps) => {
   return (
-    <div
-      className="mt-6"
-      data-aos="fade-up"
-      data-aos-duration="400"
-      data-aos-delay={dataAosDelay}
-    >
+    <div className="mt-6" data-aos="fade-up" data-aos-delay={dataAosDelay}>
       <div className="relative">
         <div className="absolute inset-0 flex items-center">
           <div className="w-full border-t border-gray-700"></div>
@@ -27,7 +22,6 @@ export const SocialSignIn = ({ dataAosDelay = 400 }: SocialSignInProps) => {
       <div
         className="mt-4 grid grid-cols-2 gap-3"
         data-aos="fade-up"
-        data-aos-duration="400"
         data-aos-delay={dataAosDelay + 50}
       >
         {SOCIAL_PROVIDERS.map((provider, index) => (

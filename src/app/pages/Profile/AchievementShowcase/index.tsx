@@ -16,8 +16,7 @@ export const AchievementShowcase = ({
     <div
       className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/30"
       data-aos="fade-up"
-      data-aos-duration="500"
-      data-aos-delay="400"
+      data-aos-delay="300"
     >
       <h2 className="text-xl font-bold text-white font-orbitron mb-6">
         Legacy & Achievements

@@ -7,20 +7,20 @@ interface GameMasteryCardProps {
   mastery: MasteryLevel;
 }
 
-export const GameMasteryCard = ({ game, index, mastery }: GameMasteryCardProps) => {
+export const GameMasteryCard = ({
+  game,
+  index,
+  mastery,
+}: GameMasteryCardProps) => {
   return (
     <div
-      className="flex items-center justify-between p-4 bg-gray-700/20 rounded-xl border border-gray-600/30 hover:border-blue-500/30 transition-all duration-300 group"
+      className="flex items-center justify-between p-4 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group cursor-default"
       data-aos="fade-right"
-      data-aos-duration="400"
-      data-aos-delay={index * 100}
+      data-aos-delay={200 + (index + 1) * 50}
     >
       <div className="flex items-center space-x-4">
-        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-          <FontAwesomeIcon
-            icon={game.icon}
-            className="text-white text-base"
-          />
+        <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center shadow-lg">
+          <FontAwesomeIcon icon={game.icon} className="text-white text-base" />
         </div>
         <div>
           <h3 className="text-white font-bold text-base">{game.name}</h3>

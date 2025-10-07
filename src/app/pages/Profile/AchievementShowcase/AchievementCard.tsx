@@ -6,7 +6,10 @@ interface AchievementCardProps {
   index: number;
 }
 
-export const AchievementCard = ({ achievement, index }: AchievementCardProps) => {
+export const AchievementCard = ({
+  achievement,
+  index,
+}: AchievementCardProps) => {
   const getRarityColor = (rarity: string) => {
     switch (rarity) {
       case 'common':
@@ -24,20 +27,22 @@ export const AchievementCard = ({ achievement, index }: AchievementCardProps) =>
 
   return (
     <div
-      className="bg-gray-700/20 rounded-xl p-3 border border-gray-600/30 hover:border-blue-500/30 transition-all duration-300 group"
+      className="bg-gray-700/30 rounded-xl p-3 hover:bg-gray-700/50 transition-all duration-300 cursor-default"
       data-aos="zoom-in"
-      data-aos-duration="400"
-      data-aos-delay={index * 80}
+      data-aos-delay={300 + (index + 1) * 50}
     >
       <div className="flex items-center space-x-3">
-        <div className={`w-10 h-10 bg-gradient-to-r ${getRarityColor(achievement.rarity)} rounded-lg flex items-center justify-center shadow-lg`}>
-          <FontAwesomeIcon icon={achievement.icon} className="text-white text-sm" />
+        <div
+          className={`w-10 h-10 bg-gradient-to-r ${getRarityColor(achievement.rarity)} rounded-lg flex items-center justify-center shadow-lg`}
+        >
+          <FontAwesomeIcon
+            icon={achievement.icon}
+            className="text-white text-sm"
+          />
         </div>
         <div className="flex-1">
           <h4 className="font-bold text-white text-sm">{achievement.name}</h4>
-          <p className="text-gray-400 text-xs">
-            {achievement.description}
-          </p>
+          <p className="text-gray-400 text-xs">{achievement.description}</p>
         </div>
       </div>
       <div className="flex justify-between items-center mt-2 text-xs">

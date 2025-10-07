@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from '@components';
-import type { Game } from './types';
+import type { Game } from '../types';
 import { useNavigate } from 'react-router-dom';
 
 interface GameCardProps {
@@ -13,16 +13,15 @@ export const GameCard = ({ game, index }: GameCardProps) => {
 
   return (
     <div
-      className="bg-gray-800/40 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-700/30 hover:border-blue-500/50 transition-all duration-300 group hover:scale-[1.02]"
+      className="bg-gray-800/40 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-700/30 hover:border-gray-500/30 transition-all duration-300 group hover:scale-[1.01] cursor-default"
       data-aos="fade-up"
-      data-aos-duration="500"
-      data-aos-delay={index * 100}
+      data-aos-delay={400 + (index + 1) * 50}
     >
       <div className="flex flex-col h-full">
         {/* Game Header */}
         <div className="flex items-start justify-between mb-4">
           <div
-            className={`w-12 h-12 sm:w-16 sm:h-16 ${game.gradient} rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}
+            className={`w-12 h-12 sm:w-16 sm:h-16 ${game.gradient} rounded-xl flex items-center justify-center shadow-lg transition-transform duration-300 flex-shrink-0`}
           >
             <FontAwesomeIcon
               icon={game.icon}

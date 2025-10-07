@@ -43,18 +43,14 @@ export const TimelineEvent = ({ event, index }: TimelineEventProps) => {
 
   return (
     <div
-      className="flex items-start space-x-3 p-3 bg-gray-700/20 rounded-xl border border-gray-600/30 hover:border-blue-500/30 transition-all duration-300 group"
+      className="flex items-start space-x-3 p-3 bg-gray-700/30 rounded-xl hover:bg-gray-700/50 transition-all duration-300 group cursor-default"
       data-aos="fade-left"
-      data-aos-duration="400"
-      data-aos-delay={index * 80}
+      data-aos-delay={400 + (index + 1) * 50}
     >
       <div
-        className={`w-8 h-8 rounded-lg flex items-center justify-center ${getEventColor(event.type)} group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}
+        className={`w-8 h-8 rounded-lg flex items-center justify-center ${getEventColor(event.type)} transition-transform duration-300 flex-shrink-0`}
       >
-        <FontAwesomeIcon
-          icon={getEventIcon(event.type)}
-          className="text-xs"
-        />
+        <FontAwesomeIcon icon={getEventIcon(event.type)} className="text-xs" />
       </div>
 
       <div className="flex-1 min-w-0">
@@ -62,10 +58,7 @@ export const TimelineEvent = ({ event, index }: TimelineEventProps) => {
         <p className="text-gray-400 text-xs mt-1">{event.description}</p>
         {event.game && (
           <div className="flex items-center space-x-1 mt-1">
-            <FontAwesomeIcon
-              icon="gamepad"
-              className="text-blue-400 w-2 h-2"
-            />
+            <FontAwesomeIcon icon="gamepad" className="text-blue-400 w-2 h-2" />
             <span className="text-blue-400 text-xs">{event.game}</span>
           </div>
         )}
@@ -76,7 +69,10 @@ export const TimelineEvent = ({ event, index }: TimelineEventProps) => {
           {new Date(event.date).toLocaleDateString()}
         </div>
         <div className="text-gray-600 text-xs">
-          {new Date(event.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+          {new Date(event.date).toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit',
+          })}
         </div>
       </div>
     </div>

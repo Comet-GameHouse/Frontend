@@ -17,7 +17,7 @@ export const SignUpForm = ({
   return (
     <form onSubmit={onSubmit} className="space-y-4 sm:space-y-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-        <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="200">
+        <div data-aos="fade-up" data-aos-delay="200">
           <Input
             label="First Name"
             icon="user"
@@ -29,7 +29,7 @@ export const SignUpForm = ({
             inputSize="md"
           />
         </div>
-        <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="250">
+        <div data-aos="fade-up" data-aos-delay="250">
           <Input
             label="Last Name"
             icon="user"
@@ -43,7 +43,7 @@ export const SignUpForm = ({
         </div>
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="300">
+      <div data-aos="fade-up" data-aos-delay="300">
         <Input
           label="Email Address"
           icon="envelope-open"
@@ -57,7 +57,7 @@ export const SignUpForm = ({
         />
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="350">
+      <div data-aos="fade-up" data-aos-delay="350">
         <Input
           label="Password"
           icon="lock"
@@ -71,7 +71,7 @@ export const SignUpForm = ({
         />
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="400">
+      <div data-aos="fade-up" data-aos-delay="400">
         <Input
           label="Confirm Password"
           icon="lock"
@@ -108,7 +108,7 @@ export const SignUpForm = ({
         </span>
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">
+      <div data-aos="fade-up" data-aos-delay="500">
         <Button
           type="submit"
           variant="primary"
