@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { ProfileAchievement } from './types';
+import { Card } from '@components';
 
 interface AchievementCardProps {
   achievement: ProfileAchievement;
@@ -26,8 +27,9 @@ export const AchievementCard = ({
   };
 
   return (
-    <div
-      className="bg-gray-700/30 rounded-xl p-3 hover:bg-gray-700/50 transition-all duration-300 cursor-default"
+    <Card
+      variant="static-paper"
+      className="!p-3"
       data-aos="zoom-in"
       data-aos-delay={300 + (index + 1) * 50}
     >
@@ -53,6 +55,6 @@ export const AchievementCard = ({
           {new Date(achievement.unlockedAt).toLocaleDateString()}
         </span>
       </div>
-    </div>
+    </Card>
   );
 };

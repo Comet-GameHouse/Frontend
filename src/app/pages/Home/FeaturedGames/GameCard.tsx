@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button } from '@components';
+import { Button, Card } from '@components';
 import { ROUTES } from '@constants';
 import type { Game } from './types';
 import { Link } from 'react-router-dom';
@@ -11,8 +11,8 @@ interface GameCardProps {
 
 export const GameCard = ({ game, index }: GameCardProps) => {
   return (
-    <div
-      className="bg-gray-800/40 backdrop-blur-sm rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-gray-700/30 hover:border-gray-500/30 transition-all duration-300 group cursor-default hover:scale-[1.01]"
+    <Card
+      variant="static-feature"
       data-aos="fade-up"
       data-aos-delay={100 + (index + 1) * 50}
     >
@@ -79,6 +79,6 @@ export const GameCard = ({ game, index }: GameCardProps) => {
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };

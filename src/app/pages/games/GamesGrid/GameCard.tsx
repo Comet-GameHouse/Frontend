@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button } from '@components';
-import type { Game } from '../types';
+import { Button, Card } from '@components';
+import type { Game } from './types';
 import { useNavigate } from 'react-router-dom';
 
 interface GameCardProps {
@@ -12,8 +12,8 @@ export const GameCard = ({ game, index }: GameCardProps) => {
   const navigate = useNavigate();
 
   return (
-    <div
-      className="bg-gray-800/40 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-700/30 hover:border-gray-500/30 transition-all duration-300 group hover:scale-[1.01] cursor-default"
+    <Card
+      variant="static-feature"
       data-aos="fade-up"
       data-aos-delay={400 + (index + 1) * 50}
     >
@@ -105,6 +105,6 @@ export const GameCard = ({ game, index }: GameCardProps) => {
           Play Now
         </Button>
       </div>
-    </div>
+    </Card>
   );
 };

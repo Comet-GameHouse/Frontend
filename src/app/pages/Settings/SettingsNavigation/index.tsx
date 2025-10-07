@@ -22,6 +22,7 @@ export const SettingsNavigation = ({
         <nav className="space-y-2">
           {navigationItems.map((item, index) => (
             <NavigationItem
+              key={index}
               item={item}
               index={index}
               activeSection={activeSection}

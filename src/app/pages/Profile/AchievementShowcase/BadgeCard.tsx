@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { ProfileBadge } from './types';
+import { Card } from '@components';
 
 interface BadgeCardProps {
   badge: ProfileBadge;
@@ -23,8 +24,9 @@ export const BadgeCard = ({ badge, index }: BadgeCardProps) => {
   };
 
   return (
-    <div
-      className="bg-gray-700/30 rounded-xl p-3 hover:bg-gray-700/50 transition-all duration-300 cursor-default"
+    <Card
+      variant="static-paper"
+      className="!p-3"
       data-aos="zoom-in"
       data-aos-delay={400 + (index + 1) * 50}
     >
@@ -42,6 +44,6 @@ export const BadgeCard = ({ badge, index }: BadgeCardProps) => {
       <div className="text-gray-500 text-xs mt-2">
         {new Date(badge.unlockedAt).toLocaleDateString()}
       </div>
-    </div>
+    </Card>
   );
 };
