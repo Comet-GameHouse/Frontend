@@ -1,7 +1,6 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import AOS from 'aos';
 
 import { DIALOG_SIZES } from './data';
 import type { DialogSize } from './types';
@@ -34,21 +33,11 @@ export const Dialog = ({
   useEffect(() => {
     if (isOpen) {
       setIsMounted(true);
-      AOS.refresh(); // Refresh AOS to detect new elements
     } else {
       const timer = setTimeout(() => setIsMounted(false), 300);
       return () => clearTimeout(timer);
     }
   }, [isOpen]);
-
-  useEffect(() => {
-    // Initialize AOS
-    AOS.init({
-      duration: 200,
-      easing: 'ease-out-cubic',
-      once: true,
-    });
-  }, []);
 
   // Close handlers (same as before)
   useEffect(() => {
@@ -108,7 +97,7 @@ export const Dialog = ({
               <button
                 onClick={onClose}
                 disabled={preventClose}
-                className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-700 hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 group"
+                className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-700 hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200 group cursor-pointer"
                 aria-label="Close dialog"
               >
                 <FontAwesomeIcon

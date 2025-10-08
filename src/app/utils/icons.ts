@@ -78,6 +78,10 @@ import {
   faCamera,
   faIdBadge,
   faArrowLeft,
+  faGlobe,
+  faSort,
+  faCaretDown,
+  faFilter,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -168,6 +172,10 @@ library.add(
   faCamera,
   faIdBadge,
   faArrowLeft,
+  faGlobe,
+  faSort,
+  faCaretDown,
+  faFilter,
 
   faGoogle,
   faDiscord,

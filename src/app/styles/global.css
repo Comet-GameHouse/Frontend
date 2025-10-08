@@ -1,0 +1,16 @@
+/* Hidden scrollbar that appears on hover */
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Gradient scrollbar for special sections */
+*::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #3b82f6,
+    #8b5cf6
+  ); /* cyan-500 to blue-500 to purple-500 */
+}
