@@ -10,7 +10,7 @@ interface TimeFrameStatCardProps {
 export const TimeFrameStatCard = ({ stat, index }: TimeFrameStatCardProps) => {
   return (
     <Card
-      variant="static"
+      variant="static-feature"
       data-aos="fade-up"
       data-aos-delay={100 + (index + 1) * 50}
     >
