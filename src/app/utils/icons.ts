@@ -82,6 +82,9 @@ import {
   faSort,
   faCaretDown,
   faFilter,
+  faPalette,
+  faVideo,
+  faRobot,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -90,6 +93,7 @@ import {
   faTwitter,
   faYoutube,
   faInstagram,
+  faReddit,
 } from '@fortawesome/free-brands-svg-icons';
 
 // Add icons to library
@@ -176,10 +180,14 @@ library.add(
   faSort,
   faCaretDown,
   faFilter,
+  faPalette,
+  faVideo,
+  faRobot,
 
   faGoogle,
   faDiscord,
   faTwitter,
   faYoutube,
-  faInstagram
+  faInstagram,
+  faReddit
 );
