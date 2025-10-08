@@ -1,20 +1,3 @@
-export interface LeaderboardEntry {
-  id: string;
-  rank: number;
-  playerName: string;
-  score: number;
-  gamesPlayed: number;
-  winRate: number;
-  level: number;
-  avatar: string;
-  country: string;
-  favoriteGame: string;
-  lastActive: string;
-  isOnline: boolean;
-  isCurrentUser?: boolean;
-  achievements: string[];
-}
-
 export interface LeaderboardFilter {
   timeFrame: 'all-time' | 'weekly' | 'monthly' | 'daily';
   gameType: 'all' | 'action' | 'puzzle' | 'strategy' | 'adventure' | 'sports';

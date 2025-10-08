@@ -57,7 +57,9 @@ export const ActiveFilters = ({
             {/* Search Query Chip */}
             {hasSearchQuery && (
               <div className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm flex items-center gap-2 border border-blue-500/30">
-                <span>Search: "{searchQuery}"</span>
+                <span className="max-w-60 text-ellipsis whitespace-nowrap overflow-hidden">
+                  Search: "{searchQuery}"
+                </span>
                 <button
                   onClick={() => onSearchChange('')}
                   className="hover:text-blue-300 transition-colors"
@@ -73,7 +75,9 @@ export const ActiveFilters = ({
                 key={`${filter.category}-${filter.value}`}
                 className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm flex items-center gap-2 border border-blue-500/30"
               >
-                <span>{filter.label}</span>
+                <span className="max-w-60 text-ellipsis whitespace-nowrap overflow-hidden">
+                  {filter.label}
+                </span>
                 <button
                   onClick={() =>
                     onFilterChange(

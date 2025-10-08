@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Button, Input, Dialog } from '@components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button, Dialog } from '@components';
 import { FilterBox } from './FilterBox';
 import type { SelectedFilters } from '../types';
 import { ActiveFilters } from './ActiveFilters';
@@ -87,8 +86,6 @@ export const FilterBar = ({
       >
         <div className="max-h-[70vh] overflow-y-auto scrollbar-comet">
           <FilterBox
-            searchQuery={searchQuery}
-            onSearchChange={onSearchChange}
             selectedFilters={selectedFilters}
             onFilterChange={onFilterChange}
           />
