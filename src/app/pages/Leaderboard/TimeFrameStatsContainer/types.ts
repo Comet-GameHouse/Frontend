@@ -4,10 +4,3 @@ export interface TimeFrameStats {
   change: number;
   description?: string;
 }
-
-export interface TimeFrameStatsContainerProps {
-  stats: TimeFrameStats[];
-  isLoading?: boolean;
-  error?: string | null;
-  className?: string;
-}
