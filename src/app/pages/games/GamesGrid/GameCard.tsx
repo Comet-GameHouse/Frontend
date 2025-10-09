@@ -15,7 +15,7 @@ export const GameCard = ({ game, index }: GameCardProps) => {
     <Card
       variant="static-feature"
       data-aos="fade-up"
-      data-aos-delay={400 + (index + 1) * 50}
+      data-aos-delay={(index + 1) * 50}
     >
       <div className="flex flex-col h-full">
         {/* Game Header */}

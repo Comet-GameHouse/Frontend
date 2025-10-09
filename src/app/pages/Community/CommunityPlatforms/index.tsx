@@ -12,7 +12,7 @@ export const CommunityPlatforms = () => {
         Join Our Platforms
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mx-auto">
         {communityPlatforms.map((platform, index) => (
           <CommunityPlatformCard
             key={index}

@@ -12,7 +12,7 @@ export const CommunityEvents = () => {
         Community Events
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mx-auto">
         {communityEvents.map((event, index) => (
           <CommunityEventCard key={index} event={event} index={index} />
         ))}

@@ -16,7 +16,7 @@ export const LeaderboardTable = ({ data, filters }: LeaderboardTableProps) => {
 
   return (
     <div
-      className="max-w-6xl mx-auto bg-gray-800/30 border border-gray-700/30 rounded-xl overflow-hidden"
+      className="mx-auto bg-gray-800/30 border border-gray-700/30 rounded-xl overflow-hidden"
       data-aos="fade-up"
       data-aos-delay="300"
     >

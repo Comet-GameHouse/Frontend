@@ -6,7 +6,7 @@ import { DiscordChannelCard } from './DiscordChannelCard';
 export const DiscordPreview = () => {
   return (
     <div className="mb-8 sm:mb-12 lg:mb-16">
-      <div className="bg-gray-800/30 border border-gray-700/30 rounded-2xl overflow-hidden max-w-4xl mx-auto">
+      <div className="bg-gray-800/30 border border-gray-700/30 rounded-2xl overflow-hidden max-w-6xl mx-auto">
         {/* Discord Header */}
         <div
           className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white"
