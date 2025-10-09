@@ -10,7 +10,7 @@ export const PlayerStatsOverview = () => {
 
   return (
     <div
-      className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-blue-500/30 mb-6 sm:mb-8 max-w-6xl mx-auto"
+      className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-blue-500/30 mb-6 sm:mb-8 mx-auto"
       data-aos="fade-up"
       data-aos-delay="150"
     >

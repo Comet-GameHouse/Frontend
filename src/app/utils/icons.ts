@@ -85,6 +85,11 @@ import {
   faPalette,
   faVideo,
   faRobot,
+  faShoppingCart,
+  faPercentage,
+  faStore,
+  faUndo,
+  faHourglass,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -93,6 +98,10 @@ import {
   faTwitter,
   faYoutube,
   faInstagram,
+  faCcVisa,
+  faCcMastercard,
+  faCcPaypal,
+  faCcApplePay,
   faReddit,
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -183,11 +192,20 @@ library.add(
   faPalette,
   faVideo,
   faRobot,
+  faShoppingCart,
+  faPercentage,
+  faStore,
+  faUndo,
+  faHourglass,
 
   faGoogle,
   faDiscord,
   faTwitter,
   faYoutube,
   faInstagram,
+  faCcVisa,
+  faCcMastercard,
+  faCcPaypal,
+  faCcApplePay,
   faReddit
 );

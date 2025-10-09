@@ -10,7 +10,7 @@ export const CommunityStats = () => {
 
   return (
     <div
-      className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-8 sm:mb-12 lg:mb-16 max-w-4xl mx-auto"
+      className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-8 sm:mb-12 lg:mb-16 max-w-6xl mx-auto"
       data-aos="fade-up"
       data-aos-delay="150"
     >

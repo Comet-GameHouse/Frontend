@@ -13,7 +13,7 @@ export const FilterBox = ({
 }: FilterBoxProps) => {
   return (
     <div
-      className="max-w-6xl mx-auto px-3 sm:px-4 mb-6 sm:mb-8"
+      className="mx-auto px-3 sm:px-4 mb-6 sm:mb-8"
       data-aos="fade-up"
     >
       {/* Filter Categories */}
