@@ -14,6 +14,7 @@ import {
   Games,
   Settings,
   Terms,
+  Privacy,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -38,7 +39,10 @@ export const routesConfig = [
         path: ROUTES.TERMS,
         element: <Terms />,
       },
-      
+      {
+        path: ROUTES.PRIVACY,
+        element: <Privacy />,
+      },
     ],
   },
   {
