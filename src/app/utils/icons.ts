@@ -106,6 +106,13 @@ import {
   faChild,
   faSync,
   faTable,
+  faSignal,
+  faUserCog,
+  faCreditCard,
+  faTools,
+  faFlag,
+  faLightbulb,
+  faChevronDown,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -229,6 +236,13 @@ library.add(
   faChild,
   faSync,
   faTable,
+  faSignal,
+  faUserCog,
+  faCreditCard,
+  faTools,
+  faFlag,
+  faLightbulb,
+  faChevronDown,
 
   faGoogle,
   faDiscord,

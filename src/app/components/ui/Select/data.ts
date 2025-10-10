@@ -25,6 +25,12 @@ export const TEXTAREA_SIZES: Record<InputSize, string> = {
   lg: 'px-5 py-4 text-lg rounded-xl min-h-[120px]',
 } as const;
 
+export const SELECT_SIZES: Record<InputSize, string> = {
+  sm: 'px-3 py-2 pr-8 text-sm rounded-md',
+  md: 'px-4 py-3 pr-10 text-base rounded-lg',
+  lg: 'px-5 py-4 pr-12 text-lg rounded-xl',
+} as const;
+
 export const LABEL_STYLES: Record<InputVariant, string> = {
   primary: 'text-blue-300 font-medium',
   secondary: 'text-cyan-300 font-medium',

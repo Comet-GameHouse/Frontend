@@ -4,6 +4,7 @@ export {
   Input,
   Dialog,
   ProgressBar,
+  Select,
   NotificationContainer,
   type NotificationType,
   type NotificationPosition,
