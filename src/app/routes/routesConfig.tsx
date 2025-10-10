@@ -15,6 +15,7 @@ import {
   Settings,
   Terms,
   Privacy,
+  Contact,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -42,6 +43,10 @@ export const routesConfig = [
       {
         path: ROUTES.PRIVACY,
         element: <Privacy />,
+      },
+      {
+        path: ROUTES.CONTACT,
+        element: <Contact />,
       },
     ],
   },

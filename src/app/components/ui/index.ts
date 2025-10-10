@@ -2,6 +2,7 @@ export { Button, type ButtonVariant } from './Button';
 export { Input } from './Input';
 export { Dialog } from './Dialog';
 export { ProgressBar } from './ProgressBar';
+export { Select } from './Select';
 
 export {
   NotificationContainer,

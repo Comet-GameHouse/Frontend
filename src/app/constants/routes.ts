@@ -5,6 +5,7 @@ export const ROUTES = {
   PROFILE: '/profile/:id',
   TERMS: '/terms',
   PRIVACY: '/privacy',
+  CONTACT: '/contact',
 
   // Auth routes
   AUTH: '/auth',
