@@ -13,6 +13,7 @@ import {
   Community,
   Games,
   Settings,
+  Terms,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -30,9 +31,14 @@ export const routesConfig = [
         element: <Home />,
       },
       {
-        path: ROUTES.PROFILE.replace(`${ROUTES.APP}/`, ''),
+        path: ROUTES.PROFILE,
         element: <Profile />,
       },
+      {
+        path: ROUTES.TERMS,
+        element: <Terms />,
+      },
+      
     ],
   },
   {

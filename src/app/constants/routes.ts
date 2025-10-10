@@ -3,6 +3,8 @@ export const ROUTES = {
   HOME: '/',
   SUPPORT: '/support',
   PROFILE: '/profile/:id',
+  TERMS: '/terms',
+  PRIVACY: '/privacy',
 
   // Auth routes
   AUTH: '/auth',
