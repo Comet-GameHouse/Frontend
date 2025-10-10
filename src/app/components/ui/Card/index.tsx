@@ -6,7 +6,7 @@ import { variantStyles } from './data';
 interface CardProps {
   children: ReactNode;
   variant?: 'clickable' | 'static-feature' | 'static-paper' | 'static';
-  type?: 'link' | 'normal';
+  type?: 'default-link' | 'link' | 'normal';
   to?: string;
   clicked?: boolean;
   className?: string;
@@ -48,5 +48,16 @@ export const Card = ({
       >
         {children}
       </Link>
+    );
+  else if (type === 'default-link')
+    return (
+      <a
+        {...props}
+        href={to}
+        className={`${baseStyles} ${clicked ? clickedStyle : variantStyles[variant]} ${className}`}
+        onClick={onClick}
+      >
+        {children}
+      </a>
     );
 };

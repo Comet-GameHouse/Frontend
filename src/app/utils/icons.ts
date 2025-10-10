@@ -90,6 +90,13 @@ import {
   faStore,
   faUndo,
   faHourglass,
+  faFileContract,
+  faFileAlt,
+  faExclamationTriangle,
+  faBalanceScale,
+  faGavel,
+  faCheck,
+  faQuestionCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -197,6 +204,13 @@ library.add(
   faStore,
   faUndo,
   faHourglass,
+  faFileContract,
+  faFileAlt,
+  faExclamationTriangle,
+  faBalanceScale,
+  faGavel,
+  faCheck,
+  faQuestionCircle,
 
   faGoogle,
   faDiscord,
