@@ -97,6 +97,15 @@ import {
   faGavel,
   faCheck,
   faQuestionCircle,
+  faUserShield,
+  faCalendarAlt,
+  faDatabase,
+  faCogs,
+  faShareAlt,
+  faCookie,
+  faChild,
+  faSync,
+  faTable,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -211,6 +220,15 @@ library.add(
   faGavel,
   faCheck,
   faQuestionCircle,
+  faUserShield,
+  faCalendarAlt,
+  faDatabase,
+  faCogs,
+  faShareAlt,
+  faCookie,
+  faChild,
+  faSync,
+  faTable,
 
   faGoogle,
   faDiscord,
