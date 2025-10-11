@@ -116,6 +116,12 @@ import {
   faBook,
   faServer,
   faTicketAlt,
+  faBug,
+  faVolumeUp,
+  faTachometer,
+  faWifi,
+  faDesktop,
+  
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -249,6 +255,12 @@ library.add(
   faBook,
   faServer,
   faTicketAlt,
+  faBug,
+  faVolumeUp,
+  faTachometer,
+  faWifi,
+  faDesktop,
+  
 
   faGoogle,
   faDiscord,
