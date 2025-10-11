@@ -13,3 +13,4 @@ export { Terms } from './Terms';
 export { Privacy } from './Privacy';
 export { Contact } from './Contact';
 export { Support } from './Support';
+export { Status } from './Status';
