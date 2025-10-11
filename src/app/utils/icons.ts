@@ -121,7 +121,7 @@ import {
   faTachometer,
   faWifi,
   faDesktop,
-  
+  faPlusCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -260,7 +260,7 @@ library.add(
   faTachometer,
   faWifi,
   faDesktop,
-  
+  faPlusCircle,
 
   faGoogle,
   faDiscord,
