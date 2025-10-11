@@ -1,3 +1,5 @@
+import type { IconName } from "@fortawesome/fontawesome-svg-core";
+
 export interface SupportCard {
   id: string;
   title: string;
