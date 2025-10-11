@@ -19,6 +19,7 @@ import {
   Support,
   Status,
   Bugs,
+  Feedback,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -72,6 +73,10 @@ export const routesConfig = [
       {
         path: ROUTES.BUGS.replace(`${ROUTES.SUPPORT}/`, ''),
         element: <Bugs />,
+      },
+      {
+        path: ROUTES.FEEDBACK.replace(`${ROUTES.SUPPORT}/`, ''),
+        element: <Feedback />,
       },
     ],
   },

@@ -15,3 +15,4 @@ export { Contact } from './Contact';
 export { Support } from './Support';
 export { Status } from './Status';
 export { Bugs } from './Bugs';
+export { Feedback } from './Feedback'
