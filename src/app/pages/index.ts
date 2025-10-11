@@ -11,4 +11,5 @@ export { Community } from './Community';
 export { Settings } from './Settings';
 export { Terms } from './Terms';
 export { Privacy } from './Privacy';
-export { Contact } from './Contact'
+export { Contact } from './Contact';
+export { Support } from './Support';

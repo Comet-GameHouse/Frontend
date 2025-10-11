@@ -16,6 +16,7 @@ import {
   Terms,
   Privacy,
   Contact,
+  Support,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -44,10 +45,42 @@ export const routesConfig = [
         path: ROUTES.PRIVACY,
         element: <Privacy />,
       },
+    ],
+  },
+  {
+    path: ROUTES.SUPPORT,
+    element: (
+      <PublicRoute>
+        <MainLayout />
+      </PublicRoute>
+    ),
+    children: [
       {
-        path: ROUTES.CONTACT,
+        path: '',
+        element: <Support />,
+      },
+      {
+        path: ROUTES.CONTACT.replace(`${ROUTES.SUPPORT}/`, ''),
         element: <Contact />,
       },
+    ],
+  },
+  {
+    path: ROUTES.COMMUNITY,
+    element: (
+      <PublicRoute>
+        <MainLayout />
+      </PublicRoute>
+    ),
+    children: [
+      {
+        path: '',
+        element: <Community />,
+      },
+      // {
+      //   path: ROUTES.FORUMS.replace(`${ROUTES.COMMUNITY}/`, ''),
+      //   element: <Forums />,
+      // },
     ],
   },
   {
@@ -91,10 +124,6 @@ export const routesConfig = [
       {
         path: ROUTES.LEADERBOARD.replace(`${ROUTES.APP}/`, ''),
         element: <Leaderboard />,
-      },
-      {
-        path: ROUTES.COMMUNITY.replace(`${ROUTES.APP}/`, ''),
-        element: <Community />,
       },
       {
         path: ROUTES.MY_PROFILE.replace(`${ROUTES.APP}/`, ''),

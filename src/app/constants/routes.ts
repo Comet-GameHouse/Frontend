@@ -1,11 +1,17 @@
 export const ROUTES = {
   // Public routes
   HOME: '/',
-  SUPPORT: '/support',
   PROFILE: '/profile/:id',
   TERMS: '/terms',
   PRIVACY: '/privacy',
-  CONTACT: '/contact',
+
+  // Support routes
+  SUPPORT: '/support',
+  CONTACT: '/support/contact',
+  HELP: '/support/help',
+  STATUS: '/support/status',
+  BUGS: '/support/bugs',
+  FEEDBACK: '/support/feedback',
 
   // Auth routes
   AUTH: '/auth',
@@ -19,10 +25,13 @@ export const ROUTES = {
   DASHBOARD: '/app/dashboard',
   SHOP: '/app/shop',
   LEADERBOARD: '/app/leaderboard',
-  COMMUNITY: '/app/community',
   MY_PROFILE: '/app/profile',
   SETTINGS: '/app/settings',
   PLAYERS: '/app/players',
+
+  // Community routes
+  COMMUNITY: '/community',
+  FORUMS: '/community/forums',
 
   // Game routes
   GAME_PREFIX: '/games',
