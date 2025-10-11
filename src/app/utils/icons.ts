@@ -113,6 +113,9 @@ import {
   faFlag,
   faLightbulb,
   faChevronDown,
+  faBook,
+  faServer,
+  faTicketAlt,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -243,6 +246,9 @@ library.add(
   faFlag,
   faLightbulb,
   faChevronDown,
+  faBook,
+  faServer,
+  faTicketAlt,
 
   faGoogle,
   faDiscord,
