@@ -28,6 +28,10 @@ export const ROUTES = {
   MY_PROFILE: '/app/profile',
   SETTINGS: '/app/settings',
   PLAYERS: '/app/players',
+  FRIENDS: '/app/friends',
+  NOTIFICATIONS: '/app/notifications',
+  TOURNAMENTS: '/app/tournaments',
+  ACHIEVEMENTS: '/app/achievements',
 
   // Community routes
   COMMUNITY: '/community',

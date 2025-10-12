@@ -122,6 +122,9 @@ import {
   faWifi,
   faDesktop,
   faPlusCircle,
+  faMoon,
+  faCopy,
+  faLink,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -261,6 +264,9 @@ library.add(
   faWifi,
   faDesktop,
   faPlusCircle,
+  faMoon,
+  faCopy,
+  faLink,
 
   faGoogle,
   faDiscord,

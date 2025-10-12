@@ -16,9 +16,12 @@ export const FooterLinksSection = ({
       data-aos="fade-up"
       data-aos-delay={(index + 1) * 100}
     >
-      <h4 className="text-xl md:text-lg lg:text-xl font-bold text-white mb-4 md:mb-6 font-orbitron">
+      <Link
+        to={section.path}
+        className="block text-xl md:text-lg lg:text-xl font-bold text-white mb-2 md:mb-4 font-orbitron"
+      >
         {section.title}
-      </h4>
+      </Link>
       <ul className="space-y-3 md:space-y-2">
         {section.links.map((link, linkIndex) => (
           <li key={link.label}>
