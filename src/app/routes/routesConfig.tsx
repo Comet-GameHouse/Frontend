@@ -22,6 +22,7 @@ import {
   Feedback,
   Help,
   Friends,
+  Notifications,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -157,6 +158,10 @@ export const routesConfig = [
       {
         path: ROUTES.FRIENDS.replace(`${ROUTES.APP}/`, ''),
         element: <Friends />,
+      },
+      {
+        path: ROUTES.NOTIFICATIONS.replace(`${ROUTES.APP}/`, ''),
+        element: <Notifications />,
       },
     ],
   },

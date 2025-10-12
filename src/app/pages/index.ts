@@ -18,3 +18,4 @@ export { Bugs } from './Bugs';
 export { Feedback } from './Feedback';
 export { Help } from './Help';
 export { Friends } from './Friends';
+export { Notifications } from './Notifications';
