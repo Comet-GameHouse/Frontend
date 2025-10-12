@@ -23,6 +23,8 @@ import {
   Help,
   Friends,
   Notifications,
+  Tournaments,
+  TournamentDetail,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -162,6 +164,14 @@ export const routesConfig = [
       {
         path: ROUTES.NOTIFICATIONS.replace(`${ROUTES.APP}/`, ''),
         element: <Notifications />,
+      },
+      {
+        path: ROUTES.TOURNAMENTS.replace(`${ROUTES.APP}/`, ''),
+        element: <Tournaments />,
+      },
+      {
+        path: ROUTES.TOURNAMENT_DETAIL.replace(`${ROUTES.APP}/`, ''),
+        element: <TournamentDetail />,
       },
     ],
   },
