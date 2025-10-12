@@ -21,6 +21,7 @@ import {
   Bugs,
   Feedback,
   Help,
+  Friends,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -152,6 +153,10 @@ export const routesConfig = [
       {
         path: ROUTES.SETTINGS.replace(`${ROUTES.APP}/`, ''),
         element: <Settings />,
+      },
+      {
+        path: ROUTES.FRIENDS.replace(`${ROUTES.APP}/`, ''),
+        element: <Friends />,
       },
     ],
   },

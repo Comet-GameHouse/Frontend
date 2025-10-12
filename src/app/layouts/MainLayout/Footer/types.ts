@@ -11,5 +11,6 @@ export interface FooterLink {
 
 export interface FooterSection {
   title: string;
+  path: string;
   links: FooterLink[];
 }
