@@ -4,6 +4,7 @@ import { StarRating } from './StarRating';
 import { feedbackCategories } from './data';
 import type { FeedbackForm as FeedbackFormType } from './types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export const FeedbackForm = () => {
   const [formData, setFormData] = useState<FeedbackFormType>({
@@ -67,7 +68,7 @@ export const FeedbackForm = () => {
                   }`}
                 >
                   <FontAwesomeIcon
-                    icon={category.icon}
+                    icon={category.icon as IconProp}
                     className={`text-${category.color}-400 text-sm block mr-2`}
                   />
                   <span className="text-white text-xs font-medium">

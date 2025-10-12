@@ -1,4 +1,5 @@
 import type { SocialLink, FooterSection } from './types';
+import { ROUTES } from '@constants';
 
 export const SOCIAL_LINKS: SocialLink[] = [
   { name: 'Discord', path: 'https://discord.gg/comet', icon: 'discord' },
@@ -11,10 +12,10 @@ export const FOOTER_SECTIONS: FooterSection[] = [
   {
     title: 'Gaming',
     links: [
-      { label: 'All Games', path: '/games' },
-      { label: 'Tournaments', path: '/tournaments' },
-      { label: 'Leaderboard', path: '/leaderboard' },
-      { label: 'Achievements', path: '/achievements' }
+      { label: 'All Games', path: ROUTES.GAMES },
+      { label: 'Tournaments', path: ROUTES.TOURNAMENTS },
+      { label: 'Leaderboard', path: ROUTES.LEADERBOARD },
+      { label: 'Achievements', path: ROUTES.ACHIEVEMENTS }
     ]
   },
   {
@@ -29,10 +30,10 @@ export const FOOTER_SECTIONS: FooterSection[] = [
   {
     title: 'Support',
     links: [
-      { label: 'Help Center', path: '/help' },
-      { label: 'Contact Us', path: '/contact' },
-      { label: 'Bug Reports', path: '/bugs' },
-      { label: 'Status', path: '/status' }
+      { label: 'Help Center', path: ROUTES.HELP },
+      { label: 'Contact Us', path: ROUTES.CONTACT },
+      { label: 'Bug Reports', path: ROUTES.BUGS },
+      { label: 'Status', path: ROUTES.STATUS }
     ]
   }
 ];
