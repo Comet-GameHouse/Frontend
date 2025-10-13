@@ -33,7 +33,8 @@ export const ROUTES = {
   NOTIFICATIONS: '/app/notifications',
   TOURNAMENTS: '/app/tournaments',
   ACHIEVEMENTS: '/app/achievements',
-  TOURNAMENT_DETAIL: '/app/tournaments/:id',
+  TOURNAMENT_DETAILS: '/app/tournaments/:id',
+  GAME_DETAILS: '/app/games/:id',
 
   // Community routes
   COMMUNITY: '/community',

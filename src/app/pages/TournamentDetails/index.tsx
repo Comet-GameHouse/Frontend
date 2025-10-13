@@ -10,7 +10,7 @@ import { HowToParticipate } from './HowToParticipate';
 import type { TournamentTab } from './types';
 import { tournamentData, tournamentTabs } from './data';
 
-export const TournamentDetail = () => {
+export const TournamentDetails = () => {
   const [activeTab, setActiveTab] = useState<TournamentTab>('overview');
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 

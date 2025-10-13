@@ -24,9 +24,10 @@ import {
   Friends,
   Notifications,
   Tournaments,
-  TournamentDetail,
+  TournamentDetails,
   Achievements,
   AboutUs,
+  GameDetails,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -176,12 +177,16 @@ export const routesConfig = [
         element: <Tournaments />,
       },
       {
-        path: ROUTES.TOURNAMENT_DETAIL.replace(`${ROUTES.APP}/`, ''),
-        element: <TournamentDetail />,
+        path: ROUTES.TOURNAMENT_DETAILS.replace(`${ROUTES.APP}/`, ''),
+        element: <TournamentDetails />,
       },
       {
         path: ROUTES.ACHIEVEMENTS.replace(`${ROUTES.APP}/`, ''),
         element: <Achievements />,
+      },
+      {
+        path: ROUTES.GAME_DETAILS.replace(`${ROUTES.APP}/`, ''),
+        element: <GameDetails />,
       },
     ],
   },
