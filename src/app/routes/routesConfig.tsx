@@ -26,6 +26,7 @@ import {
   Tournaments,
   TournamentDetail,
   Achievements,
+  AboutUs,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -87,6 +88,10 @@ export const routesConfig = [
       {
         path: ROUTES.HELP.replace(`${ROUTES.SUPPORT}/`, ''),
         element: <Help />,
+      },
+      {
+        path: ROUTES.ABOUT_US.replace(`${ROUTES.SUPPORT}/`, ''),
+        element: <AboutUs />,
       },
     ],
   },

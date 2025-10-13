@@ -128,6 +128,7 @@ import {
   faCalendarCheck,
   faFistRaised,
   faLayerGroup,
+  faMobile,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -141,6 +142,8 @@ import {
   faCcPaypal,
   faCcApplePay,
   faReddit,
+  faGithub,
+  faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
 // Add icons to library
@@ -273,6 +276,7 @@ library.add(
   faCalendarCheck,
   faFistRaised,
   faLayerGroup,
+  faMobile,
 
   faGoogle,
   faDiscord,
@@ -283,5 +287,7 @@ library.add(
   faCcMastercard,
   faCcPaypal,
   faCcApplePay,
-  faReddit
+  faReddit,
+  faGithub,
+  faLinkedin
 );
