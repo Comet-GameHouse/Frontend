@@ -20,6 +20,7 @@ export { Help } from './Help';
 export { Friends } from './Friends';
 export { Notifications } from './Notifications';
 export { Tournaments } from './Tournaments';
-export { TournamentDetail } from './TournamentDetail';
+export { TournamentDetails } from './TournamentDetails';
 export { Achievements } from './Achievements';
 export { AboutUs } from './AboutUs';
+export { GameDetails } from './GameDetails';
