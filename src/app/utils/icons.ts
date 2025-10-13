@@ -125,6 +125,9 @@ import {
   faMoon,
   faCopy,
   faLink,
+  faCalendarCheck,
+  faFistRaised,
+  faLayerGroup,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -267,6 +270,9 @@ library.add(
   faMoon,
   faCopy,
   faLink,
+  faCalendarCheck,
+  faFistRaised,
+  faLayerGroup,
 
   faGoogle,
   faDiscord,

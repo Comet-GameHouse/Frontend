@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import type { TournamentTab } from './types';
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 interface TournamentTabsProps {
   tabs: { id: TournamentTab; label: string; icon: string }[];
@@ -7,7 +8,11 @@ interface TournamentTabsProps {
   onTabChange: (tab: TournamentTab) => void;
 }
 
-export const TournamentTabs = ({ tabs, activeTab, onTabChange }: TournamentTabsProps) => {
+export const TournamentTabs = ({
+  tabs,
+  activeTab,
+  onTabChange,
+}: TournamentTabsProps) => {
   return (
     <div className="flex overflow-x-auto gap-1 mb-6 sm:mb-8" data-aos="fade-up">
       {tabs.map((tab) => (
@@ -20,7 +25,7 @@ export const TournamentTabs = ({ tabs, activeTab, onTabChange }: TournamentTabsP
               : 'bg-gray-800/50 text-gray-400 hover:bg-gray-700/50 hover:text-white'
           }`}
         >
-          <FontAwesomeIcon icon={tab.icon} />
+          <FontAwesomeIcon icon={tab.icon as IconProp} />
           {tab.label}
         </button>
       ))}

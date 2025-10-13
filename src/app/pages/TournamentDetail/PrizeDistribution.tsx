@@ -1,5 +1,4 @@
 import { Card } from '@components';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { prizeDistribution } from './data';
 
 export const PrizeDistribution = () => {
