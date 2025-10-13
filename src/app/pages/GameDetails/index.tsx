@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Card, Button } from '@components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { GameHeader } from './GameHeader';
 import { GameStats } from './GameStats';
@@ -8,11 +7,11 @@ import { GameDescription } from './GameDescription';
 import { GameLeaderboard } from './GameLeaderboard';
 import { GameAchievements } from './GameAchievements';
 import { SupportContact } from './SupportContact';
-import type { GameTab } from './types';
 import { gameData, gameTabs } from './data';
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 export const GameDetails = () => {
-  const [activeTab, setActiveTab] = useState<GameTab>('rooms');
+  const [activeTab, setActiveTab] = useState<string>('rooms');
   const [isFavorite, setIsFavorite] = useState(false);
 
   const renderTabContent = () => {
@@ -36,8 +35,7 @@ export const GameDetails = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900/10 to-purple-900/10">
       <div className="container mx-auto px-3 sm:px-4 lg:px-6 xl:px-8 py-4 sm:py-6 lg:py-8">
-        
-        <GameHeader 
+        <GameHeader
           game={gameData}
           isFavorite={isFavorite}
           onToggleFavorite={() => setIsFavorite(!isFavorite)}
@@ -59,16 +57,14 @@ export const GameDetails = () => {
                     : 'bg-gray-800/50 text-gray-400 hover:bg-gray-700/50 hover:text-white'
                 }`}
               >
-                <FontAwesomeIcon icon={tab.icon} />
+                <FontAwesomeIcon icon={tab.icon as IconProp} />
                 {tab.label}
               </button>
             ))}
           </div>
 
           {/* Tab Content */}
-          <div data-aos="fade-up">
-            {renderTabContent()}
-          </div>
+          <div data-aos="fade-up">{renderTabContent()}</div>
 
           <SupportContact />
         </div>
