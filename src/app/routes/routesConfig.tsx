@@ -28,6 +28,7 @@ import {
   Achievements,
   AboutUs,
   GameDetails,
+  RoomDetail,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -187,6 +188,10 @@ export const routesConfig = [
       {
         path: ROUTES.GAME_DETAILS.replace(`${ROUTES.APP}/`, ''),
         element: <GameDetails />,
+      },
+      {
+        path: ROUTES.ROOM_DETAILS.replace(`${ROUTES.APP}/`, ''),
+        element: <RoomDetail />,
       },
     ],
   },

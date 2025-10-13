@@ -24,3 +24,4 @@ export { TournamentDetails } from './TournamentDetails';
 export { Achievements } from './Achievements';
 export { AboutUs } from './AboutUs';
 export { GameDetails } from './GameDetails';
+export { RoomDetail } from './RoomDetail';
