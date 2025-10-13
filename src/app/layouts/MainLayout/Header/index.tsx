@@ -9,6 +9,7 @@ import { UserMenu } from './UserMenu';
 import { AuthButtons } from './AuthButtons';
 import { MobileMenu } from './MobileMenu';
 import { MobileMenuButton } from './MobileMenuButton';
+import { Notification } from './Notification';
 
 export const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -27,6 +28,7 @@ export const Header = () => {
           <Logo />
           <DesktopNavigation />
 
+          <Notification />
           <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
             {user ? (
               <>
