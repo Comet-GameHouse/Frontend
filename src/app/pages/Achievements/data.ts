@@ -1,0 +1,168 @@
+import type { Achievement, AchievementCategory, UserAchievements, DailyAchievement } from './types';
+
+export const achievementsData: Achievement[] = [
+  {
+    id: 'win-streak',
+    name: 'Win Streak',
+    description: 'Consecutive wins in competitive matches',
+    icon: 'fire',
+    category: 'combat',
+    rarity: 'epic',
+    points: 500,
+    currentLevel: 3,
+    maxLevel: 10,
+    currentProgress: 7,
+    requiredProgress: 10,
+    nextLevelPoints: 750
+  },
+  {
+    id: 'total-wins',
+    name: 'Victory Collector',
+    description: 'Total wins across all game modes',
+    icon: 'trophy',
+    category: 'combat',
+    rarity: 'rare',
+    points: 1200,
+    currentLevel: 5,
+    maxLevel: 20,
+    currentProgress: 87,
+    requiredProgress: 100,
+    nextLevelPoints: 1500
+  },
+  {
+    id: 'play-time',
+    name: 'Dedicated Gamer',
+    description: 'Total hours spent playing games',
+    icon: 'clock',
+    category: 'dedication',
+    rarity: 'common',
+    points: 300,
+    currentLevel: 2,
+    maxLevel: 10,
+    currentProgress: 15,
+    requiredProgress: 20,
+    nextLevelPoints: 450
+  },
+  {
+    id: 'perfect-scores',
+    name: 'Perfectionist',
+    description: 'Achieve perfect scores in games',
+    icon: 'star',
+    category: 'skills',
+    rarity: 'legendary',
+    points: 2000,
+    currentLevel: 1,
+    maxLevel: 5,
+    currentProgress: 2,
+    requiredProgress: 5,
+    nextLevelPoints: 3000
+  },
+  {
+    id: 'friend-battles',
+    name: 'Friendly Rival',
+    description: 'Play matches with friends',
+    icon: 'user-friends',
+    category: 'social',
+    rarity: 'common',
+    points: 800,
+    currentLevel: 4,
+    maxLevel: 10,
+    currentProgress: 32,
+    requiredProgress: 40,
+    nextLevelPoints: 1000
+  },
+  {
+    id: 'daily-login',
+    name: 'Consistent Player',
+    description: 'Consecutive days logged in',
+    icon: 'calendar-check',
+    category: 'dedication',
+    rarity: 'rare',
+    points: 1500,
+    currentLevel: 7,
+    maxLevel: 30,
+    currentProgress: 18,
+    requiredProgress: 20,
+    nextLevelPoints: 1800
+  },
+  {
+    id: 'collection',
+    name: 'Collector',
+    description: 'Unlock different achievements',
+    icon: 'gem',
+    category: 'collection',
+    rarity: 'epic',
+    points: 2200,
+    currentLevel: 3,
+    maxLevel: 10,
+    currentProgress: 24,
+    requiredProgress: 30,
+    nextLevelPoints: 2800
+  },
+  {
+    id: 'exploration',
+    name: 'Explorer',
+    description: 'Discover hidden areas and secrets',
+    icon: 'map',
+    category: 'exploration',
+    rarity: 'rare',
+    points: 900,
+    currentLevel: 2,
+    maxLevel: 8,
+    currentProgress: 12,
+    requiredProgress: 15,
+    nextLevelPoints: 1200
+  }
+];
+
+export const dailyAchievements: DailyAchievement[] = [
+  {
+    id: 'daily-win-1',
+    name: 'First Win of the Day',
+    description: 'Win one match in any game mode',
+    icon: 'trophy',
+    reward: 150,
+    requiredProgress: 1,
+    currentProgress: 1,
+    completed: true,
+    type: 'daily'
+  },
+  {
+    id: 'daily-play-3',
+    name: 'Warm Up',
+    description: 'Play 3 matches today',
+    icon: 'gamepad',
+    reward: 200,
+    requiredProgress: 3,
+    currentProgress: 2,
+    completed: false,
+    type: 'daily'
+  },
+  {
+    id: 'daily-friend',
+    name: 'Friendly Match',
+    description: 'Play a match with a friend',
+    icon: 'user-friends',
+    reward: 250,
+    requiredProgress: 1,
+    currentProgress: 0,
+    completed: false,
+    type: 'daily'
+  }
+];
+
+export const achievementCategories: AchievementCategory[] = [
+  { id: 'all', name: 'All Achievements', icon: 'layer-group', count: achievementsData.length },
+  { id: 'combat', name: 'Combat', icon: 'fist-raised', count: 2 },
+  { id: 'skills', name: 'Skills', icon: 'brain', count: 1 },
+  { id: 'social', name: 'Social', icon: 'users', count: 1 },
+  { id: 'dedication', name: 'Dedication', icon: 'calendar', count: 2 },
+  { id: 'collection', name: 'Collection', icon: 'gem', count: 1 },
+  { id: 'exploration', name: 'Exploration', icon: 'map', count: 1 }
+];
+
+export const userAchievements: UserAchievements = {
+  unlockedCount: 8,
+  totalPoints: 10400,
+  unlockedIds: ['win-streak', 'total-wins', 'play-time', 'perfect-scores', 'friend-battles', 'daily-login', 'collection', 'exploration']
+};

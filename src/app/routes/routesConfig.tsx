@@ -25,6 +25,7 @@ import {
   Notifications,
   Tournaments,
   TournamentDetail,
+  Achievements,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -172,6 +173,10 @@ export const routesConfig = [
       {
         path: ROUTES.TOURNAMENT_DETAIL.replace(`${ROUTES.APP}/`, ''),
         element: <TournamentDetail />,
+      },
+      {
+        path: ROUTES.ACHIEVEMENTS.replace(`${ROUTES.APP}/`, ''),
+        element: <Achievements />,
       },
     ],
   },

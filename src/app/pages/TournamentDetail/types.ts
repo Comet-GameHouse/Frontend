@@ -1,3 +1,5 @@
+import type { IconProp } from '@fortawesome/fontawesome-svg-core';
+
 export interface TournamentDetail {
   id: string;
   name: string;
@@ -40,7 +42,7 @@ export interface PrizeTier {
 
 export interface TournamentRule {
   id: string;
-  icon: string;
+  icon: IconProp;
   title: string;
   description: string;
   details?: string[];
@@ -49,7 +51,7 @@ export interface TournamentRule {
 export interface ParticipationStep {
   id: string;
   step: number;
-  icon: string;
+  icon: IconProp;
   title: string;
   description: string;
   actions?: string[];

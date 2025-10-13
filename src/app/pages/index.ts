@@ -21,3 +21,4 @@ export { Friends } from './Friends';
 export { Notifications } from './Notifications';
 export { Tournaments } from './Tournaments';
 export { TournamentDetail } from './TournamentDetail';
+export { Achievements } from './Achievements';
