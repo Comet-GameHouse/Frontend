@@ -35,6 +35,7 @@ export const ROUTES = {
   ACHIEVEMENTS: '/app/achievements',
   TOURNAMENT_DETAILS: '/app/tournaments/:id',
   GAME_DETAILS: '/app/games/:id',
+  ROOM_DETAILS: '/app/games/:id/rooms/:rid',
 
   // Community routes
   COMMUNITY: '/community',
