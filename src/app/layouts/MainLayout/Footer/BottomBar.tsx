@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { ROUTES } from '@constants';
 
 export const BottomBar = () => {
   return (
@@ -12,22 +13,22 @@ export const BottomBar = () => {
       </p>
       <div className="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-6 text-base md:text-sm order-1 md:order-2">
         <Link
-          to="/privacy"
+          to={ROUTES.PRIVACY}
           className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-105 mb-2 md:mb-0"
         >
           Privacy Policy
         </Link>
         <Link
-          to="/terms"
+          to={ROUTES.TERMS}
           className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-105 mb-2 md:mb-0"
         >
           Terms of Service
         </Link>
         <Link
-          to="/cookies"
+          to={ROUTES.ABOUT_US}
           className="text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-105 mb-2 md:mb-0"
         >
-          Cookies
+          About Us
         </Link>
       </div>
     </div>

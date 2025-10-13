@@ -22,3 +22,4 @@ export { Notifications } from './Notifications';
 export { Tournaments } from './Tournaments';
 export { TournamentDetail } from './TournamentDetail';
 export { Achievements } from './Achievements';
+export { AboutUs } from './AboutUs';

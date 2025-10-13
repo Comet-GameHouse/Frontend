@@ -12,6 +12,7 @@ export const ROUTES = {
   STATUS: '/support/status',
   BUGS: '/support/bugs',
   FEEDBACK: '/support/feedback',
+  ABOUT_US: '/support/aboutus',
 
   // Auth routes
   AUTH: '/auth',
