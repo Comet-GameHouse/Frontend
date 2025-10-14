@@ -1,0 +1,6 @@
+export { BugsPage } from './BugsPage'
+export { ContactPage } from './ContactPage'
+export { FeedbackPage } from './FeedbackPage'
+export { HelpPage } from './HelpPage'
+export { StatusPage } from './StatusPage'
+export { SupportPage } from './SupportPage'

@@ -1,34 +1,33 @@
 import { ROUTES } from '@constants';
 import { MainLayout, AuthLayout, GameLayout } from '@layouts';
 import {
-  Home,
-  SignIn,
-  SignUp,
-  Dashboard,
-  GameLobby,
-  Shop,
-  Leaderboard,
-  Profile,
-  NotFound,
-  Community,
-  Games,
-  Settings,
-  Terms,
-  Privacy,
-  Contact,
-  Support,
-  Status,
-  Bugs,
-  Feedback,
-  Help,
-  Friends,
-  Notifications,
-  Tournaments,
-  TournamentDetails,
-  Achievements,
-  AboutUs,
-  GameDetails,
-  RoomDetail,
+  HomePage,
+  SignInPage,
+  SignUpPage,
+  DashboardPage,
+  ShopPage,
+  LeaderboardPage,
+  ProfilePage,
+  NotFoundPage,
+  CommunityPage,
+  GamesPage,
+  SettingsPage,
+  TermsPage,
+  PrivacyPage,
+  ContactPage,
+  SupportPage,
+  StatusPage,
+  BugsPage,
+  FeedbackPage,
+  HelpPage,
+  FriendsPage,
+  NotificationsPage,
+  TournamentsPage,
+  TournamentDetailsPage,
+  AchievementsPage,
+  AboutUsPage,
+  GameDetailsPage,
+  RoomDetailsPage,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -43,19 +42,23 @@ export const routesConfig = [
     children: [
       {
         path: '',
-        element: <Home />,
+        element: <HomePage />,
       },
       {
-        path: ROUTES.PROFILE,
-        element: <Profile />,
+        path: ROUTES.ABOUT_US,
+        element: <AboutUsPage />,
       },
       {
         path: ROUTES.TERMS,
-        element: <Terms />,
+        element: <TermsPage />,
       },
       {
         path: ROUTES.PRIVACY,
-        element: <Privacy />,
+        element: <PrivacyPage />,
+      },
+      {
+        path: ROUTES.CONTACT,
+        element: <ContactPage />,
       },
     ],
   },
@@ -69,31 +72,23 @@ export const routesConfig = [
     children: [
       {
         path: '',
-        element: <Support />,
-      },
-      {
-        path: ROUTES.CONTACT.replace(`${ROUTES.SUPPORT}/`, ''),
-        element: <Contact />,
-      },
-      {
-        path: ROUTES.STATUS.replace(`${ROUTES.SUPPORT}/`, ''),
-        element: <Status />,
-      },
-      {
-        path: ROUTES.BUGS.replace(`${ROUTES.SUPPORT}/`, ''),
-        element: <Bugs />,
-      },
-      {
-        path: ROUTES.FEEDBACK.replace(`${ROUTES.SUPPORT}/`, ''),
-        element: <Feedback />,
+        element: <SupportPage />,
       },
       {
         path: ROUTES.HELP.replace(`${ROUTES.SUPPORT}/`, ''),
-        element: <Help />,
+        element: <HelpPage />,
       },
       {
-        path: ROUTES.ABOUT_US.replace(`${ROUTES.SUPPORT}/`, ''),
-        element: <AboutUs />,
+        path: ROUTES.STATUS.replace(`${ROUTES.SUPPORT}/`, ''),
+        element: <StatusPage />,
+      },
+      {
+        path: ROUTES.BUGS.replace(`${ROUTES.SUPPORT}/`, ''),
+        element: <BugsPage />,
+      },
+      {
+        path: ROUTES.FEEDBACK.replace(`${ROUTES.SUPPORT}/`, ''),
+        element: <FeedbackPage />,
       },
     ],
   },
@@ -107,12 +102,8 @@ export const routesConfig = [
     children: [
       {
         path: '',
-        element: <Community />,
+        element: <CommunityPage />,
       },
-      // {
-      //   path: ROUTES.FORUMS.replace(`${ROUTES.COMMUNITY}/`, ''),
-      //   element: <Forums />,
-      // },
     ],
   },
   {
@@ -125,11 +116,11 @@ export const routesConfig = [
     children: [
       {
         path: ROUTES.SIGN_IN.replace(`${ROUTES.AUTH}/`, ''),
-        element: <SignIn />,
+        element: <SignInPage />,
       },
       {
         path: ROUTES.SIGN_UP.replace(`${ROUTES.AUTH}/`, ''),
-        element: <SignUp />,
+        element: <SignUpPage />,
       },
     ],
   },
@@ -143,55 +134,55 @@ export const routesConfig = [
     children: [
       {
         path: ROUTES.DASHBOARD.replace(`${ROUTES.APP}/`, ''),
-        element: <Dashboard />,
+        element: <DashboardPage />,
       },
       {
         path: ROUTES.GAMES.replace(`${ROUTES.APP}/`, ''),
-        element: <Games />,
+        element: <GamesPage />,
       },
       {
         path: ROUTES.SHOP.replace(`${ROUTES.APP}/`, ''),
-        element: <Shop />,
+        element: <ShopPage />,
       },
       {
         path: ROUTES.LEADERBOARD.replace(`${ROUTES.APP}/`, ''),
-        element: <Leaderboard />,
+        element: <LeaderboardPage />,
       },
       {
         path: ROUTES.MY_PROFILE.replace(`${ROUTES.APP}/`, ''),
-        element: <Profile />,
+        element: <ProfilePage />,
       },
       {
         path: ROUTES.SETTINGS.replace(`${ROUTES.APP}/`, ''),
-        element: <Settings />,
+        element: <SettingsPage />,
       },
       {
         path: ROUTES.FRIENDS.replace(`${ROUTES.APP}/`, ''),
-        element: <Friends />,
+        element: <FriendsPage />,
       },
       {
         path: ROUTES.NOTIFICATIONS.replace(`${ROUTES.APP}/`, ''),
-        element: <Notifications />,
+        element: <NotificationsPage />,
       },
       {
         path: ROUTES.TOURNAMENTS.replace(`${ROUTES.APP}/`, ''),
-        element: <Tournaments />,
+        element: <TournamentsPage />,
       },
       {
-        path: ROUTES.TOURNAMENT_DETAILS.replace(`${ROUTES.APP}/`, ''),
-        element: <TournamentDetails />,
+        path: ROUTES.TOURNAMENT_DETAIL.replace(`${ROUTES.APP}/`, ''),
+        element: <TournamentDetailsPage />,
       },
       {
         path: ROUTES.ACHIEVEMENTS.replace(`${ROUTES.APP}/`, ''),
-        element: <Achievements />,
+        element: <AchievementsPage />,
       },
       {
-        path: ROUTES.GAME_DETAILS.replace(`${ROUTES.APP}/`, ''),
-        element: <GameDetails />,
+        path: ROUTES.GAME_DETAIL.replace(`${ROUTES.APP}/`, ''),
+        element: <GameDetailsPage />,
       },
       {
-        path: ROUTES.ROOM_DETAILS.replace(`${ROUTES.APP}/`, ''),
-        element: <RoomDetail />,
+        path: ROUTES.ROOM_DETAIL.replace(`${ROUTES.APP}/`, ''),
+        element: <RoomDetailsPage />,
       },
     ],
   },
@@ -203,10 +194,10 @@ export const routesConfig = [
       </PrivateRoute>
     ),
     children: [
-      {
-        path: ROUTES.GAME_LOBBY.replace(`${ROUTES.GAME_PREFIX}/`, ''),
-        element: <GameLobby />,
-      },
+      // {
+      //   path: ROUTES.GAME_LOBBY.replace(`${ROUTES.GAME_PREFIX}/`, ''),
+      //   element: <GameLobby />,
+      // },
     ],
   },
   {
@@ -215,7 +206,7 @@ export const routesConfig = [
     children: [
       {
         path: '*',
-        element: <NotFound />,
+        element: <NotFoundPage />,
       },
     ],
   },
