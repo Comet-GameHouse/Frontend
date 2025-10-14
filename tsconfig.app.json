@@ -53,5 +53,5 @@
       "@utils": ["src/app/utils"],
     }
   },
-  "include": ["src"]
+  "include": ["src", "src/app/pages/Achievements/AchievementFilters/.tsx"]
 }

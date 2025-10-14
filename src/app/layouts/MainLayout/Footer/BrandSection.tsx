@@ -5,7 +5,7 @@ import type { IconName } from '@fortawesome/fontawesome-svg-core';
 export const BrandSection = () => {
   return (
     <div
-      className="md:col-span-3 lg:col-span-2 text-center md:text-left"
+      className="md:col-span-3 xl:col-span-2 text-center md:text-left"
       data-aos="fade-up"
     >
       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-3 mb-4 md:mb-6">
