@@ -1,7 +1,7 @@
 {
   "name": "comet-gamehouse-frontend",
   "private": true,
-  "version": "0.30.1",
+  "version": "0.31.0",
   "type": "module",
   "description": "Comet GameHouse - A modern gaming platform with desktop, mobile, and browser extension support",
   "author": {
