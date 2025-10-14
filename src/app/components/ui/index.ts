@@ -1,20 +1,10 @@
-export { Button, type ButtonVariant } from './Button';
-export { Input } from './Input';
-export { Dialog } from './Dialog';
-export { ProgressBar } from './ProgressBar';
-export { Select } from './Select';
-export { Checkbox } from './Checkbox';
-export { Radio } from './Radio';
-export { Switch } from './Switch';
-export { Card } from './Card1';
-export { Paper } from './Paper';
-
-
+export { Button, Card, Paper } from './base';
+export { Input, Select, Radio, Switch, Checkbox } from './forms';
+export { Dialog, ProgressBar, LoadingSpinner, Loading } from './status';
 export {
   NotificationContainer,
   type NotificationType,
   type NotificationPosition,
-} from './NotificationContainer';
-export { LoadingSpinner } from './LoadingSpinner';
-export { CometBackground } from './CometBackground';
-export { Loading } from './Loading';
+} from './notifications';
+
+export { CometBackground } from './backgrounds';
