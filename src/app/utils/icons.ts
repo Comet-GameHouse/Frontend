@@ -130,6 +130,8 @@ import {
   faLayerGroup,
   faMobile,
   faDoorOpen,
+  faChevronLeft,
+  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -279,6 +281,8 @@ library.add(
   faLayerGroup,
   faMobile,
   faDoorOpen,
+  faChevronLeft,
+  faChevronRight,
 
   faGoogle,
   faDiscord,

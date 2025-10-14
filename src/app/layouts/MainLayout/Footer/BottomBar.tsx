@@ -9,7 +9,7 @@ export const BottomBar = () => {
       data-aos-delay="600"
     >
       <p className="text-gray-400 text-base md:text-sm text-center md:text-left order-2 md:order-1">
-        © 2024 Comet-GameHouse. All rights reserved.
+        © 2025 Comet-GameHouse. All rights reserved.
       </p>
       <div className="flex flex-wrap justify-center md:justify-start space-x-4 md:space-x-6 text-base md:text-sm order-1 md:order-2">
         <Link
