@@ -33,9 +33,9 @@ export const ROUTES = {
   NOTIFICATIONS: '/app/notifications',
   TOURNAMENTS: '/app/tournaments',
   ACHIEVEMENTS: '/app/achievements',
-  TOURNAMENT_DETAILS: '/app/tournaments/:id',
-  GAME_DETAILS: '/app/games/:id',
-  ROOM_DETAILS: '/app/games/:id/rooms/:rid',
+  TOURNAMENT_DETAIL: '/app/tournaments/:id',
+  GAME_DETAIL: '/app/games/:id',
+  ROOM_DETAIL: '/app/rooms/:id',
 
   // Community routes
   COMMUNITY: '/community',

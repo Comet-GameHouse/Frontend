@@ -1,27 +1,32 @@
-export { Home } from './Home';
-export { SignIn } from './auth/SignIn';
-export { SignUp } from './auth/SignUp';
-export { Dashboard } from './Dashboard';
-export { Games, GameLobby } from './games';
-export { Shop } from './Shop';
-export { Leaderboard } from './Leaderboard';
-export { Profile } from './Profile';
-export { NotFound } from './NotFound';
-export { Community } from './Community';
-export { Settings } from './Settings';
-export { Terms } from './Terms';
-export { Privacy } from './Privacy';
-export { Contact } from './Contact';
-export { Support } from './Support';
-export { Status } from './Status';
-export { Bugs } from './Bugs';
-export { Feedback } from './Feedback';
-export { Help } from './Help';
-export { Friends } from './Friends';
-export { Notifications } from './Notifications';
-export { Tournaments } from './Tournaments';
-export { TournamentDetails } from './TournamentDetails';
-export { Achievements } from './Achievements';
-export { AboutUs } from './AboutUs';
-export { GameDetails } from './GameDetails';
-export { RoomDetail } from './RoomDetail';
+export { SignInPage, SignUpPage } from './auth';
+
+export {
+  AchievementsPage,
+  DashboardPage,
+  FriendsPage,
+  LeaderboardPage,
+  NotificationsPage,
+  ProfilePage,
+  SettingsPage,
+  ShopPage,
+  TournamentDetailsPage,
+  TournamentsPage,
+} from './app';
+
+export { CommunityPage } from './community';
+export { GameDetailsPage, GamesPage, RoomDetailsPage } from './games';
+export {
+  AboutUsPage,
+  HomePage,
+  PrivacyPage,
+  TermsPage,
+  NotFoundPage,
+} from './public';
+export {
+  BugsPage,
+  ContactPage,
+  FeedbackPage,
+  HelpPage,
+  StatusPage,
+  SupportPage,
+} from './support';
