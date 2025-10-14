@@ -12,6 +12,10 @@ export {
   CometBackground,
   Loading,
   Card,
+  Paper,
+  Switch,
+  Checkbox,
+  Radio,
 } from './ui';
 
 export { SocialSignIn } from './auth';
