@@ -15,6 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   pulse?: boolean;
   glow?: boolean;
   disabled?: boolean;
+  fullWidth?: boolean;
 }
 
 export const Button = ({
@@ -29,12 +30,14 @@ export const Button = ({
   children,
   disabled,
   className = '',
+  fullWidth = false,
   ...props
 }: ButtonProps) => {
   const baseStyles = `cursor-pointer rounded-lg font-bold transition-all duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none hover:brightness-110 active:translate-y-0.5 ${pulse ? 'animate-pulse' : ''} ${glow ? 'shadow-lg shadow-current' : ''}`;
 
   const buttonStyles = `
     ${baseStyles}
+    ${fullWidth ? 'w-full' : ''}
     ${BUTTON_VARIANTS[variant]}
     ${BUTTON_SIZES[size]}
     ${BUTTON_DESIGNS[design]}
