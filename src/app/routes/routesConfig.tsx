@@ -28,6 +28,7 @@ import {
   AboutUsPage,
   GameDetailsPage,
   RoomDetailsPage,
+  Test,
 } from '@pages';
 import { PrivateRoute, PublicRoute } from './routes';
 
@@ -40,6 +41,10 @@ export const routesConfig = [
       </PublicRoute>
     ),
     children: [
+      {
+        path: 'test',
+        element: <Test />,
+      },
       {
         path: '',
         element: <HomePage />,

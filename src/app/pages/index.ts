@@ -30,3 +30,5 @@ export {
   StatusPage,
   SupportPage,
 } from './support';
+
+export { Test } from './Test';
