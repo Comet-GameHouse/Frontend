@@ -132,6 +132,7 @@ import {
   faDoorOpen,
   faChevronLeft,
   faChevronRight,
+  faPlayCircle,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -283,6 +284,7 @@ library.add(
   faDoorOpen,
   faChevronLeft,
   faChevronRight,
+  faPlayCircle,
 
   faGoogle,
   faDiscord,

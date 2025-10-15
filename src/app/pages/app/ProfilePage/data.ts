@@ -1,3 +1,7 @@
+import { type QuickAction } from '@app/components';
+
+import { ROUTES } from '@app/constants';
+
 export const PROFILE_DATA: Record<string, any> = {
   '1': {
     id: '1',
@@ -369,3 +373,34 @@ export const PROFILE_TIMELINE: Record<string, any[]> = {
     },
   ],
 };
+
+export const QUICK_ACTIONS: QuickAction[] = [
+  {
+    icon: 'cog',
+    label: 'Settings',
+    description: 'Manage account',
+    path: ROUTES.SETTINGS,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    icon: 'award',
+    label: 'Achievements',
+    description: 'View your progress',
+    path: ROUTES.ACHIEVEMENTS,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    icon: 'users',
+    label: 'Friends',
+    description: 'Your gaming buddies',
+    path: ROUTES.FRIENDS,
+    color: 'from-yellow-500 to-amber-500',
+  },
+  {
+    icon: 'tachometer-alt',
+    label: 'Dashboard',
+    description: 'Back to overview',
+    path: ROUTES.DASHBOARD,
+    color: 'from-purple-500 to-pink-500',
+  },
+];

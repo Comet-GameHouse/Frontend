@@ -1,4 +1,6 @@
+import type { QuickAction } from '@app/components';
 import type { Game, GameCategory, SortOption } from './types';
+import { ROUTES } from '@app/constants';
 
 export const GAME_CATEGORIES: GameCategory[] = [
   { id: 'all', name: 'All Games', icon: 'gamepad', count: 24 },
@@ -145,4 +147,35 @@ export const SORT_OPTIONS: SortOption[] = [
   { value: 'newest', label: 'Newest First' },
   { value: 'rating', label: 'Highest Rated' },
   { value: 'name', label: 'Alphabetical' },
+];
+
+export const QUICK_ACTIONS: QuickAction[] = [
+  {
+    icon: 'trophy',
+    label: 'Tournaments',
+    description: 'Game competitions',
+    path: ROUTES.TOURNAMENTS,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    icon: 'chart-bar',
+    label: 'Leaderboard',
+    description: 'Game rankings',
+    path: ROUTES.LEADERBOARD,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    icon: 'store',
+    label: 'Shop',
+    description: 'Buy games & DLC',
+    path: ROUTES.SHOP,
+    color: 'from-yellow-500 to-amber-500',
+  },
+  {
+    icon: 'users',
+    label: 'Community',
+    description: 'Game communities',
+    path: ROUTES.COMMUNITY,
+    color: 'from-purple-500 to-pink-500',
+  },
 ];

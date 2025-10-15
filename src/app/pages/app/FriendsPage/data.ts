@@ -1,4 +1,5 @@
-import type { Friend, FriendRequest, QuickNavigation } from './types';
+import type { Friend, FriendRequest } from './types';
+import type { QuickAction } from '@app/components';
 import { ROUTES } from '@constants';
 
 export const friendsList: Friend[] = [
@@ -10,7 +11,7 @@ export const friendsList: Friend[] = [
     game: 'Cosmic Clash',
     lastOnline: 'Now',
     friendshipDate: '2024-01-10',
-    mutualFriends: 12
+    mutualFriends: 12,
   },
   {
     id: '2',
@@ -19,7 +20,7 @@ export const friendsList: Friend[] = [
     status: 'online',
     lastOnline: 'Now',
     friendshipDate: '2024-01-05',
-    mutualFriends: 8
+    mutualFriends: 8,
   },
   {
     id: '3',
@@ -28,7 +29,7 @@ export const friendsList: Friend[] = [
     status: 'away',
     lastOnline: '2 hours ago',
     friendshipDate: '2024-01-02',
-    mutualFriends: 5
+    mutualFriends: 5,
   },
   {
     id: '4',
@@ -37,7 +38,7 @@ export const friendsList: Friend[] = [
     status: 'offline',
     lastOnline: '1 day ago',
     friendshipDate: '2023-12-28',
-    mutualFriends: 3
+    mutualFriends: 3,
   },
   {
     id: '5',
@@ -47,7 +48,7 @@ export const friendsList: Friend[] = [
     game: 'Star Raiders',
     lastOnline: 'Now',
     friendshipDate: '2023-12-20',
-    mutualFriends: 15
+    mutualFriends: 15,
   },
   {
     id: '6',
@@ -56,8 +57,8 @@ export const friendsList: Friend[] = [
     status: 'online',
     lastOnline: 'Now',
     friendshipDate: '2023-12-15',
-    mutualFriends: 7
-  }
+    mutualFriends: 7,
+  },
 ];
 
 export const friendRequests: FriendRequest[] = [
@@ -66,46 +67,50 @@ export const friendRequests: FriendRequest[] = [
     fromUser: {
       id: '7',
       username: 'NewPlayer123',
-      avatar: ''
+      avatar: '',
     },
     sentAt: '2 hours ago',
-    mutualFriends: 2
+    mutualFriends: 2,
   },
   {
     id: 'req2',
     fromUser: {
       id: '8',
       username: 'GameMaster',
-      avatar: ''
+      avatar: '',
     },
     sentAt: '1 day ago',
-    mutualFriends: 5
-  }
+    mutualFriends: 5,
+  },
 ];
 
-export const FRIENDS_QUICK_ACTIONS: QuickNavigation[] = [
-  {
-    icon: 'home',
-    label: 'Go Home',
-    description: 'Return to the main dashboard',
-    path: ROUTES.HOME,
-  },
-  {
-    icon: 'gamepad',
-    label: 'Browse Games',
-    description: 'Explore our game library',
-    path: ROUTES.GAMES,
-  },
-  {
-    icon: 'users',
-    label: 'Community',
-    description: 'Join our Discord community',
-    path: ROUTES.COMMUNITY,
-  },
+export const FRIENDS_QUICK_ACTIONS: QuickAction[] = [
   {
     icon: 'user-plus',
     label: 'Add Friends',
-    description: 'Find new friends to play with',
-    path: ROUTES.SEARCH,
+    description: 'Find new players',
+    path: ROUTES.COMMUNITY,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    icon: 'bell',
+    label: 'Notifications',
+    description: 'Friend requests',
+    path: ROUTES.NOTIFICATIONS,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    icon: 'chart-bar',
+    label: 'Leaderboard',
+    description: 'Compare with friends',
+    path: ROUTES.LEADERBOARD,
+    color: 'from-yellow-500 to-amber-500',
+  },
+  {
+    icon: 'gamepad',
+    label: 'Play Together',
+    description: 'Start a game session',
+    path: ROUTES.GAMES,
+    color: 'from-purple-500 to-pink-500',
   },
 ];

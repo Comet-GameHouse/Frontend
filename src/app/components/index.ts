@@ -1,6 +1,5 @@
 export {
   Button,
-  type ButtonVariant,
   Input,
   Dialog,
   ProgressBar,
@@ -16,6 +15,8 @@ export {
   Switch,
   Checkbox,
   Radio,
+  QuickActionsGrid,
+  type QuickAction,
 } from './ui';
 
 export { SocialSignIn } from './auth';

@@ -8,3 +8,4 @@ export {
 } from './notifications';
 
 export { CometBackground } from './backgrounds';
+export { QuickActionsGrid, type QuickAction } from './layouts';

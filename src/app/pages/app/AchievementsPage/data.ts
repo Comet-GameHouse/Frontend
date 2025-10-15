@@ -1,4 +1,11 @@
-import type { Achievement, AchievementCategory, UserAchievements, DailyAchievement } from './types';
+import { ROUTES } from '@app/constants';
+import type {
+  Achievement,
+  AchievementCategory,
+  UserAchievements,
+  DailyAchievement,
+} from './types';
+import { type QuickAction } from '@components';
 
 export const achievementsData: Achievement[] = [
   {
@@ -13,7 +20,7 @@ export const achievementsData: Achievement[] = [
     maxLevel: 10,
     currentProgress: 7,
     requiredProgress: 10,
-    nextLevelPoints: 750
+    nextLevelPoints: 750,
   },
   {
     id: 'total-wins',
@@ -27,7 +34,7 @@ export const achievementsData: Achievement[] = [
     maxLevel: 20,
     currentProgress: 87,
     requiredProgress: 100,
-    nextLevelPoints: 1500
+    nextLevelPoints: 1500,
   },
   {
     id: 'play-time',
@@ -41,7 +48,7 @@ export const achievementsData: Achievement[] = [
     maxLevel: 10,
     currentProgress: 15,
     requiredProgress: 20,
-    nextLevelPoints: 450
+    nextLevelPoints: 450,
   },
   {
     id: 'perfect-scores',
@@ -55,7 +62,7 @@ export const achievementsData: Achievement[] = [
     maxLevel: 5,
     currentProgress: 2,
     requiredProgress: 5,
-    nextLevelPoints: 3000
+    nextLevelPoints: 3000,
   },
   {
     id: 'friend-battles',
@@ -69,7 +76,7 @@ export const achievementsData: Achievement[] = [
     maxLevel: 10,
     currentProgress: 32,
     requiredProgress: 40,
-    nextLevelPoints: 1000
+    nextLevelPoints: 1000,
   },
   {
     id: 'daily-login',
@@ -83,7 +90,7 @@ export const achievementsData: Achievement[] = [
     maxLevel: 30,
     currentProgress: 18,
     requiredProgress: 20,
-    nextLevelPoints: 1800
+    nextLevelPoints: 1800,
   },
   {
     id: 'collection',
@@ -97,7 +104,7 @@ export const achievementsData: Achievement[] = [
     maxLevel: 10,
     currentProgress: 24,
     requiredProgress: 30,
-    nextLevelPoints: 2800
+    nextLevelPoints: 2800,
   },
   {
     id: 'exploration',
@@ -111,8 +118,8 @@ export const achievementsData: Achievement[] = [
     maxLevel: 8,
     currentProgress: 12,
     requiredProgress: 15,
-    nextLevelPoints: 1200
-  }
+    nextLevelPoints: 1200,
+  },
 ];
 
 export const dailyAchievements: DailyAchievement[] = [
@@ -125,7 +132,7 @@ export const dailyAchievements: DailyAchievement[] = [
     requiredProgress: 1,
     currentProgress: 1,
     completed: true,
-    type: 'daily'
+    type: 'daily',
   },
   {
     id: 'daily-play-3',
@@ -136,7 +143,7 @@ export const dailyAchievements: DailyAchievement[] = [
     requiredProgress: 3,
     currentProgress: 2,
     completed: false,
-    type: 'daily'
+    type: 'daily',
   },
   {
     id: 'daily-friend',
@@ -147,22 +154,67 @@ export const dailyAchievements: DailyAchievement[] = [
     requiredProgress: 1,
     currentProgress: 0,
     completed: false,
-    type: 'daily'
-  }
+    type: 'daily',
+  },
 ];
 
 export const achievementCategories: AchievementCategory[] = [
-  { id: 'all', name: 'All Achievements', icon: 'layer-group', count: achievementsData.length },
+  {
+    id: 'all',
+    name: 'All Achievements',
+    icon: 'layer-group',
+    count: achievementsData.length,
+  },
   { id: 'combat', name: 'Combat', icon: 'fist-raised', count: 2 },
   { id: 'skills', name: 'Skills', icon: 'brain', count: 1 },
   { id: 'social', name: 'Social', icon: 'users', count: 1 },
   { id: 'dedication', name: 'Dedication', icon: 'calendar', count: 2 },
   { id: 'collection', name: 'Collection', icon: 'gem', count: 1 },
-  { id: 'exploration', name: 'Exploration', icon: 'map', count: 1 }
+  { id: 'exploration', name: 'Exploration', icon: 'map', count: 1 },
 ];
 
 export const userAchievements: UserAchievements = {
   unlockedCount: 8,
   totalPoints: 10400,
-  unlockedIds: ['win-streak', 'total-wins', 'play-time', 'perfect-scores', 'friend-battles', 'daily-login', 'collection', 'exploration']
+  unlockedIds: [
+    'win-streak',
+    'total-wins',
+    'play-time',
+    'perfect-scores',
+    'friend-battles',
+    'daily-login',
+    'collection',
+    'exploration',
+  ],
 };
+
+export const QUICK_ACTIONS: QuickAction[] = [
+  {
+    icon: 'chart-bar',
+    label: 'Leaderboard',
+    description: 'Global rankings',
+    path: ROUTES.LEADERBOARD,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    icon: 'user',
+    label: 'Profile',
+    description: 'Your stats overview',
+    path: ROUTES.PROFILE,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    icon: 'gamepad',
+    label: 'Play Games',
+    description: 'Earn more achievements',
+    path: ROUTES.GAMES,
+    color: 'from-yellow-500 to-amber-500',
+  },
+  {
+    icon: 'tachometer-alt',
+    label: 'Dashboard',
+    description: 'Back to overview',
+    path: ROUTES.DASHBOARD,
+    color: 'from-purple-500 to-pink-500',
+  },
+];

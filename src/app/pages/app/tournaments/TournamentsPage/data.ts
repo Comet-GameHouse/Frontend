@@ -1,4 +1,5 @@
-import type { Tournament, TournamentCategory, QuickNavigation } from './types';
+import type { QuickAction } from '@app/components';
+import type { Tournament, TournamentCategory } from './types';
 import { ROUTES } from '@constants';
 
 export const tournaments: Tournament[] = [
@@ -139,29 +140,33 @@ export const tournamentCategories: TournamentCategory[] = [
   },
 ];
 
-export const TOURNAMENTS_QUICK_ACTIONS: QuickNavigation[] = [
+export const TOURNAMENTS_QUICK_ACTIONS: QuickAction[] = [
   {
-    icon: 'home',
-    label: 'Go Home',
-    description: 'Return to the main dashboard',
-    path: ROUTES.HOME,
+    icon: 'chart-bar',
+    label: 'Leaderboard',
+    description: 'Tournament rankings',
+    path: ROUTES.LEADERBOARD,
+    color: 'from-blue-500 to-cyan-500',
   },
   {
     icon: 'gamepad',
-    label: 'Browse Games',
-    description: 'Explore our game library',
+    label: 'Practice',
+    description: 'Play the games',
     path: ROUTES.GAMES,
+    color: 'from-green-500 to-emerald-500',
   },
   {
     icon: 'users',
     label: 'Community',
-    description: 'Join our Discord community',
+    description: 'Find team members',
     path: ROUTES.COMMUNITY,
+    color: 'from-yellow-500 to-amber-500',
   },
   {
-    icon: 'user-plus',
-    label: 'Invite Friends',
-    description: 'Invite friends to play together',
-    path: ROUTES.FRIENDS,
+    icon: 'tachometer-alt',
+    label: 'Dashboard',
+    description: 'Back to overview',
+    path: ROUTES.DASHBOARD,
+    color: 'from-purple-500 to-pink-500',
   },
 ];

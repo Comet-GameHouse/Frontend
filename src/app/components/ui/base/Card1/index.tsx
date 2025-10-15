@@ -56,7 +56,7 @@ export const Card = ({
 }: CardProps) => {
   // Base styles
   const baseStyles =
-    'backdrop-blur-sm transition-all duration-300 overflow-hidden';
+    'backdrop-blur-sm transition-all duration-300 overflow-hidden group';
 
   // Get current theme values
   const currentColorTheme = colorThemes[colorTheme];
