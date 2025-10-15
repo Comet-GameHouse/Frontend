@@ -1,10 +1,21 @@
-import type { GameDetail, GameTab, LeaderboardPlayer, GameRoom, Friend, GameAchievement } from './types';
+import type { QuickAction } from '@app/components';
+import type {
+  GameDetail,
+  GameTab,
+  LeaderboardPlayer,
+  GameRoom,
+  Friend,
+  GameAchievement,
+} from './types';
+import { ROUTES } from '@app/constants';
 
 export const gameData: GameDetail = {
   id: 'space-duel',
   name: 'Space Duel 1v1',
-  description: 'Intense 1v1 space combat where only the best pilot survives. Test your skills against players worldwide in fast-paced battles.',
-  longDescription: 'Engage in thrilling 1v1 space combat where strategy and quick reflexes determine victory. Customize your spacecraft, master different weapons, and climb the global rankings. With multiple game modes and regular tournaments, every battle is a new challenge.',
+  description:
+    'Intense 1v1 space combat where only the best pilot survives. Test your skills against players worldwide in fast-paced battles.',
+  longDescription:
+    'Engage in thrilling 1v1 space combat where strategy and quick reflexes determine victory. Customize your spacecraft, master different weapons, and climb the global rankings. With multiple game modes and regular tournaments, every battle is a new challenge.',
   icon: 'rocket',
   category: '1v1 Combat',
   difficulty: 'Hard',
@@ -30,41 +41,38 @@ export const gameData: GameDetail = {
     'Weapon customization',
     'Global ranking system',
     'Skill-based matchmaking',
-    'Live spectator mode'
+    'Live spectator mode',
   ],
-  gameModes: [
-    'Ranked 1v1',
-    'Quick Match',
-    'Tournament',
-    'Practice Mode'
-  ],
+  gameModes: ['Ranked 1v1', 'Quick Match', 'Tournament', 'Practice Mode'],
   howToPlay: [
     {
       title: 'Choose Your Entry Fee',
-      description: 'Select from 10 to 10,000 GameCoins to enter a match'
+      description: 'Select from 10 to 10,000 GameCoins to enter a match',
     },
     {
       title: 'Matchmaking',
-      description: 'Get matched with a player of similar skill level'
+      description: 'Get matched with a player of similar skill level',
     },
     {
       title: 'Battle',
-      description: 'Use your skills to defeat your opponent in space combat'
+      description: 'Use your skills to defeat your opponent in space combat',
     },
     {
       title: 'Win Prizes',
-      description: 'Winner takes 90% of the total entry fee pool'
-    }
-  ]
+      description: 'Winner takes 90% of the total entry fee pool',
+    },
+  ],
 };
 
 export const gameTabs: GameTab[] = [
   { id: 'rooms', label: 'Play Now', icon: 'play' },
   { id: 'overview', label: 'Overview', icon: 'info-circle' },
-  { id: 'achievements', label: 'Achievements', icon: 'trophy' }
+  { id: 'achievements', label: 'Achievements', icon: 'trophy' },
 ];
 
-export const roomEntryFees = [10, 25, 50, 100, 200, 500, 1000, 2000, 5000, 10000];
+export const roomEntryFees = [
+  10, 25, 50, 100, 200, 500, 1000, 2000, 5000, 10000,
+];
 
 // Active players count for each fee category
 export const roomPlayerCounts: { [key: number]: number } = {
@@ -77,7 +85,7 @@ export const roomPlayerCounts: { [key: number]: number } = {
   1000: 12,
   2000: 8,
   5000: 4,
-  10000: 2
+  10000: 2,
 };
 
 export const activeRooms: GameRoom[] = [
@@ -89,7 +97,7 @@ export const activeRooms: GameRoom[] = [
     maxPlayers: 2,
     potentialPrize: 180,
     creator: 'You',
-    invitedFriends: ['ProPlayer92']
+    invitedFriends: ['ProPlayer92'],
   },
   {
     id: '2',
@@ -99,7 +107,7 @@ export const activeRooms: GameRoom[] = [
     maxPlayers: 2,
     potentialPrize: 900,
     creator: 'SpaceWarrior',
-    invitedFriends: ['You', 'GalaxyHunter']
+    invitedFriends: ['You', 'GalaxyHunter'],
   },
   {
     id: '3',
@@ -109,8 +117,8 @@ export const activeRooms: GameRoom[] = [
     maxPlayers: 2,
     potentialPrize: 1800,
     creator: 'AlienDestroyer',
-    passwordProtected: true
-  }
+    passwordProtected: true,
+  },
 ];
 
 export const friendsList: Friend[] = [
@@ -118,40 +126,85 @@ export const friendsList: Friend[] = [
     id: '1',
     name: 'ProPlayer92',
     avatar: 'P',
-    status: 'Online'
+    status: 'Online',
   },
   {
     id: '2',
     name: 'SpaceWarrior',
     avatar: 'S',
-    status: 'In Game'
+    status: 'In Game',
   },
   {
     id: '3',
     name: 'GalaxyHunter',
     avatar: 'G',
-    status: 'Online'
+    status: 'Online',
   },
   {
     id: '4',
     name: 'AlienDestroyer',
     avatar: 'A',
-    status: 'Offline'
+    status: 'Offline',
   },
   {
     id: '5',
     name: 'StarDefender',
     avatar: 'S',
-    status: 'Online'
-  }
+    status: 'Online',
+  },
 ];
 
 export const leaderboardData: LeaderboardPlayer[] = [
-  { id: '1', rank: 1, name: 'GalaxyHunter', score: 158500, wins: 245, gamesPlayed: 280, winRate: 87.5, totalEarnings: 125000 },
-  { id: '2', rank: 2, name: 'SpaceWarrior', score: 142300, wins: 198, gamesPlayed: 225, winRate: 88.0, totalEarnings: 98000 },
-  { id: '3', rank: 3, name: 'AlienDestroyer', score: 138900, wins: 187, gamesPlayed: 210, winRate: 89.0, totalEarnings: 87500 },
-  { id: '4', rank: 4, name: 'CosmicHero', score: 125600, wins: 165, gamesPlayed: 195, winRate: 84.6, totalEarnings: 72000 },
-  { id: '5', rank: 5, name: 'StarDefender', score: 118700, wins: 152, gamesPlayed: 180, winRate: 84.4, totalEarnings: 65000 }
+  {
+    id: '1',
+    rank: 1,
+    name: 'GalaxyHunter',
+    score: 158500,
+    wins: 245,
+    gamesPlayed: 280,
+    winRate: 87.5,
+    totalEarnings: 125000,
+  },
+  {
+    id: '2',
+    rank: 2,
+    name: 'SpaceWarrior',
+    score: 142300,
+    wins: 198,
+    gamesPlayed: 225,
+    winRate: 88.0,
+    totalEarnings: 98000,
+  },
+  {
+    id: '3',
+    rank: 3,
+    name: 'AlienDestroyer',
+    score: 138900,
+    wins: 187,
+    gamesPlayed: 210,
+    winRate: 89.0,
+    totalEarnings: 87500,
+  },
+  {
+    id: '4',
+    rank: 4,
+    name: 'CosmicHero',
+    score: 125600,
+    wins: 165,
+    gamesPlayed: 195,
+    winRate: 84.6,
+    totalEarnings: 72000,
+  },
+  {
+    id: '5',
+    rank: 5,
+    name: 'StarDefender',
+    score: 118700,
+    wins: 152,
+    gamesPlayed: 180,
+    winRate: 84.4,
+    totalEarnings: 65000,
+  },
 ];
 
 export const gameAchievements: GameAchievement[] = [
@@ -165,7 +218,7 @@ export const gameAchievements: GameAchievement[] = [
     unlocked: true,
     unlockedAt: '2024-01-15T10:30:00Z',
     currentProgress: 1,
-    requiredProgress: 1
+    requiredProgress: 1,
   },
   {
     id: 'win-streak-5',
@@ -176,7 +229,7 @@ export const gameAchievements: GameAchievement[] = [
     rarity: 'rare',
     unlocked: false,
     currentProgress: 3,
-    requiredProgress: 5
+    requiredProgress: 5,
   },
   {
     id: 'high-roller',
@@ -187,7 +240,7 @@ export const gameAchievements: GameAchievement[] = [
     rarity: 'legendary',
     unlocked: false,
     currentProgress: 0,
-    requiredProgress: 1
+    requiredProgress: 1,
   },
   {
     id: 'veteran',
@@ -198,7 +251,7 @@ export const gameAchievements: GameAchievement[] = [
     rarity: 'rare',
     unlocked: false,
     currentProgress: 45,
-    requiredProgress: 100
+    requiredProgress: 100,
   },
   {
     id: 'perfect-victory',
@@ -210,7 +263,7 @@ export const gameAchievements: GameAchievement[] = [
     unlocked: true,
     unlockedAt: '2024-01-18T14:20:00Z',
     currentProgress: 1,
-    requiredProgress: 1
+    requiredProgress: 1,
   },
   {
     id: 'rich-warrior',
@@ -221,7 +274,7 @@ export const gameAchievements: GameAchievement[] = [
     rarity: 'epic',
     unlocked: false,
     currentProgress: 28700,
-    requiredProgress: 50000
+    requiredProgress: 50000,
   },
   {
     id: 'rival-destroyer',
@@ -232,7 +285,7 @@ export const gameAchievements: GameAchievement[] = [
     rarity: 'rare',
     unlocked: false,
     currentProgress: 4,
-    requiredProgress: 10
+    requiredProgress: 10,
   },
   {
     id: 'quick-draw',
@@ -243,6 +296,37 @@ export const gameAchievements: GameAchievement[] = [
     rarity: 'rare',
     unlocked: false,
     currentProgress: 0,
-    requiredProgress: 1
-  }
+    requiredProgress: 1,
+  },
+];
+
+export const QUICK_ACTIONS: QuickAction[] = [
+  {
+    icon: 'gamepad',
+    label: 'All Games',
+    description: 'Browse catalog',
+    path: ROUTES.GAMES,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    icon: 'trophy',
+    label: 'Tournaments',
+    description: "This game's events",
+    path: ROUTES.TOURNAMENTS,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    icon: 'chart-bar',
+    label: 'Leaderboard',
+    description: "This game's rankings",
+    path: ROUTES.LEADERBOARD,
+    color: 'from-yellow-500 to-amber-500',
+  },
+  {
+    icon: 'store',
+    label: 'Shop',
+    description: 'Purchase & DLC',
+    path: ROUTES.SHOP,
+    color: 'from-purple-500 to-pink-500',
+  },
 ];

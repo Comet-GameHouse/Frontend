@@ -174,7 +174,7 @@ export const routesConfig = [
         element: <TournamentsPage />,
       },
       {
-        path: ROUTES.TOURNAMENT_DETAIL.replace(`${ROUTES.APP}/`, ''),
+        path: ROUTES.TOURNAMENT_DETAILS.replace(`${ROUTES.APP}/`, ''),
         element: <TournamentDetailsPage />,
       },
       {
@@ -182,11 +182,11 @@ export const routesConfig = [
         element: <AchievementsPage />,
       },
       {
-        path: ROUTES.GAME_DETAIL.replace(`${ROUTES.APP}/`, ''),
+        path: ROUTES.GAME_DETAILS.replace(`${ROUTES.APP}/`, ''),
         element: <GameDetailsPage />,
       },
       {
-        path: ROUTES.ROOM_DETAIL.replace(`${ROUTES.APP}/`, ''),
+        path: ROUTES.ROOM_DETAILS.replace(`${ROUTES.APP}/`, ''),
         element: <RoomDetailsPage />,
       },
     ],

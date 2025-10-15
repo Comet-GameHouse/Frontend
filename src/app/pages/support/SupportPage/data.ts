@@ -1,5 +1,6 @@
 import { ROUTES } from '@constants';
 import type { SupportCard, SupportCategory, SupportStats } from './types';
+import type { QuickAction } from '@app/components';
 
 export const supportCards: SupportCard[] = [
   {
@@ -176,3 +177,34 @@ export const supportStats: SupportStats = {
   avgResponseTime: '< 2 hours',
   satisfactionRate: '98%',
 };
+
+export const QUICK_ACTIONS: QuickAction[] = [
+  {
+    icon: 'question-circle',
+    label: 'Help Center',
+    description: 'Find answers',
+    path: ROUTES.HELP,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    icon: 'envelope',
+    label: 'Contact Support',
+    description: 'Direct help',
+    path: ROUTES.CONTACT,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    icon: 'bug',
+    label: 'Report Bugs',
+    description: 'Technical issues',
+    path: ROUTES.BUGS,
+    color: 'from-yellow-500 to-amber-500',
+  },
+  {
+    icon: 'server',
+    label: 'System Status',
+    description: 'Service health',
+    path: ROUTES.STATUS,
+    color: 'from-purple-500 to-pink-500',
+  },
+];

@@ -3,6 +3,8 @@ import type { NotificationSettingsType as NotificationSettings } from './Notific
 import type { AccountAction } from './AccountActions';
 import type { PrivacySettingsType as PrivacySettings } from './PrivacySettings';
 import type { NavigationItem } from './SettingsNavigation';
+import type { QuickAction } from '@app/components';
+import { ROUTES } from '@app/constants';
 
 export const initialUserProfile: UserProfile = {
   firstName: 'Akira',
@@ -63,4 +65,35 @@ export const navigationItems: NavigationItem[] = [
   { id: 'notifications', label: 'Notifications', icon: 'bell' },
   { id: 'privacy', label: 'Privacy & Security', icon: 'shield-alt' },
   { id: 'account', label: 'Account Actions', icon: 'cog' },
+];
+
+export const QUICK_ACTIONS: QuickAction[] = [
+  {
+    icon: 'user',
+    label: 'Profile',
+    description: 'Edit your profile',
+    path: ROUTES.PROFILE,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    icon: 'shield-alt',
+    label: 'Privacy',
+    description: 'Privacy settings',
+    path: ROUTES.PRIVACY,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    icon: 'tachometer-alt',
+    label: 'Dashboard',
+    description: 'Back to overview',
+    path: ROUTES.DASHBOARD,
+    color: 'from-yellow-500 to-amber-500',
+  },
+  {
+    icon: 'question-circle',
+    label: 'Support',
+    description: 'Get help',
+    path: ROUTES.SUPPORT,
+    color: 'from-purple-500 to-pink-500',
+  },
 ];

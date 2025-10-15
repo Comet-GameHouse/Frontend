@@ -27,39 +27,44 @@ export const shadowStyles = {
 export const colorOptions = {
   blue: {
     base: 'bg-blue-500/20 border-blue-500/30 text-blue-300',
-    hover: 'hover:bg-blue-500/30 hover:border-blue-400/50 hover:text-blue-100',
+    hover: 'hover:bg-blue-500/10 hover:border-blue-500/50 hover:text-blue-100',
   },
   green: {
     base: 'bg-green-500/20 border-green-500/30 text-green-300',
     hover:
-      'hover:bg-green-500/30 hover:border-green-400/50 hover:text-green-100',
+      'hover:bg-green-500/10 hover:border-green-500/50 hover:text-green-100',
   },
   yellow: {
     base: 'bg-yellow-500/20 border-yellow-500/30 text-yellow-300',
     hover:
-      'hover:bg-yellow-500/30 hover:border-yellow-400/50 hover:text-yellow-100',
+      'hover:bg-yellow-500/10 hover:border-yellow-500/50 hover:text-yellow-100',
   },
   red: {
     base: 'bg-red-500/20 border-red-500/30 text-red-300',
-    hover: 'hover:bg-red-500/30 hover:border-red-400/50 hover:text-red-100',
+    hover: 'hover:bg-red-500/10 hover:border-red-500/50 hover:text-red-100',
   },
   orange: {
     base: 'bg-orange-500/20 border-orange-500/30 text-orange-300',
     hover:
-      'hover:bg-orange-500/30 hover:border-orange-400/50 hover:text-orange-100',
+      'hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-100',
   },
   purple: {
     base: 'bg-purple-500/20 border-purple-500/30 text-purple-300',
     hover:
-      'hover:bg-purple-500/30 hover:border-purple-400/50 hover:text-purple-100',
+      'hover:bg-purple-500/10 hover:border-purple-500/50 hover:text-purple-100',
   },
   cyan: {
     base: 'bg-cyan-500/20 border-cyan-500/30 text-cyan-300',
-    hover: 'hover:bg-cyan-500/30 hover:border-cyan-400/50 hover:text-cyan-100',
+    hover: 'hover:bg-cyan-500/10 hover:border-cyan-500/50 hover:text-cyan-100',
+  },
+  indigo: {
+    base: 'bg-indigo-500/20 border-indigo-500/30 text-indigo-300',
+    hover:
+      'hover:bg-indigo-500/10 hover:border-indigo-500/50 hover:text-indigo-100',
   },
   gray: {
     base: 'bg-gray-500/20 border-gray-500/30 text-gray-300',
-    hover: 'hover:bg-gray-500/30 hover:border-gray-400/50 hover:text-gray-100',
+    hover: 'hover:bg-gray-500/10 hover:border-gray-500/50 hover:text-gray-100',
   },
 };
 
@@ -139,6 +144,10 @@ export const shadowTypes = {
     cyan: {
       base: 'shadow-gray-500/10',
       hover: 'hover:shadow-cyan-500/20',
+    },
+    indigo: {
+      base: 'shadow-gray-500/10',
+      hover: 'hover:shadow-indigo-500/20',
     },
     gray: {
       base: 'shadow-gray-500/10',

@@ -1,4 +1,11 @@
-import type { ServiceStatus, SystemMetric, QuickNavigation, Incident, DailyStatus } from './types';
+import type { QuickAction } from '@app/components';
+import type {
+  ServiceStatus,
+  SystemMetric,
+  QuickNavigation,
+  Incident,
+  DailyStatus,
+} from './types';
 import { ROUTES } from '@constants';
 
 export const systemMetrics: SystemMetric[] = [
@@ -6,26 +13,26 @@ export const systemMetrics: SystemMetric[] = [
     icon: 'users',
     label: 'Active Players',
     value: '12,584',
-    color: 'blue'
+    color: 'blue',
   },
   {
     icon: 'gamepad',
     label: 'Live Games',
     value: '8,923',
-    color: 'green'
+    color: 'green',
   },
   {
     icon: 'bolt',
     label: 'API Latency',
     value: '42ms',
-    color: 'purple'
+    color: 'purple',
   },
   {
     icon: 'server',
     label: 'Server Load',
     value: '28%',
-    color: 'orange'
-  }
+    color: 'orange',
+  },
 ];
 
 export const servicesStatus: ServiceStatus[] = [
@@ -38,7 +45,7 @@ export const servicesStatus: ServiceStatus[] = [
     responseTime: 24,
     uptime: '99.98%',
     icon: 'server',
-    color: 'green'
+    color: 'green',
   },
   {
     id: 'authentication',
@@ -49,7 +56,7 @@ export const servicesStatus: ServiceStatus[] = [
     responseTime: 18,
     uptime: '99.99%',
     icon: 'user-shield',
-    color: 'green'
+    color: 'green',
   },
   {
     id: 'leaderboard-api',
@@ -60,7 +67,7 @@ export const servicesStatus: ServiceStatus[] = [
     responseTime: 156,
     uptime: '99.85%',
     icon: 'trophy',
-    color: 'yellow'
+    color: 'yellow',
   },
   {
     id: 'payment-service',
@@ -71,7 +78,7 @@ export const servicesStatus: ServiceStatus[] = [
     responseTime: 32,
     uptime: '99.97%',
     icon: 'credit-card',
-    color: 'green'
+    color: 'green',
   },
   {
     id: 'shop-api',
@@ -82,7 +89,7 @@ export const servicesStatus: ServiceStatus[] = [
     responseTime: 28,
     uptime: '99.96%',
     icon: 'store',
-    color: 'green'
+    color: 'green',
   },
   {
     id: 'community-api',
@@ -92,15 +99,16 @@ export const servicesStatus: ServiceStatus[] = [
     lastUpdated: '2024-01-15T12:00:00Z',
     uptime: '99.94%',
     icon: 'users',
-    color: 'blue'
-  }
+    color: 'blue',
+  },
 ];
 
 export const activeIncidents: Incident[] = [
   {
     id: 'inc-2024-001',
     title: 'Leaderboard API Performance',
-    description: 'Some users may experience slower leaderboard updates and statistics loading',
+    description:
+      'Some users may experience slower leaderboard updates and statistics loading',
     status: 'monitoring',
     severity: 'minor',
     startTime: '2024-01-15T11:20:00Z',
@@ -108,14 +116,16 @@ export const activeIncidents: Incident[] = [
       {
         timestamp: '2024-01-15T13:45:00Z',
         status: 'monitoring',
-        message: 'Performance improvements deployed. Monitoring system stability and response times.'
-      }
-    ]
+        message:
+          'Performance improvements deployed. Monitoring system stability and response times.',
+      },
+    ],
   },
   {
     id: 'inc-2024-002',
     title: 'Community Features Maintenance',
-    description: 'Community forums and team features are undergoing scheduled maintenance',
+    description:
+      'Community forums and team features are undergoing scheduled maintenance',
     status: 'monitoring',
     severity: 'minor',
     startTime: '2024-01-15T10:00:00Z',
@@ -124,36 +134,41 @@ export const activeIncidents: Incident[] = [
       {
         timestamp: '2024-01-15T12:00:00Z',
         status: 'monitoring',
-        message: 'Database optimization completed. Monitoring performance and preparing to restore services.'
-      }
-    ]
-  }
+        message:
+          'Database optimization completed. Monitoring performance and preparing to restore services.',
+      },
+    ],
+  },
 ];
 
-export const STATUS_QUICK_ACTIONS: QuickNavigation[] = [
+export const STATUS_QUICK_ACTIONS: QuickAction[] = [
   {
-    icon: 'home',
-    label: 'Go Home',
-    description: 'Return to the main dashboard',
-    path: ROUTES.HOME,
-  },
-  {
-    icon: 'gamepad',
-    label: 'Play Games',
-    description: 'Jump into available games',
-    path: ROUTES.GAMES,
-  },
-  {
-    icon: 'headset',
-    label: 'Get Support',
-    description: 'Contact our support team',
+    icon: 'life-ring',
+    label: 'Support Home',
+    description: 'All support options',
     path: ROUTES.SUPPORT,
+    color: 'from-blue-500 to-cyan-500',
   },
   {
-    icon: 'comments',
-    label: 'Community',
-    description: 'Visit community forums',
-    path: ROUTES.COMMUNITY,
+    icon: 'bug',
+    label: 'Bug Reports',
+    description: 'Report issues',
+    path: ROUTES.BUGS,
+    color: 'from-green-500 to-emerald-500',
+  },
+  {
+    icon: 'question-circle',
+    label: 'Help Center',
+    description: 'Help articles',
+    path: ROUTES.HELP,
+    color: 'from-yellow-500 to-amber-500',
+  },
+  {
+    icon: 'envelope',
+    label: 'Contact',
+    description: 'Support contact',
+    path: ROUTES.CONTACT,
+    color: 'from-purple-500 to-pink-500',
   },
 ];
 
@@ -177,7 +192,7 @@ export const dailyStatus: DailyStatus[] = [
       { hour: '18:00', status: 'operational', incidents: 0 },
       { hour: '20:00', status: 'operational', incidents: 0 },
       { hour: '22:00', status: 'operational', incidents: 0 },
-    ]
+    ],
   },
   {
     date: '2024-01-14',
@@ -185,11 +200,13 @@ export const dailyStatus: DailyStatus[] = [
     uptime: 99.99,
     incidents: 0,
     responseTime: 38,
-    timeline: Array(12).fill(null).map((_, i) => ({
-      hour: `${i * 2}:00`.padStart(5, '0'),
-      status: 'operational' as const,
-      incidents: 0
-    }))
+    timeline: Array(12)
+      .fill(null)
+      .map((_, i) => ({
+        hour: `${i * 2}:00`.padStart(5, '0'),
+        status: 'operational' as const,
+        incidents: 0,
+      })),
   },
   {
     date: '2024-01-13',
@@ -210,6 +227,6 @@ export const dailyStatus: DailyStatus[] = [
       { hour: '18:00', status: 'operational', incidents: 0 },
       { hour: '20:00', status: 'operational', incidents: 0 },
       { hour: '22:00', status: 'operational', incidents: 0 },
-    ]
-  }
+    ],
+  },
 ];
